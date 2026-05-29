@@ -11,7 +11,7 @@ Phase 0 scaffold. Bootstrap + autoloader + CodeStar bundled. No business logic y
 - **Constants**: `ESCORE_VERSION`, `ESCORE_FILE`, `ESCORE_DIR`, `ESCORE_URL`, `ESCORE_BASENAME`
 - **Hand-rolled autoloader** in main file (Composer optional; vendor/ if present is preferred)
 - **CodeStar Framework v2.3.1** bundled at `codestar-framework/`. Guarded with `class_exists('CSF')` to coexist with standalone CodeStar.
-- **Update pipeline**: TBD — explicitly NOT using GitHub-token plugin-update-checker pattern. Decision deferred.
+- **Update pipeline**: native WP filter reads manifest JSON from `https://dev.estatesite.eu/updates/estatesite-wpcore.json`, downloads zip from same server. See [/plugins-release-docs.md](../../../plugins-release-docs.md) at the dev site root for the full release/update flow.
 
 ## Files of note
 

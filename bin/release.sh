@@ -118,6 +118,25 @@ rsync -a \
   --exclude='RELEASE_NOTES_v*.md' \
   ./ "$DIST_DIR/"
 
+# Neutralize `Plugin Name:` headers in bundled dependencies so WP's plugin
+# scanner only lists the package's own entry file. Without this, customers
+# see codestar-framework / meta-box / addons as separately-installable
+# plugins and may activate the wrong row, hitting "The plugin does not have
+# a valid header." Renames the directive to `Plugin Name (bundled):` which
+# is no longer recognised by get_plugins(). Skips the package's own entry
+# file ($DIST_DIR/$PACKAGE_SLUG.php).
+echo "==> Scrubbing bundled Plugin Name headers"
+SCRUBBED=0
+while IFS= read -r f; do
+  if [ "$f" = "$DIST_DIR/$PACKAGE_SLUG.php" ]; then
+    continue
+  fi
+  # Replace ONLY the literal header marker, leave the rest of the comment alone
+  sed -i 's/^\([[:space:]]*\*\?[[:space:]]*\)Plugin Name:/\1Plugin Name (bundled):/' "$f"
+  SCRUBBED=$((SCRUBBED + 1))
+done < <(grep -rl '^[[:space:]]*\*\?[[:space:]]*Plugin Name:' "$DIST_DIR" --include='*.php' 2>/dev/null)
+echo "✓ Scrubbed $SCRUBBED bundled dependency header(s)"
+
 # Build zip inside the temp dir so the top-level entry is $PACKAGE_SLUG/
 ( cd "$WORK_DIR" && zip -qr "$ZIP_NAME" "$PACKAGE_SLUG" )
 
