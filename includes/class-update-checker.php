@@ -83,13 +83,10 @@ final class Update_Checker {
 		// is present.
 		add_action( 'admin_notices', [ $this, 'maybe_render_force_check_notice' ] );
 
-		// Theme card "Check for updates" link. We attach an admin notice
-		// (rendered on themes.php only) that adds the link to our theme's
-		// card — the theme_action_links filter doesn't exist for themes,
-		// so we use a small inline JS+CSS shim.
-		if ( $type === 'theme' ) {
-			add_action( 'admin_print_footer_scripts-themes.php', [ $this, 'inject_theme_card_link' ] );
-		}
+		// Theme-side UI lives in the THEME, not here. The theme calls
+		// $checker->manifest() and $checker->get_force_check_url() to render
+		// its own card link + overlay Changelog block. Core owns the
+		// generic update infrastructure; the theme owns its presentation.
 	}
 
 	/**
@@ -109,205 +106,49 @@ final class Update_Checker {
 	}
 
 	/**
-	 * Inject a "Check for updates" link into our theme's card on the Themes
-	 * admin screen.
+	 * Read-only access to the cached remote manifest. Returns an empty
+	 * array if the manifest isn't yet cached (fresh install, expired
+	 * transient) or if the endpoint is unreachable.
 	 *
-	 * WP renders theme cards client-side via Backbone, so a one-shot
-	 * DOMContentLoaded listener races the render. Instead we use a
-	 * MutationObserver that watches the themes container and inserts the
-	 * link whenever our card appears — covers initial render, filter
-	 * changes, search, and pagination.
+	 * Themes / external code use this to read the rich content (sections,
+	 * changelog, screenshots etc.) without having to re-fetch.
 	 *
-	 * Also injects an "Update available" notice + button directly into the
-	 * description, so customers see the action right next to the version.
+	 * @return array
 	 */
-	public function inject_theme_card_link(): void {
-		// Build the action URL with real ampersands. wp_nonce_url() and esc_js()
-		// both HTML-entity-encode `&` → `&amp;` (intended for HTML attributes
-		// and onclick handlers respectively). Setting link.href to such a
-		// string in JS produces $_GET keys named `amp;type`, `amp;slug` etc,
-		// breaking nonce verification — visible as "The link you followed has
-		// expired."
-		//
-		// We hand-build the URL, then emit it through wp_json_encode so the JS
-		// literal contains real ampersands.
+	public function manifest(): array {
+		$m = $this->fetch_manifest();
+		return is_array( $m ) ? $m : [];
+	}
+
+	/**
+	 * Build the canonical force-check URL (nonced, decoded) for this
+	 * instance. Used by external UI code (e.g. the theme) to render
+	 * "Check for updates" links without duplicating the URL-encoding
+	 * gymnastics required to avoid the &amp; entity trap.
+	 *
+	 * @return string Plain URL with real ampersands. Safe to embed in
+	 *                JS string literals via wp_json_encode().
+	 */
+	public function get_force_check_url(): string {
 		$url = add_query_arg(
 			[
 				'action' => 'estatesite_force_update_check',
-				'type'   => 'theme',
+				'type'   => $this->type,
 				'slug'   => rawurlencode( $this->slug ),
 			],
 			admin_url( 'admin-post.php' )
 		);
 		$url = wp_nonce_url( $url, 'estatesite_force_update_check_' . $this->slug );
-		$url = html_entity_decode( $url, ENT_QUOTES, 'UTF-8' );
-
-		$slug_json  = wp_json_encode( $this->slug );
-		$label_json = wp_json_encode( __( 'Check for updates', 'estatesite-wpcore' ) );
-		$href_json  = wp_json_encode( $url );
-
-		// Pull the changelog HTML from our manifest cache so the modal can
-		// render a Changelog section. Themes don't get the plugins_api
-		// "View details" lightbox WP gives plugins — we inject our own.
-		$manifest        = $this->fetch_manifest();
-		$changelog_html  = $manifest['sections']['changelog'] ?? '';
-		$changelog_json  = wp_json_encode( $changelog_html );
-		$changelog_label = wp_json_encode( __( 'Changelog', 'estatesite-wpcore' ) );
-		?>
-		<style>
-			.theme[data-slug="<?php echo esc_attr( $this->slug ); ?>"] .esc-check-updates {
-				display: inline-block;
-				margin-top: 4px;
-				color: #2271b1;
-				text-decoration: none;
-				font-size: 13px;
-			}
-			.theme[data-slug="<?php echo esc_attr( $this->slug ); ?>"] .esc-check-updates:hover {
-				color: #135e96;
-				text-decoration: underline;
-			}
-			.theme-overlay .theme-info .esc-check-updates {
-				display: inline-block;
-				margin-left: 12px;
-				font-size: 13px;
-				color: #2271b1;
-				text-decoration: none;
-				vertical-align: middle;
-			}
-			.theme-overlay .theme-info .esc-check-updates:hover {
-				color: #135e96;
-				text-decoration: underline;
-			}
-			.esc-theme-changelog {
-				margin-top: 24px;
-				padding-top: 20px;
-				border-top: 1px solid #dcdcde;
-			}
-			.esc-theme-changelog summary {
-				font-weight: 600;
-				font-size: 14px;
-				cursor: pointer;
-				color: #1d2327;
-				padding: 6px 0;
-				outline: none;
-			}
-			.esc-theme-changelog summary:hover { color: #135e96; }
-			.esc-theme-changelog[open] summary { margin-bottom: 12px; }
-			.esc-theme-changelog .esc-changelog-body { font-size: 13px; line-height: 1.6; }
-			.esc-theme-changelog .esc-changelog-body h4 {
-				margin: 16px 0 6px;
-				font-size: 14px;
-				color: #1d2327;
-			}
-			.esc-theme-changelog .esc-changelog-body h4:first-child { margin-top: 0; }
-			.esc-theme-changelog .esc-changelog-body ul {
-				margin: 0 0 10px 18px;
-				padding: 0;
-				list-style: disc;
-			}
-			.esc-theme-changelog .esc-changelog-body li { margin-bottom: 4px; }
-			.esc-theme-changelog .esc-changelog-body code {
-				background: #f0f0f1;
-				padding: 1px 5px;
-				border-radius: 2px;
-				font-size: 12px;
-			}
-		</style>
-		<script>
-		(function () {
-			var slug           = <?php echo $slug_json; ?>;
-			var href           = <?php echo $href_json; ?>;
-			var label          = <?php echo $label_json; ?>;
-			var changelogHtml  = <?php echo $changelog_json; ?>;
-			var changelogLabel = <?php echo $changelog_label; ?>;
-
-			function makeLink() {
-				var link = document.createElement('a');
-				link.className = 'esc-check-updates';
-				link.href = href;
-				link.textContent = label;
-				return link;
-			}
-
-			function injectIntoCard(card) {
-				if (!card || card.querySelector('.esc-check-updates')) return;
-				// Try several mount points; WP's markup changes between screens.
-				var mount = card.querySelector('.theme-actions') ||
-				            card.querySelector('.theme-name') ||
-				            card.querySelector('.theme-author') ||
-				            card;
-				mount.appendChild(makeLink());
-			}
-
-			function injectIntoModal() {
-				// WP renders the theme-details modal when a card is clicked.
-				// `.theme-overlay` is the overlay wrapper; `.theme-info` holds
-				// title, version, author + an actions row. The modal IS shared
-				// across themes, so we only inject when this overlay is showing
-				// OUR theme.
-				var overlay = document.querySelector('.theme-overlay');
-				if (!overlay) return;
-				// The theme card the overlay is showing has class 'displaying-theme'
-				var displayed = document.querySelector('.theme.displaying-theme');
-				if (!displayed) return;
-				if (displayed.getAttribute('data-slug') !== slug) return;
-
-				var info = overlay.querySelector('.theme-info');
-				if (!info) return;
-
-				// 1. "Check for updates" link next to theme-name
-				if (!overlay.querySelector('.esc-check-updates')) {
-					var nameEl = info.querySelector('.theme-name');
-					if (nameEl) {
-						nameEl.appendChild(makeLink());
-					} else {
-						info.appendChild(makeLink());
-					}
-				}
-
-				// 2. Changelog <details> block at the bottom of .theme-info.
-				// WP doesn't show changelogs for themes natively — this is our
-				// replacement for the missing themes_api modal experience.
-				if (changelogHtml && !overlay.querySelector('.esc-theme-changelog')) {
-					var details = document.createElement('details');
-					details.className = 'esc-theme-changelog';
-					var summary = document.createElement('summary');
-					summary.textContent = changelogLabel;
-					var body = document.createElement('div');
-					body.className = 'esc-changelog-body';
-					body.innerHTML = changelogHtml; // pre-sanitized server-side (h4/ul/li/strong/code only)
-					details.appendChild(summary);
-					details.appendChild(body);
-					info.appendChild(details);
-				}
-			}
-
-			function tryNow() {
-				var card = document.querySelector('.theme[data-slug="' + slug + '"]');
-				if (card) injectIntoCard(card);
-				injectIntoModal();
-				return !!card;
-			}
-
-			// Try immediately, on DOMContentLoaded, and on load — covers
-			// the early/late timing of when WP's Backbone renders the card.
-			if (document.readyState !== 'loading') tryNow();
-			else document.addEventListener('DOMContentLoaded', tryNow);
-			window.addEventListener('load', tryNow);
-
-			// MutationObserver covers Backbone re-renders (filter, search,
-			// pagination, "More info" overlay close).
-			var observer = new MutationObserver(function () {
-				tryNow();
-			});
-			var themes = document.querySelector('.themes') || document.body;
-			if (themes) {
-				observer.observe(themes, { childList: true, subtree: true });
-			}
-		})();
-		</script>
-		<?php
+		return html_entity_decode( $url, ENT_QUOTES, 'UTF-8' );
 	}
+
+	/**
+	 * Read-only access to this instance's identity, for external UI code
+	 * that needs to render with the right slug/type/version.
+	 */
+	public function get_slug(): string    { return $this->slug; }
+	public function get_type(): string    { return $this->type; }
+	public function get_version(): string { return $this->version; }
 
 	/**
 	 * Force-check handler. Clears all relevant caches and bounces back.

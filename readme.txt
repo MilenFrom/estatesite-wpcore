@@ -4,7 +4,7 @@ Tags: real estate, property listings, agents, agencies
 Requires at least: 6.4
 Tested up to: 6.7
 Requires PHP: 7.4
-Stable tag: 1.0.6
+Stable tag: 1.0.7
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -24,6 +24,9 @@ EstateSite Core provides the foundation for a real estate site:
 This is the engine. The Classic theme is the visual layer. The Elementor add-on is for page builders.
 
 == Changelog ==
+
+= 1.0.7 =
+* Refactor: Removed theme-specific UI code from Update_Checker. The theme card "Check for updates" link and the Theme Details overlay Changelog block were living inside Core, which incorrectly coupled Core's generic update infrastructure to a specific theme's presentation. Core now exposes a small public API (manifest(), get_force_check_url(), get_slug(), get_type(), get_version()); EstateSite Classic owns its own admin UI in inc/class-update-ui.php. This release pairs with estatesite-classic v1.0.4 which contains the relocated code. Functional behavior is unchanged for customers.
 
 = 1.0.6 =
 * New: Theme Details overlay now shows a collapsible Changelog section with the full version history. WP doesn't have a themes_api equivalent of the plugin "View details" modal, so theme update notifications historically gave customers no visibility into what changed between releases. Update_Checker now reads the rich changelog HTML from the manifest and injects it as a `<details>` block at the bottom of `.theme-info` in WP's theme overlay.
