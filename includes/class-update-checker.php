@@ -145,6 +145,14 @@ final class Update_Checker {
 		$slug_json  = wp_json_encode( $this->slug );
 		$label_json = wp_json_encode( __( 'Check for updates', 'estatesite-wpcore' ) );
 		$href_json  = wp_json_encode( $url );
+
+		// Pull the changelog HTML from our manifest cache so the modal can
+		// render a Changelog section. Themes don't get the plugins_api
+		// "View details" lightbox WP gives plugins — we inject our own.
+		$manifest        = $this->fetch_manifest();
+		$changelog_html  = $manifest['sections']['changelog'] ?? '';
+		$changelog_json  = wp_json_encode( $changelog_html );
+		$changelog_label = wp_json_encode( __( 'Changelog', 'estatesite-wpcore' ) );
 		?>
 		<style>
 			.theme[data-slug="<?php echo esc_attr( $this->slug ); ?>"] .esc-check-updates {
@@ -170,12 +178,48 @@ final class Update_Checker {
 				color: #135e96;
 				text-decoration: underline;
 			}
+			.esc-theme-changelog {
+				margin-top: 24px;
+				padding-top: 20px;
+				border-top: 1px solid #dcdcde;
+			}
+			.esc-theme-changelog summary {
+				font-weight: 600;
+				font-size: 14px;
+				cursor: pointer;
+				color: #1d2327;
+				padding: 6px 0;
+				outline: none;
+			}
+			.esc-theme-changelog summary:hover { color: #135e96; }
+			.esc-theme-changelog[open] summary { margin-bottom: 12px; }
+			.esc-theme-changelog .esc-changelog-body { font-size: 13px; line-height: 1.6; }
+			.esc-theme-changelog .esc-changelog-body h4 {
+				margin: 16px 0 6px;
+				font-size: 14px;
+				color: #1d2327;
+			}
+			.esc-theme-changelog .esc-changelog-body h4:first-child { margin-top: 0; }
+			.esc-theme-changelog .esc-changelog-body ul {
+				margin: 0 0 10px 18px;
+				padding: 0;
+				list-style: disc;
+			}
+			.esc-theme-changelog .esc-changelog-body li { margin-bottom: 4px; }
+			.esc-theme-changelog .esc-changelog-body code {
+				background: #f0f0f1;
+				padding: 1px 5px;
+				border-radius: 2px;
+				font-size: 12px;
+			}
 		</style>
 		<script>
 		(function () {
-			var slug  = <?php echo $slug_json; ?>;
-			var href  = <?php echo $href_json; ?>;
-			var label = <?php echo $label_json; ?>;
+			var slug           = <?php echo $slug_json; ?>;
+			var href           = <?php echo $href_json; ?>;
+			var label          = <?php echo $label_json; ?>;
+			var changelogHtml  = <?php echo $changelog_json; ?>;
+			var changelogLabel = <?php echo $changelog_label; ?>;
 
 			function makeLink() {
 				var link = document.createElement('a');
@@ -203,25 +247,38 @@ final class Update_Checker {
 				// OUR theme.
 				var overlay = document.querySelector('.theme-overlay');
 				if (!overlay) return;
-				// The active overlay sets the theme on body via class change:
-				// data-slug is on the .theme card that's currently expanded.
-				// More reliable: check the overlay's visible state + name
-				// matches.
-				var nameNode = overlay.querySelector('.theme-name');
 				// The theme card the overlay is showing has class 'displaying-theme'
 				var displayed = document.querySelector('.theme.displaying-theme');
 				if (!displayed) return;
 				if (displayed.getAttribute('data-slug') !== slug) return;
-				if (overlay.querySelector('.esc-check-updates')) return;
 
-				// Mount inside .theme-info, right after the .theme-name h2/h3
 				var info = overlay.querySelector('.theme-info');
 				if (!info) return;
-				var nameEl = info.querySelector('.theme-name');
-				if (nameEl) {
-					nameEl.appendChild(makeLink());
-				} else {
-					info.appendChild(makeLink());
+
+				// 1. "Check for updates" link next to theme-name
+				if (!overlay.querySelector('.esc-check-updates')) {
+					var nameEl = info.querySelector('.theme-name');
+					if (nameEl) {
+						nameEl.appendChild(makeLink());
+					} else {
+						info.appendChild(makeLink());
+					}
+				}
+
+				// 2. Changelog <details> block at the bottom of .theme-info.
+				// WP doesn't show changelogs for themes natively — this is our
+				// replacement for the missing themes_api modal experience.
+				if (changelogHtml && !overlay.querySelector('.esc-theme-changelog')) {
+					var details = document.createElement('details');
+					details.className = 'esc-theme-changelog';
+					var summary = document.createElement('summary');
+					summary.textContent = changelogLabel;
+					var body = document.createElement('div');
+					body.className = 'esc-changelog-body';
+					body.innerHTML = changelogHtml; // pre-sanitized server-side (h4/ul/li/strong/code only)
+					details.appendChild(summary);
+					details.appendChild(body);
+					info.appendChild(details);
 				}
 			}
 

@@ -4,7 +4,7 @@ Tags: real estate, property listings, agents, agencies
 Requires at least: 6.4
 Tested up to: 6.7
 Requires PHP: 7.4
-Stable tag: 1.0.5
+Stable tag: 1.0.6
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -24,6 +24,10 @@ EstateSite Core provides the foundation for a real estate site:
 This is the engine. The Classic theme is the visual layer. The Elementor add-on is for page builders.
 
 == Changelog ==
+
+= 1.0.6 =
+* New: Theme Details overlay now shows a collapsible Changelog section with the full version history. WP doesn't have a themes_api equivalent of the plugin "View details" modal, so theme update notifications historically gave customers no visibility into what changed between releases. Update_Checker now reads the rich changelog HTML from the manifest and injects it as a `<details>` block at the bottom of `.theme-info` in WP's theme overlay.
+* Tweak: Changelog content for both plugin and theme manifests pulled from readme.txt's `== Changelog ==` section by bin/release.sh, converted from wiki markup (`= 1.0.6 =` headings, `* bullets`, `**bold**`, `` `code` ``) to HTML.
 
 = 1.0.5 =
 * Fix: "Check for updates" link on theme card produced "The link you followed has expired" when clicked. wp_nonce_url + esc_js chain HTML-encoded the ampersands to &amp; — the browser then received $_GET keys named amp;type, amp;slug, amp;_wpnonce. Now uses wp_json_encode + html_entity_decode so the URL has real ampersands in the emitted JS.
