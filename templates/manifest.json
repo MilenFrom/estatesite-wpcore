@@ -1,0 +1,3425 @@
+{
+    "elements": [
+        {
+            "id": 22344,
+            "title": "footer 18",
+            "slug": "footer-18",
+            "link": "https://studio.houzez.co/favethemes-blocks/footer-18/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2026/05/Footer-18.png",
+            "type": "block",
+            "category": "block, footer"
+        },
+        {
+            "id": 22336,
+            "title": "hero 48",
+            "slug": "hero-48",
+            "link": "https://studio.houzez.co/favethemes-blocks/hero-48/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2026/05/Hero-48.png",
+            "type": "block",
+            "category": "block, hero"
+        },
+        {
+            "id": 22329,
+            "title": "header 14",
+            "slug": "header-14",
+            "link": "https://studio.houzez.co/favethemes-blocks/header-14/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2026/05/Header-14.jpg",
+            "type": "block",
+            "category": "block, header"
+        },
+        {
+            "id": 22323,
+            "title": "hero 47",
+            "slug": "hero-47",
+            "link": "https://studio.houzez.co/favethemes-blocks/hero-47/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2026/05/Hero-47.png",
+            "type": "block",
+            "category": "block, hero"
+        },
+        {
+            "id": 22316,
+            "title": "call to action 17",
+            "slug": "call-to-action-17",
+            "link": "https://studio.houzez.co/favethemes-blocks/call-to-action-17/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2026/05/Call-to-action-17.png",
+            "type": "block",
+            "category": "block, call-to-action"
+        },
+        {
+            "id": 22310,
+            "title": "about us – block 16",
+            "slug": "about-us-block-16",
+            "link": "https://studio.houzez.co/favethemes-blocks/about-us-block-16/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2026/05/About-us-block-16.png",
+            "type": "block",
+            "category": "block, about-us"
+        },
+        {
+            "id": 22301,
+            "title": "about us – block 15",
+            "slug": "about-us-block-15",
+            "link": "https://studio.houzez.co/favethemes-blocks/about-us-block-15/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2026/05/About-us-block-15.png",
+            "type": "block",
+            "category": "block, about-us"
+        },
+        {
+            "id": 22295,
+            "title": "single agent 09",
+            "slug": "single-agent-09",
+            "link": "https://studio.houzez.co/favethemes-blocks/single-agent-09/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2026/05/Single-Agent-09.png",
+            "type": "block",
+            "category": "block, single-property"
+        },
+        {
+            "id": 22289,
+            "title": "contact us 15",
+            "slug": "contact-us-15",
+            "link": "https://studio.houzez.co/favethemes-blocks/contact-us-15/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2026/05/Contact-us-15.png",
+            "type": "template",
+            "category": ""
+        },
+        {
+            "id": 22277,
+            "title": "single property 17",
+            "slug": "single-property-17",
+            "link": "https://studio.houzez.co/favethemes-blocks/single-property-17/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2026/05/Single-Property-17.png",
+            "type": "block",
+            "category": "block, single-agent"
+        },
+        {
+            "id": 22250,
+            "title": "about us 30",
+            "slug": "about-us-30",
+            "link": "https://studio.houzez.co/favethemes-blocks/about-us-30/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2026/05/About-us-30.png",
+            "type": "block",
+            "category": ""
+        },
+        {
+            "id": 22206,
+            "title": "homepage &#8211; demo 47",
+            "slug": "homepage-demo-47",
+            "link": "https://studio.houzez.co/favethemes-blocks/homepage-demo-47/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2026/05/Homepage-Demo-47.png",
+            "type": "block",
+            "category": ""
+        },
+        {
+            "id": 22199,
+            "title": "single property 12",
+            "slug": "single-property-12",
+            "link": "https://studio.houzez.co/favethemes-blocks/single-property-12/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2026/01/demo42-property-page.png",
+            "type": "block",
+            "category": "block, single-property"
+        },
+        {
+            "id": 22175,
+            "title": "header 13",
+            "slug": "header-13",
+            "link": "https://studio.houzez.co/favethemes-blocks/header-13/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2026/01/header-13.png",
+            "type": "block",
+            "category": "block, header"
+        },
+        {
+            "id": 22161,
+            "title": "service detail page 01",
+            "slug": "service-detail-page-01",
+            "link": "https://studio.houzez.co/favethemes-blocks/service-detail-page-01/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2026/01/Service-Detail-Page-01.png",
+            "type": "template",
+            "category": ""
+        },
+        {
+            "id": 22128,
+            "title": "services page 01",
+            "slug": "services-page-01",
+            "link": "https://studio.houzez.co/favethemes-blocks/services-page-01/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2026/01/Services-Page-01.png",
+            "type": "template",
+            "category": ""
+        },
+        {
+            "id": 22085,
+            "title": "homepage &#8211; main demo 2026",
+            "slug": "homepage-main-demo-2026",
+            "link": "https://studio.houzez.co/favethemes-blocks/homepage-main-demo-2026/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2026/01/homepage-main-demo-2026.png",
+            "type": "template",
+            "category": ""
+        },
+        {
+            "id": 22062,
+            "title": "homepage &#8211; demo 46",
+            "slug": "homepage-demo-46",
+            "link": "https://studio.houzez.co/favethemes-blocks/homepage-demo-46/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2026/01/homepage-demo-46.png",
+            "type": "template",
+            "category": ""
+        },
+        {
+            "id": 22042,
+            "title": "about us 29",
+            "slug": "about-us-29",
+            "link": "https://studio.houzez.co/favethemes-blocks/about-us-29/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2026/01/About-us-29.png",
+            "type": "template",
+            "category": "template, about-us"
+        },
+        {
+            "id": 22015,
+            "title": "about us 28",
+            "slug": "about-us-28",
+            "link": "https://studio.houzez.co/favethemes-blocks/about-us-28/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2026/01/About-us-28.png",
+            "type": "template",
+            "category": "template, about-us"
+        },
+        {
+            "id": 22005,
+            "title": "contact us 14",
+            "slug": "contact-us-14",
+            "link": "https://studio.houzez.co/favethemes-blocks/contact-us-14/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2026/01/contact-page-14.png",
+            "type": "block",
+            "category": "block, contact-us"
+        },
+        {
+            "id": 21989,
+            "title": "single property 16",
+            "slug": "single-property-16",
+            "link": "https://studio.houzez.co/favethemes-blocks/single-property-16/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2026/01/single-property-16.png",
+            "type": "block",
+            "category": "block, single-property"
+        },
+        {
+            "id": 21977,
+            "title": "footer 17",
+            "slug": "footer-17",
+            "link": "https://studio.houzez.co/favethemes-blocks/footer-17/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2026/01/main-demo-footer.png",
+            "type": "block",
+            "category": "block, footer"
+        },
+        {
+            "id": 21966,
+            "title": "footer 16",
+            "slug": "footer-16",
+            "link": "https://studio.houzez.co/favethemes-blocks/footer-16/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2026/01/demo-46-footer-e1768509283761.png",
+            "type": "block",
+            "category": "block, footer"
+        },
+        {
+            "id": 21946,
+            "title": "footer 15",
+            "slug": "footer-15",
+            "link": "https://studio.houzez.co/favethemes-blocks/footer-15/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2025/11/Footer-15.png",
+            "type": "block",
+            "category": "block, footer"
+        },
+        {
+            "id": 21938,
+            "title": "footer 14",
+            "slug": "footer-14",
+            "link": "https://studio.houzez.co/favethemes-blocks/footer-14/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2025/11/Footer-14.png",
+            "type": "block",
+            "category": "block, footer"
+        },
+        {
+            "id": 21930,
+            "title": "header 12",
+            "slug": "header-12",
+            "link": "https://studio.houzez.co/favethemes-blocks/header-12/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2025/11/heaader-12.png",
+            "type": "block",
+            "category": "block, header"
+        },
+        {
+            "id": 21921,
+            "title": "header 11",
+            "slug": "header-11",
+            "link": "https://studio.houzez.co/favethemes-blocks/header-11/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2025/11/heaader-11.png",
+            "type": "block",
+            "category": "block, header"
+        },
+        {
+            "id": 21910,
+            "title": "single property 15",
+            "slug": "single-property-15",
+            "link": "https://studio.houzez.co/favethemes-blocks/single-property-15/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2025/11/Single-Property-15-scaled.png",
+            "type": "block",
+            "category": "block, single-property"
+        },
+        {
+            "id": 21903,
+            "title": "single property 14",
+            "slug": "single-property-14",
+            "link": "https://studio.houzez.co/favethemes-blocks/single-property-14/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2025/11/Single-Property-14-scaled.png",
+            "type": "block",
+            "category": "block, single-property"
+        },
+        {
+            "id": 21895,
+            "title": "contact us 13",
+            "slug": "contact-us-13",
+            "link": "https://studio.houzez.co/favethemes-blocks/contact-us-13/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2025/11/Group-17-Copy-12.png",
+            "type": "block",
+            "category": "block, contact-us"
+        },
+        {
+            "id": 21888,
+            "title": "contact us 12",
+            "slug": "contact-us-12-2",
+            "link": "https://studio.houzez.co/favethemes-blocks/contact-us-12-2/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2025/11/Group-17-Copy-11.png",
+            "type": "template",
+            "category": "template, contact-us"
+        },
+        {
+            "id": 21863,
+            "title": "about us 27",
+            "slug": "about-us-27",
+            "link": "https://studio.houzez.co/favethemes-blocks/about-us-27/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2025/11/Group-17-Copy-10.png",
+            "type": "template",
+            "category": "template, about-us"
+        },
+        {
+            "id": 21853,
+            "title": "about us 26",
+            "slug": "about-us-26",
+            "link": "https://studio.houzez.co/favethemes-blocks/about-us-26/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2025/11/Group-17-Copy-9.png",
+            "type": "template",
+            "category": "template, about-us"
+        },
+        {
+            "id": 21831,
+            "title": "homepage &#8211; demo 45",
+            "slug": "homepage-demo-45",
+            "link": "https://studio.houzez.co/favethemes-blocks/homepage-demo-45/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2025/11/Group-17-Copy-8-1.png",
+            "type": "template",
+            "category": ""
+        },
+        {
+            "id": 21796,
+            "title": "homepage – demo 44",
+            "slug": "homepage-demo-44",
+            "link": "https://studio.houzez.co/favethemes-blocks/homepage-demo-44/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2025/11/Group-17-Copy-8.png",
+            "type": "template",
+            "category": ""
+        },
+        {
+            "id": 21744,
+            "title": "call to action 16",
+            "slug": "call-to-action-16-2",
+            "link": "https://studio.houzez.co/favethemes-blocks/call-to-action-16-2/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2025/06/Call-to-action-16.png",
+            "type": "block",
+            "category": "block, call-to-action"
+        },
+        {
+            "id": 21734,
+            "title": "footer 13",
+            "slug": "footer-13",
+            "link": "https://studio.houzez.co/favethemes-blocks/footer-13/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2025/06/footer-13.png",
+            "type": "block",
+            "category": "block, footer"
+        },
+        {
+            "id": 21727,
+            "title": "footer 12",
+            "slug": "footer-12",
+            "link": "https://studio.houzez.co/favethemes-blocks/footer-12/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2025/06/footer-12.png",
+            "type": "block",
+            "category": "block, footer"
+        },
+        {
+            "id": 21720,
+            "title": "call to action 15",
+            "slug": "call-to-action-16",
+            "link": "https://studio.houzez.co/favethemes-blocks/call-to-action-16/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2025/06/call-to-action-15.png",
+            "type": "block",
+            "category": "block, call-to-action"
+        },
+        {
+            "id": 21710,
+            "title": "agents 13",
+            "slug": "agents-13",
+            "link": "https://studio.houzez.co/favethemes-blocks/agents-13/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2025/06/agents-13.png",
+            "type": "block",
+            "category": "block, agents"
+        },
+        {
+            "id": 21704,
+            "title": "agents 12",
+            "slug": "agents-12",
+            "link": "https://studio.houzez.co/favethemes-blocks/agents-12/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2025/06/agents-12.png",
+            "type": "block",
+            "category": "block, agents"
+        },
+        {
+            "id": 21693,
+            "title": "agents 11",
+            "slug": "agents-11",
+            "link": "https://studio.houzez.co/favethemes-blocks/agents-11/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2025/06/agents-11.png",
+            "type": "block",
+            "category": "block, agents"
+        },
+        {
+            "id": 21686,
+            "title": "agents 10",
+            "slug": "agents-10",
+            "link": "https://studio.houzez.co/favethemes-blocks/agents-10/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2025/06/agents-10b.png",
+            "type": "block",
+            "category": "block, agents"
+        },
+        {
+            "id": 21680,
+            "title": "agents 09",
+            "slug": "agents-09",
+            "link": "https://studio.houzez.co/favethemes-blocks/agents-09/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2025/06/agents-09.png",
+            "type": "block",
+            "category": "block, agents"
+        },
+        {
+            "id": 21648,
+            "title": "single agent 08",
+            "slug": "single-agent-08",
+            "link": "https://studio.houzez.co/favethemes-blocks/single-agent-08/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2025/06/demo42-7.png",
+            "type": "block",
+            "category": "block, single-agent"
+        },
+        {
+            "id": 21647,
+            "title": "single property 13",
+            "slug": "single-property-13",
+            "link": "https://studio.houzez.co/favethemes-blocks/single-property-13/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2025/06/demo42-6.png",
+            "type": "block",
+            "category": "block, single-property"
+        },
+        {
+            "id": 21646,
+            "title": "contact us 12",
+            "slug": "contact-us-12",
+            "link": "https://studio.houzez.co/favethemes-blocks/contact-us-12/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2025/06/demo42-5.png",
+            "type": "template",
+            "category": "template, contact-us"
+        },
+        {
+            "id": 21645,
+            "title": "about us 25",
+            "slug": "about-us-25",
+            "link": "https://studio.houzez.co/favethemes-blocks/about-us-25/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2025/06/demo42-4.png",
+            "type": "template",
+            "category": "template, about-us"
+        },
+        {
+            "id": 21617,
+            "title": "homepage – demo 43",
+            "slug": "homepage-demo-43",
+            "link": "https://studio.houzez.co/favethemes-blocks/homepage-demo-43/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2025/06/demo42-3.png",
+            "type": "template",
+            "category": ""
+        },
+        {
+            "id": 21609,
+            "title": "single agent 07",
+            "slug": "single-agent-07",
+            "link": "https://studio.houzez.co/favethemes-blocks/single-agent-07/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2025/06/demo42-2.png",
+            "type": "block",
+            "category": "block, single-agent"
+        },
+        {
+            "id": 21595,
+            "title": "contact us 11",
+            "slug": "contact-us-11",
+            "link": "https://studio.houzez.co/favethemes-blocks/contact-us-11/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2025/06/demo42-1.png",
+            "type": "template",
+            "category": "template, contact-us"
+        },
+        {
+            "id": 21583,
+            "title": "about us 24",
+            "slug": "about-us-24",
+            "link": "https://studio.houzez.co/favethemes-blocks/about-us-24/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2025/06/demo42.png",
+            "type": "template",
+            "category": "template, about-us"
+        },
+        {
+            "id": 21545,
+            "title": "homepage – demo 42",
+            "slug": "homepage-demo-42",
+            "link": "https://studio.houzez.co/favethemes-blocks/homepage-demo-42/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2024/09/demo42.png",
+            "type": "template",
+            "category": ""
+        },
+        {
+            "id": 20206,
+            "title": "single property 11",
+            "slug": "single-property-11",
+            "link": "https://studio.houzez.co/favethemes-blocks/single-property-11/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2024/09/demo-40-property-detail-page-copy.png",
+            "type": "block",
+            "category": "block, single-property"
+        },
+        {
+            "id": 20203,
+            "title": "single agency 06",
+            "slug": "single-agency-06",
+            "link": "https://studio.houzez.co/favethemes-blocks/single-agency-06/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2024/09/demo-40-agency-profile-1.png",
+            "type": "block",
+            "category": "block, single-agency"
+        },
+        {
+            "id": 20202,
+            "title": "single agent 06",
+            "slug": "single-agent-06",
+            "link": "https://studio.houzez.co/favethemes-blocks/single-agent-06/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2024/09/demo-40-agent-profile-copy.png",
+            "type": "block",
+            "category": "block, single-agent"
+        },
+        {
+            "id": 20194,
+            "title": "contact us 10",
+            "slug": "contact-us-10",
+            "link": "https://studio.houzez.co/favethemes-blocks/contact-us-10/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2024/09/demo-40-contact-us-copy.png",
+            "type": "template",
+            "category": "template, contact-us"
+        },
+        {
+            "id": 20192,
+            "title": "about us 23",
+            "slug": "about-us-23",
+            "link": "https://studio.houzez.co/favethemes-blocks/about-us-23/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2024/09/demo-40-about-us-copy.png",
+            "type": "template",
+            "category": "template, about-us"
+        },
+        {
+            "id": 20159,
+            "title": "homepage &#8211; demo 41",
+            "slug": "homepage-demo-41",
+            "link": "https://studio.houzez.co/favethemes-blocks/homepage-demo-41/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2024/09/demo-40-homepage-copy.png",
+            "type": "template",
+            "category": ""
+        },
+        {
+            "id": 20133,
+            "title": "single property 10",
+            "slug": "single-property-10",
+            "link": "https://studio.houzez.co/favethemes-blocks/single-property-10/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2024/09/demo-40-property-detail-page.png",
+            "type": "block",
+            "category": "block, single-property"
+        },
+        {
+            "id": 20126,
+            "title": "single agent 05",
+            "slug": "single-agent-05",
+            "link": "https://studio.houzez.co/favethemes-blocks/single-agent-05/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2024/09/demo-40-agent-profile.png",
+            "type": "block",
+            "category": "block, single-agent"
+        },
+        {
+            "id": 20119,
+            "title": "single agency 05",
+            "slug": "single-agency-05",
+            "link": "https://studio.houzez.co/favethemes-blocks/single-agency-05/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2024/09/demo-40-agency-profile.png",
+            "type": "block",
+            "category": "block, single-agency"
+        },
+        {
+            "id": 20112,
+            "title": "contact us 09",
+            "slug": "contact-us-09",
+            "link": "https://studio.houzez.co/favethemes-blocks/contact-us-09/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2024/09/demo-40-contact-us.png",
+            "type": "template",
+            "category": "template, contact-us"
+        },
+        {
+            "id": 20102,
+            "title": "about us 22",
+            "slug": "about-us-22",
+            "link": "https://studio.houzez.co/favethemes-blocks/about-us-22/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2024/09/demo-40-about-us.png",
+            "type": "template",
+            "category": "template, about-us"
+        },
+        {
+            "id": 20074,
+            "title": "homepage &#8211; demo 40",
+            "slug": "homepage-demo-40",
+            "link": "https://studio.houzez.co/favethemes-blocks/homepage-demo-40/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2024/09/demo-40-homepage.png",
+            "type": "template",
+            "category": ""
+        },
+        {
+            "id": 20063,
+            "title": "single agency 04",
+            "slug": "single-agency-04",
+            "link": "https://studio.houzez.co/favethemes-blocks/single-agency-04/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2024/08/Single-Agency-04.png",
+            "type": "block",
+            "category": "block, single-agency"
+        },
+        {
+            "id": 20057,
+            "title": "single agent 04",
+            "slug": "single-agent-04",
+            "link": "https://studio.houzez.co/favethemes-blocks/single-agent-04/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2024/08/Single-Agent-04.png",
+            "type": "block",
+            "category": "block, single-agent"
+        },
+        {
+            "id": 20051,
+            "title": "single property 09",
+            "slug": "single-property-09",
+            "link": "https://studio.houzez.co/favethemes-blocks/single-property-09/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2024/08/single-property-09.png",
+            "type": "block",
+            "category": "block, single-property"
+        },
+        {
+            "id": 20045,
+            "title": "contact us 08",
+            "slug": "contact-us-08",
+            "link": "https://studio.houzez.co/favethemes-blocks/contact-us-08/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2024/11/contact-us-block-80.png",
+            "type": "block",
+            "category": "block, contact-us"
+        },
+        {
+            "id": 20031,
+            "title": "about us 21",
+            "slug": "about-us-21",
+            "link": "https://studio.houzez.co/favethemes-blocks/about-us-21/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2024/08/about-us-21.png",
+            "type": "template",
+            "category": "template, about-us"
+        },
+        {
+            "id": 20013,
+            "title": "homepage – demo 39",
+            "slug": "homepage-demo-39",
+            "link": "https://studio.houzez.co/favethemes-blocks/homepage-demo-39/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2024/08/demo39.houzez.co_.png",
+            "type": "template",
+            "category": ""
+        },
+        {
+            "id": 20007,
+            "title": "footer 11",
+            "slug": "footer-11",
+            "link": "https://studio.houzez.co/favethemes-blocks/footer-11/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2024/08/Footer-11.png",
+            "type": "block",
+            "category": "block, footer"
+        },
+        {
+            "id": 20001,
+            "title": "single agency 03",
+            "slug": "single-agency-03",
+            "link": "https://studio.houzez.co/favethemes-blocks/single-agency-03/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2024/08/Single-Agency-03.png",
+            "type": "block",
+            "category": "block, single-agency"
+        },
+        {
+            "id": 19995,
+            "title": "single agent 03",
+            "slug": "single-agent-03",
+            "link": "https://studio.houzez.co/favethemes-blocks/single-agent-03/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2024/08/Single-Agent-03.png",
+            "type": "block",
+            "category": "block, single-agent"
+        },
+        {
+            "id": 19988,
+            "title": "single property 08",
+            "slug": "single-property-08",
+            "link": "https://studio.houzez.co/favethemes-blocks/single-property-08/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2024/08/single-property-08.png",
+            "type": "block",
+            "category": "block, single-property"
+        },
+        {
+            "id": 19980,
+            "title": "contact us 07",
+            "slug": "contact-us-07",
+            "link": "https://studio.houzez.co/favethemes-blocks/contact-us-07/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2024/11/contact-us-block-07.png",
+            "type": "block",
+            "category": "block, contact-us"
+        },
+        {
+            "id": 19968,
+            "title": "homepage – demo 38",
+            "slug": "homepage-demo-38",
+            "link": "https://studio.houzez.co/favethemes-blocks/homepage-demo-38/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2024/08/demo38.houzez.co_.png",
+            "type": "template",
+            "category": ""
+        },
+        {
+            "id": 19951,
+            "title": "about us 20",
+            "slug": "about-us-20",
+            "link": "https://studio.houzez.co/favethemes-blocks/about-us-20/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2024/08/about-us-20.png",
+            "type": "template",
+            "category": "template, about-us"
+        },
+        {
+            "id": 19779,
+            "title": "single agency 02",
+            "slug": "single-agency-02",
+            "link": "https://studio.houzez.co/favethemes-blocks/single-agency-02/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2024/08/single-agency-v2.png",
+            "type": "block",
+            "category": "block, single-agency"
+        },
+        {
+            "id": 19774,
+            "title": "single agency 01",
+            "slug": "single-agency-01",
+            "link": "https://studio.houzez.co/favethemes-blocks/single-agency-01/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2024/08/single-agency-v1.png",
+            "type": "block",
+            "category": "block, single-agency"
+        },
+        {
+            "id": 19769,
+            "title": "single agent 02",
+            "slug": "single-agent-02",
+            "link": "https://studio.houzez.co/favethemes-blocks/single-agent-02/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2024/08/single-agent-v2.png",
+            "type": "block",
+            "category": "block, single-agent"
+        },
+        {
+            "id": 19743,
+            "title": "single property 05",
+            "slug": "single-property-05",
+            "link": "https://studio.houzez.co/favethemes-blocks/single-property-05/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2024/08/single-property-v5.png",
+            "type": "block",
+            "category": "block, single-property"
+        },
+        {
+            "id": 19759,
+            "title": "single property full width",
+            "slug": "single-property-full-width",
+            "link": "https://studio.houzez.co/favethemes-blocks/single-property-full-width/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2024/08/single-property-full-width.png",
+            "type": "block",
+            "category": "block, single-property"
+        },
+        {
+            "id": 19754,
+            "title": "single property 07",
+            "slug": "single-property-07",
+            "link": "https://studio.houzez.co/favethemes-blocks/single-property-07/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2024/08/single-property-v7.png",
+            "type": "block",
+            "category": "block, single-property"
+        },
+        {
+            "id": 19733,
+            "title": "single property 03",
+            "slug": "single-property-03",
+            "link": "https://studio.houzez.co/favethemes-blocks/single-property-03/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2024/08/single-property-v3.png",
+            "type": "block",
+            "category": "block, single-property"
+        },
+        {
+            "id": 19728,
+            "title": "single property 02",
+            "slug": "single-property-02",
+            "link": "https://studio.houzez.co/favethemes-blocks/single-property-02/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2024/08/single-property-v2.png",
+            "type": "block",
+            "category": "block, single-property"
+        },
+        {
+            "id": 19749,
+            "title": "single property 06",
+            "slug": "single-property-06",
+            "link": "https://studio.houzez.co/favethemes-blocks/single-property-06/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2024/08/single-property-v6.png",
+            "type": "block",
+            "category": "block, single-property"
+        },
+        {
+            "id": 19764,
+            "title": "single agent 01",
+            "slug": "single-agent-01",
+            "link": "https://studio.houzez.co/favethemes-blocks/single-agent-01/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2024/08/single-agent-v1.png",
+            "type": "block",
+            "category": "block, single-agent"
+        },
+        {
+            "id": 19735,
+            "title": "single property 04",
+            "slug": "single-property-04",
+            "link": "https://studio.houzez.co/favethemes-blocks/single-property-04/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2024/08/single-property-v4.png",
+            "type": "block",
+            "category": "block, single-property"
+        },
+        {
+            "id": 19539,
+            "title": "single property 01",
+            "slug": "single-property-01",
+            "link": "https://studio.houzez.co/favethemes-blocks/single-property-01/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2024/08/single-property-v1.png",
+            "type": "block",
+            "category": "block, single-property"
+        },
+        {
+            "id": 19489,
+            "title": "homepage &#8211; demo 37",
+            "slug": "homepage-demo-37",
+            "link": "https://studio.houzez.co/favethemes-blocks/homepage-demo-37/",
+            "image": false,
+            "type": "template",
+            "category": ""
+        },
+        {
+            "id": 19476,
+            "title": "homepage &#8211; demo 35",
+            "slug": "homepage-demo-35",
+            "link": "https://studio.houzez.co/favethemes-blocks/homepage-demo-35/",
+            "image": false,
+            "type": "template",
+            "category": ""
+        },
+        {
+            "id": 19442,
+            "title": "homepage &#8211; demo 36",
+            "slug": "homepage-demo-36",
+            "link": "https://studio.houzez.co/favethemes-blocks/homepage-demo-36/",
+            "image": false,
+            "type": "template",
+            "category": ""
+        },
+        {
+            "id": 19358,
+            "title": "blog 07",
+            "slug": "blog-07",
+            "link": "https://studio.houzez.co/favethemes-blocks/blog-07/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2024/11/blog-block-07.png",
+            "type": "block",
+            "category": "block, blog"
+        },
+        {
+            "id": 19266,
+            "title": "footer 10",
+            "slug": "footer-10",
+            "link": "https://studio.houzez.co/favethemes-blocks/footer-10/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/11/footer-10.png",
+            "type": "block",
+            "category": "block, footer"
+        },
+        {
+            "id": 19258,
+            "title": "footer 09",
+            "slug": "footer-09",
+            "link": "https://studio.houzez.co/favethemes-blocks/footer-09/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/11/footer-09.png",
+            "type": "block",
+            "category": "block, footer"
+        },
+        {
+            "id": 19247,
+            "title": "footer 08",
+            "slug": "footer-08",
+            "link": "https://studio.houzez.co/favethemes-blocks/footer-08/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/11/footer-08.png",
+            "type": "block",
+            "category": "block, footer"
+        },
+        {
+            "id": 19223,
+            "title": "footer 07",
+            "slug": "footer-07",
+            "link": "https://studio.houzez.co/favethemes-blocks/footer-07/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/11/footer-07.png",
+            "type": "block",
+            "category": "block, footer"
+        },
+        {
+            "id": 19217,
+            "title": "footer 06",
+            "slug": "footer-06",
+            "link": "https://studio.houzez.co/favethemes-blocks/footer-06/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/11/footer-06.png",
+            "type": "block",
+            "category": "block, footer"
+        },
+        {
+            "id": 19200,
+            "title": "footer 05",
+            "slug": "footer-05",
+            "link": "https://studio.houzez.co/favethemes-blocks/footer-05/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/11/footer-05.png",
+            "type": "block",
+            "category": "block, footer"
+        },
+        {
+            "id": 19186,
+            "title": "footer 04",
+            "slug": "footer-04",
+            "link": "https://studio.houzez.co/favethemes-blocks/footer-04/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/11/footer-04.png",
+            "type": "block",
+            "category": "block, footer"
+        },
+        {
+            "id": 19169,
+            "title": "footer 03",
+            "slug": "footer-03",
+            "link": "https://studio.houzez.co/favethemes-blocks/footer-03/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/11/footer-03.png",
+            "type": "block",
+            "category": "block, footer"
+        },
+        {
+            "id": 19134,
+            "title": "footer 02",
+            "slug": "footer-02",
+            "link": "https://studio.houzez.co/favethemes-blocks/footer-02/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/11/footer-02.png",
+            "type": "block",
+            "category": "block, footer"
+        },
+        {
+            "id": 19101,
+            "title": "footer 01",
+            "slug": "footer-01-2",
+            "link": "https://studio.houzez.co/favethemes-blocks/footer-01-2/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/11/footer-01.png",
+            "type": "block",
+            "category": "block, footer"
+        },
+        {
+            "id": 19059,
+            "title": "header 10",
+            "slug": "header-10",
+            "link": "https://studio.houzez.co/favethemes-blocks/header-10/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/10/header-10.png",
+            "type": "block",
+            "category": "block, header"
+        },
+        {
+            "id": 19055,
+            "title": "header 09",
+            "slug": "header-09",
+            "link": "https://studio.houzez.co/favethemes-blocks/header-09/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/10/header-09.png",
+            "type": "block",
+            "category": "block, header"
+        },
+        {
+            "id": 19046,
+            "title": "header 08",
+            "slug": "header-08",
+            "link": "https://studio.houzez.co/favethemes-blocks/header-08/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/10/header-08.png",
+            "type": "block",
+            "category": "block, header"
+        },
+        {
+            "id": 19038,
+            "title": "header 07",
+            "slug": "header-07",
+            "link": "https://studio.houzez.co/favethemes-blocks/header-07/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/10/header-07.png",
+            "type": "block",
+            "category": "block, header"
+        },
+        {
+            "id": 19023,
+            "title": "header 06",
+            "slug": "header-06",
+            "link": "https://studio.houzez.co/favethemes-blocks/header-06/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/11/header-06.png",
+            "type": "block",
+            "category": "block, header"
+        },
+        {
+            "id": 19004,
+            "title": "header 05",
+            "slug": "header-05",
+            "link": "https://studio.houzez.co/favethemes-blocks/header-05/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/10/header-05.png",
+            "type": "block",
+            "category": "block, header"
+        },
+        {
+            "id": 18984,
+            "title": "header 04",
+            "slug": "header-04",
+            "link": "https://studio.houzez.co/favethemes-blocks/header-04/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/10/header-04.png",
+            "type": "block",
+            "category": "block, header"
+        },
+        {
+            "id": 18976,
+            "title": "header 03",
+            "slug": "header-03",
+            "link": "https://studio.houzez.co/favethemes-blocks/header-03/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/10/header-03.png",
+            "type": "block",
+            "category": "block, header"
+        },
+        {
+            "id": 18949,
+            "title": "header 02",
+            "slug": "header-02",
+            "link": "https://studio.houzez.co/favethemes-blocks/header-02/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/10/header-02.png",
+            "type": "block",
+            "category": "block, header"
+        },
+        {
+            "id": 18971,
+            "title": "header 01",
+            "slug": "header-01",
+            "link": "https://studio.houzez.co/favethemes-blocks/header-01/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/10/header-01.png",
+            "type": "block",
+            "category": "block, header"
+        },
+        {
+            "id": 18716,
+            "title": "about us 19",
+            "slug": "about-us-19",
+            "link": "https://studio.houzez.co/favethemes-blocks/about-us-19/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/10/about-us-page-19.png",
+            "type": "template",
+            "category": "template, about-us"
+        },
+        {
+            "id": 18710,
+            "title": "about us 18",
+            "slug": "about-us-18",
+            "link": "https://studio.houzez.co/favethemes-blocks/about-us-18/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/10/about-us-page-18.png",
+            "type": "template",
+            "category": "template, about-us"
+        },
+        {
+            "id": 18703,
+            "title": "about us 17",
+            "slug": "about-us-17",
+            "link": "https://studio.houzez.co/favethemes-blocks/about-us-17/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/10/about-us-page-17.png",
+            "type": "template",
+            "category": "template, about-us"
+        },
+        {
+            "id": 18694,
+            "title": "about us 16",
+            "slug": "about-us-16",
+            "link": "https://studio.houzez.co/favethemes-blocks/about-us-16/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/10/about-us-page-16.png",
+            "type": "template",
+            "category": "template, about-us"
+        },
+        {
+            "id": 18687,
+            "title": "about us 15",
+            "slug": "about-us-15",
+            "link": "https://studio.houzez.co/favethemes-blocks/about-us-15/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/10/about-us-page-15.png",
+            "type": "template",
+            "category": "template, about-us"
+        },
+        {
+            "id": 18675,
+            "title": "about us 14",
+            "slug": "about-us-14-2",
+            "link": "https://studio.houzez.co/favethemes-blocks/about-us-14-2/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/10/about-us-page-14.png",
+            "type": "template",
+            "category": "template, about-us"
+        },
+        {
+            "id": 18661,
+            "title": "about us 13",
+            "slug": "about-us-13-2",
+            "link": "https://studio.houzez.co/favethemes-blocks/about-us-13-2/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/10/about-us-page-13.png",
+            "type": "template",
+            "category": "template, about-us"
+        },
+        {
+            "id": 18652,
+            "title": "about us 12",
+            "slug": "about-us-12-2",
+            "link": "https://studio.houzez.co/favethemes-blocks/about-us-12-2/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/10/about-us-page-12.png",
+            "type": "template",
+            "category": "template, about-us"
+        },
+        {
+            "id": 18645,
+            "title": "about us 11",
+            "slug": "about-us-11-2",
+            "link": "https://studio.houzez.co/favethemes-blocks/about-us-11-2/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/10/about-us-page-11.png",
+            "type": "template",
+            "category": "template, about-us"
+        },
+        {
+            "id": 18637,
+            "title": "about us 10",
+            "slug": "about-us-10-2",
+            "link": "https://studio.houzez.co/favethemes-blocks/about-us-10-2/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/10/about-us-page-10.png",
+            "type": "template",
+            "category": "template, about-us"
+        },
+        {
+            "id": 18617,
+            "title": "about us 09",
+            "slug": "about-us-09-2",
+            "link": "https://studio.houzez.co/favethemes-blocks/about-us-09-2/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/10/about-us-page-09.png",
+            "type": "template",
+            "category": "template, about-us"
+        },
+        {
+            "id": 18612,
+            "title": "about us 08",
+            "slug": "about-us-08-2",
+            "link": "https://studio.houzez.co/favethemes-blocks/about-us-08-2/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/10/about-us-page-08.png",
+            "type": "template",
+            "category": "template, about-us"
+        },
+        {
+            "id": 18597,
+            "title": "about us 07",
+            "slug": "about-us-07-2",
+            "link": "https://studio.houzez.co/favethemes-blocks/about-us-07-2/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/10/about-us-page-07.png",
+            "type": "template",
+            "category": "template, about-us"
+        },
+        {
+            "id": 18592,
+            "title": "about us 06",
+            "slug": "about-us-06-2",
+            "link": "https://studio.houzez.co/favethemes-blocks/about-us-06-2/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/10/about-us-page-06.png",
+            "type": "template",
+            "category": "template, about-us"
+        },
+        {
+            "id": 18567,
+            "title": "about us 04",
+            "slug": "about-us-03-3",
+            "link": "https://studio.houzez.co/favethemes-blocks/about-us-03-3/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/10/about-us-page-04.png",
+            "type": "template",
+            "category": "template, about-us"
+        },
+        {
+            "id": 18559,
+            "title": "about us 03",
+            "slug": "about-us-03-2",
+            "link": "https://studio.houzez.co/favethemes-blocks/about-us-03-2/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/10/about-us-page-03.png",
+            "type": "template",
+            "category": "template, about-us"
+        },
+        {
+            "id": 18544,
+            "title": "about us 02",
+            "slug": "about-us-02-2",
+            "link": "https://studio.houzez.co/favethemes-blocks/about-us-02-2/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/10/about-us-page-02.png",
+            "type": "template",
+            "category": "template, about-us"
+        },
+        {
+            "id": 18514,
+            "title": "about us 01",
+            "slug": "about-us-01-2",
+            "link": "https://studio.houzez.co/favethemes-blocks/about-us-01-2/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/10/about-us-page-01.png",
+            "type": "template",
+            "category": "template, about-us"
+        },
+        {
+            "id": 18107,
+            "title": "blog 06",
+            "slug": "blog-06",
+            "link": "https://studio.houzez.co/favethemes-blocks/blog-06/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2024/11/blog-block-06.png",
+            "type": "block",
+            "category": "block, blog"
+        },
+        {
+            "id": 18102,
+            "title": "blog 05",
+            "slug": "blog-05",
+            "link": "https://studio.houzez.co/favethemes-blocks/blog-05/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2024/11/blog-block-05.png",
+            "type": "block",
+            "category": "block, blog"
+        },
+        {
+            "id": 18096,
+            "title": "blog 04",
+            "slug": "blog-04",
+            "link": "https://studio.houzez.co/favethemes-blocks/blog-04/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2024/11/blog-block-04.png",
+            "type": "block",
+            "category": "block, blog"
+        },
+        {
+            "id": 18091,
+            "title": "blog 03",
+            "slug": "blog-03",
+            "link": "https://studio.houzez.co/favethemes-blocks/blog-03/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2024/11/blog-block-03.png",
+            "type": "block",
+            "category": "block, blog"
+        },
+        {
+            "id": 18086,
+            "title": "blog 02",
+            "slug": "blog-02",
+            "link": "https://studio.houzez.co/favethemes-blocks/blog-02/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2024/11/blog-block-02.png",
+            "type": "block",
+            "category": "block, blog"
+        },
+        {
+            "id": 18081,
+            "title": "blog 01",
+            "slug": "blog-01",
+            "link": "https://studio.houzez.co/favethemes-blocks/blog-01/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2024/11/blog-block-01.png",
+            "type": "block",
+            "category": "block, blog"
+        },
+        {
+            "id": 18076,
+            "title": "properties 20",
+            "slug": "properties-20",
+            "link": "https://studio.houzez.co/favethemes-blocks/properties-20/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/properties-20.png",
+            "type": "block",
+            "category": "block, properties"
+        },
+        {
+            "id": 18071,
+            "title": "properties 19",
+            "slug": "properties-19",
+            "link": "https://studio.houzez.co/favethemes-blocks/properties-19/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/properties-19.png",
+            "type": "block",
+            "category": "block, properties"
+        },
+        {
+            "id": 18061,
+            "title": "properties 18",
+            "slug": "properties-18",
+            "link": "https://studio.houzez.co/favethemes-blocks/properties-18/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/properties-18.png",
+            "type": "block",
+            "category": "block, properties"
+        },
+        {
+            "id": 18056,
+            "title": "properties 17",
+            "slug": "properties-17",
+            "link": "https://studio.houzez.co/favethemes-blocks/properties-17/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/properties-17.png",
+            "type": "block",
+            "category": "block, properties"
+        },
+        {
+            "id": 18031,
+            "title": "properties 16",
+            "slug": "properties-16",
+            "link": "https://studio.houzez.co/favethemes-blocks/properties-16/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/properties-16.png",
+            "type": "block",
+            "category": "block, properties"
+        },
+        {
+            "id": 18026,
+            "title": "properties 15",
+            "slug": "properties-15",
+            "link": "https://studio.houzez.co/favethemes-blocks/properties-15/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/properties-15.png",
+            "type": "block",
+            "category": "block, properties"
+        },
+        {
+            "id": 18021,
+            "title": "properties 14",
+            "slug": "properties-14",
+            "link": "https://studio.houzez.co/favethemes-blocks/properties-14/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/properties-14.png",
+            "type": "block",
+            "category": "block, properties"
+        },
+        {
+            "id": 18015,
+            "title": "properties 13",
+            "slug": "properties-13",
+            "link": "https://studio.houzez.co/favethemes-blocks/properties-13/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/properties-13.png",
+            "type": "block",
+            "category": "block, properties"
+        },
+        {
+            "id": 18002,
+            "title": "properties 12",
+            "slug": "properties-12",
+            "link": "https://studio.houzez.co/favethemes-blocks/properties-12/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/properties-12.png",
+            "type": "block",
+            "category": "block, properties"
+        },
+        {
+            "id": 17997,
+            "title": "properties 11",
+            "slug": "properties-11",
+            "link": "https://studio.houzez.co/favethemes-blocks/properties-11/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/properties-11.png",
+            "type": "block",
+            "category": "block, properties"
+        },
+        {
+            "id": 17992,
+            "title": "properties 10",
+            "slug": "properties-10",
+            "link": "https://studio.houzez.co/favethemes-blocks/properties-10/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/properties-10.png",
+            "type": "block",
+            "category": "block, properties"
+        },
+        {
+            "id": 17987,
+            "title": "properties 09",
+            "slug": "properties-09",
+            "link": "https://studio.houzez.co/favethemes-blocks/properties-09/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/properties-09.png",
+            "type": "block",
+            "category": "block, properties"
+        },
+        {
+            "id": 17982,
+            "title": "properties 08",
+            "slug": "properties-08",
+            "link": "https://studio.houzez.co/favethemes-blocks/properties-08/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/properties-08.png",
+            "type": "block",
+            "category": "block, properties"
+        },
+        {
+            "id": 17976,
+            "title": "properties 07",
+            "slug": "properties-07",
+            "link": "https://studio.houzez.co/favethemes-blocks/properties-07/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/properties-07.png",
+            "type": "block",
+            "category": "block, properties"
+        },
+        {
+            "id": 17965,
+            "title": "properties 06",
+            "slug": "properties-06",
+            "link": "https://studio.houzez.co/favethemes-blocks/properties-06/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/properties-06.png",
+            "type": "block",
+            "category": "block, properties"
+        },
+        {
+            "id": 17960,
+            "title": "properties 05",
+            "slug": "properties-05",
+            "link": "https://studio.houzez.co/favethemes-blocks/properties-05/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/properties-05.png",
+            "type": "block",
+            "category": "block, properties"
+        },
+        {
+            "id": 17947,
+            "title": "properties 04",
+            "slug": "properties-04",
+            "link": "https://studio.houzez.co/favethemes-blocks/properties-04/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/properties-04.png",
+            "type": "block",
+            "category": "block, properties"
+        },
+        {
+            "id": 17942,
+            "title": "properties 03",
+            "slug": "properties-03",
+            "link": "https://studio.houzez.co/favethemes-blocks/properties-03/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/properties-03.png",
+            "type": "block",
+            "category": "block, properties"
+        },
+        {
+            "id": 17937,
+            "title": "properties 02",
+            "slug": "properties-02",
+            "link": "https://studio.houzez.co/favethemes-blocks/properties-02/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/properties-02.png",
+            "type": "block",
+            "category": "block, properties"
+        },
+        {
+            "id": 17931,
+            "title": "properties 01",
+            "slug": "properties-01",
+            "link": "https://studio.houzez.co/favethemes-blocks/properties-01/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/properties-01.png",
+            "type": "block",
+            "category": "block, properties"
+        },
+        {
+            "id": 17925,
+            "title": "contact us 06",
+            "slug": "contact-us-06",
+            "link": "https://studio.houzez.co/favethemes-blocks/contact-us-06/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2024/11/contact-us-block-06.png",
+            "type": "block",
+            "category": "block, contact-us"
+        },
+        {
+            "id": 17918,
+            "title": "contact us 05",
+            "slug": "contact-us-05",
+            "link": "https://studio.houzez.co/favethemes-blocks/contact-us-05/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2024/11/contact-us-block-05.png",
+            "type": "block",
+            "category": "block, contact-us"
+        },
+        {
+            "id": 17913,
+            "title": "contact us 04",
+            "slug": "contact-us-04",
+            "link": "https://studio.houzez.co/favethemes-blocks/contact-us-04/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2024/11/contact-us-block-04.png",
+            "type": "block",
+            "category": "block, contact-us"
+        },
+        {
+            "id": 17906,
+            "title": "contact us 03",
+            "slug": "contact-us-03",
+            "link": "https://studio.houzez.co/favethemes-blocks/contact-us-03/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2024/11/contact-us-block-03.png",
+            "type": "block",
+            "category": "block, contact-us"
+        },
+        {
+            "id": 17899,
+            "title": "contact us 02",
+            "slug": "contact-us-02",
+            "link": "https://studio.houzez.co/favethemes-blocks/contact-us-02/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2024/11/contact-us-block-02.png",
+            "type": "block",
+            "category": "block, contact-us"
+        },
+        {
+            "id": 17892,
+            "title": "contact us 01",
+            "slug": "contact-us-01",
+            "link": "https://studio.houzez.co/favethemes-blocks/contact-us-01/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2024/11/contact-us-block-01.png",
+            "type": "block",
+            "category": "block, contact-us"
+        },
+        {
+            "id": 17887,
+            "title": "services 17",
+            "slug": "services-17",
+            "link": "https://studio.houzez.co/favethemes-blocks/services-17/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/services-17.png",
+            "type": "block",
+            "category": "block, services"
+        },
+        {
+            "id": 17881,
+            "title": "services 16",
+            "slug": "services-16",
+            "link": "https://studio.houzez.co/favethemes-blocks/services-16/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/services-16.png",
+            "type": "block",
+            "category": "block, services"
+        },
+        {
+            "id": 17871,
+            "title": "services 15",
+            "slug": "services-15",
+            "link": "https://studio.houzez.co/favethemes-blocks/services-15/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/services-15.png",
+            "type": "block",
+            "category": "block, services"
+        },
+        {
+            "id": 17863,
+            "title": "services 14",
+            "slug": "services-14",
+            "link": "https://studio.houzez.co/favethemes-blocks/services-14/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/services-14.png",
+            "type": "block",
+            "category": "block, services"
+        },
+        {
+            "id": 17858,
+            "title": "services 13",
+            "slug": "services-13",
+            "link": "https://studio.houzez.co/favethemes-blocks/services-13/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/services-13.png",
+            "type": "block",
+            "category": "block, services"
+        },
+        {
+            "id": 17852,
+            "title": "services 12",
+            "slug": "services-12",
+            "link": "https://studio.houzez.co/favethemes-blocks/services-12/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/services-12.png",
+            "type": "block",
+            "category": "block, services"
+        },
+        {
+            "id": 17847,
+            "title": "services 11",
+            "slug": "11",
+            "link": "https://studio.houzez.co/favethemes-blocks/11/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/services-11.png",
+            "type": "block",
+            "category": "block, services"
+        },
+        {
+            "id": 17838,
+            "title": "services 10",
+            "slug": "services-10",
+            "link": "https://studio.houzez.co/favethemes-blocks/services-10/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/services-10.png",
+            "type": "block",
+            "category": "block, services"
+        },
+        {
+            "id": 17833,
+            "title": "services 09",
+            "slug": "services-09",
+            "link": "https://studio.houzez.co/favethemes-blocks/services-09/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/services-09.png",
+            "type": "block",
+            "category": "block, services"
+        },
+        {
+            "id": 17824,
+            "title": "services 08",
+            "slug": "services-08",
+            "link": "https://studio.houzez.co/favethemes-blocks/services-08/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/services-08.png",
+            "type": "block",
+            "category": "block, services"
+        },
+        {
+            "id": 17813,
+            "title": "services 07",
+            "slug": "services-07",
+            "link": "https://studio.houzez.co/favethemes-blocks/services-07/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/services-07.png",
+            "type": "block",
+            "category": "block, services"
+        },
+        {
+            "id": 17800,
+            "title": "services 06",
+            "slug": "services-06",
+            "link": "https://studio.houzez.co/favethemes-blocks/services-06/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/services-06.png",
+            "type": "block",
+            "category": "block, services"
+        },
+        {
+            "id": 17792,
+            "title": "services 05",
+            "slug": "services-05",
+            "link": "https://studio.houzez.co/favethemes-blocks/services-05/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/services-05.png",
+            "type": "block",
+            "category": "block, services"
+        },
+        {
+            "id": 17786,
+            "title": "services 04",
+            "slug": "services-04",
+            "link": "https://studio.houzez.co/favethemes-blocks/services-04/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/services-04.png",
+            "type": "block",
+            "category": "block, services"
+        },
+        {
+            "id": 17780,
+            "title": "services 03",
+            "slug": "services-03",
+            "link": "https://studio.houzez.co/favethemes-blocks/services-03/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/services-03.png",
+            "type": "block",
+            "category": "block, services"
+        },
+        {
+            "id": 17770,
+            "title": "services 02",
+            "slug": "services-02",
+            "link": "https://studio.houzez.co/favethemes-blocks/services-02/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/services-02.png",
+            "type": "block",
+            "category": "block, services"
+        },
+        {
+            "id": 17763,
+            "title": "services 01",
+            "slug": "services-01",
+            "link": "https://studio.houzez.co/favethemes-blocks/services-01/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/services-01.png",
+            "type": "block",
+            "category": "block, services"
+        },
+        {
+            "id": 17756,
+            "title": "call to action 15",
+            "slug": "call-to-action-15",
+            "link": "https://studio.houzez.co/favethemes-blocks/call-to-action-15/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2024/11/call-to-actions-15.png",
+            "type": "block",
+            "category": "block, call-to-action"
+        },
+        {
+            "id": 17751,
+            "title": "call to action 14",
+            "slug": "call-to-action-14",
+            "link": "https://studio.houzez.co/favethemes-blocks/call-to-action-14/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2024/11/call-to-actions-14.png",
+            "type": "block",
+            "category": "block, call-to-action"
+        },
+        {
+            "id": 17745,
+            "title": "call to action 13",
+            "slug": "call-to-action-13",
+            "link": "https://studio.houzez.co/favethemes-blocks/call-to-action-13/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2024/11/call-to-actions-13.png",
+            "type": "block",
+            "category": "block, call-to-action"
+        },
+        {
+            "id": 17738,
+            "title": "call to action 12",
+            "slug": "call-to-action-12",
+            "link": "https://studio.houzez.co/favethemes-blocks/call-to-action-12/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2024/11/call-to-actions-12.png",
+            "type": "block",
+            "category": "block, call-to-action"
+        },
+        {
+            "id": 17730,
+            "title": "call to action 11",
+            "slug": "call-to-action-11",
+            "link": "https://studio.houzez.co/favethemes-blocks/call-to-action-11/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2024/11/call-to-actions-11.png",
+            "type": "block",
+            "category": "block, call-to-action"
+        },
+        {
+            "id": 17717,
+            "title": "call to action 09",
+            "slug": "call-to-action-09",
+            "link": "https://studio.houzez.co/favethemes-blocks/call-to-action-09/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2024/11/call-to-actions-09.png",
+            "type": "block",
+            "category": "block, call-to-action"
+        },
+        {
+            "id": 17712,
+            "title": "call to action 08",
+            "slug": "call-to-action-08",
+            "link": "https://studio.houzez.co/favethemes-blocks/call-to-action-08/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2024/11/call-to-actions-08.png",
+            "type": "block",
+            "category": "block, call-to-action"
+        },
+        {
+            "id": 17705,
+            "title": "call to action 07",
+            "slug": "call-to-action-07",
+            "link": "https://studio.houzez.co/favethemes-blocks/call-to-action-07/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2024/11/call-to-actions-07.png",
+            "type": "block",
+            "category": "block, call-to-action"
+        },
+        {
+            "id": 17698,
+            "title": "call to action 06",
+            "slug": "call-to-action-06",
+            "link": "https://studio.houzez.co/favethemes-blocks/call-to-action-06/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2024/11/call-to-actions-06.png",
+            "type": "block",
+            "category": "block, call-to-action"
+        },
+        {
+            "id": 17691,
+            "title": "call to action 05",
+            "slug": "call-to-action-05",
+            "link": "https://studio.houzez.co/favethemes-blocks/call-to-action-05/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2024/11/call-to-actions-05.png",
+            "type": "block",
+            "category": "block, call-to-action"
+        },
+        {
+            "id": 17681,
+            "title": "call to action 04",
+            "slug": "call-to-action-04",
+            "link": "https://studio.houzez.co/favethemes-blocks/call-to-action-04/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2024/11/call-to-actions-04.png",
+            "type": "block",
+            "category": "block, call-to-action"
+        },
+        {
+            "id": 17674,
+            "title": "call to action 03",
+            "slug": "call-to-action-03",
+            "link": "https://studio.houzez.co/favethemes-blocks/call-to-action-03/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2024/11/call-to-actions-03.png",
+            "type": "block",
+            "category": "block, call-to-action"
+        },
+        {
+            "id": 17665,
+            "title": "call to action 02",
+            "slug": "call-to-action-02",
+            "link": "https://studio.houzez.co/favethemes-blocks/call-to-action-02/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2024/11/call-to-actions-02.png",
+            "type": "block",
+            "category": "block, call-to-action"
+        },
+        {
+            "id": 17657,
+            "title": "call to action 01",
+            "slug": "call-to-action-01",
+            "link": "https://studio.houzez.co/favethemes-blocks/call-to-action-01/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2024/11/call-to-actions-01.png",
+            "type": "block",
+            "category": "block, call-to-action"
+        },
+        {
+            "id": 17413,
+            "title": "inquiry form 10",
+            "slug": "inquiry-form-11",
+            "link": "https://studio.houzez.co/favethemes-blocks/inquiry-form-11/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/inquiry-form-10.png",
+            "type": "block",
+            "category": "block, inquiry-form"
+        },
+        {
+            "id": 17398,
+            "title": "inquiry form 09",
+            "slug": "inquiry-form-09",
+            "link": "https://studio.houzez.co/favethemes-blocks/inquiry-form-09/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/inquiry-form-09.png",
+            "type": "block",
+            "category": "block, inquiry-form"
+        },
+        {
+            "id": 17384,
+            "title": "inquiry form 08",
+            "slug": "inquiry-form-08",
+            "link": "https://studio.houzez.co/favethemes-blocks/inquiry-form-08/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/inquiry-form-08.png",
+            "type": "block",
+            "category": "block, inquiry-form"
+        },
+        {
+            "id": 17374,
+            "title": "inquiry form 07",
+            "slug": "inquiry-form-07",
+            "link": "https://studio.houzez.co/favethemes-blocks/inquiry-form-07/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/inquiry-form-07.png",
+            "type": "block",
+            "category": "block, inquiry-form"
+        },
+        {
+            "id": 17368,
+            "title": "inquiry form 06",
+            "slug": "inquiry-form-06",
+            "link": "https://studio.houzez.co/favethemes-blocks/inquiry-form-06/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/inquiry-form-06.png",
+            "type": "block",
+            "category": "block, inquiry-form"
+        },
+        {
+            "id": 17362,
+            "title": "inquiry form 05",
+            "slug": "inquiry-form-05",
+            "link": "https://studio.houzez.co/favethemes-blocks/inquiry-form-05/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/inquiry-form-05.png",
+            "type": "block",
+            "category": "block, inquiry-form"
+        },
+        {
+            "id": 17352,
+            "title": "inquiry form 04",
+            "slug": "inquiry-form-04",
+            "link": "https://studio.houzez.co/favethemes-blocks/inquiry-form-04/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/inquiry-form-04.png",
+            "type": "block",
+            "category": "block, inquiry-form"
+        },
+        {
+            "id": 17346,
+            "title": "inquiry form 03",
+            "slug": "inquiry-form-03",
+            "link": "https://studio.houzez.co/favethemes-blocks/inquiry-form-03/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/inquiry-form-03.png",
+            "type": "block",
+            "category": "block, inquiry-form"
+        },
+        {
+            "id": 17339,
+            "title": "inquiry form 02",
+            "slug": "inquiry-form-02",
+            "link": "https://studio.houzez.co/favethemes-blocks/inquiry-form-02/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/inquiry-form-02.png",
+            "type": "block",
+            "category": "block, inquiry-form"
+        },
+        {
+            "id": 17333,
+            "title": "inquiry form 01",
+            "slug": "inquiry-form-01",
+            "link": "https://studio.houzez.co/favethemes-blocks/inquiry-form-01/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/inquiry-form-01.png",
+            "type": "block",
+            "category": "block, inquiry-form"
+        },
+        {
+            "id": 17327,
+            "title": "about us &#8211; block 14",
+            "slug": "about-us-14",
+            "link": "https://studio.houzez.co/favethemes-blocks/about-us-14/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/about-us-14-1.png",
+            "type": "block",
+            "category": "block, about-us"
+        },
+        {
+            "id": 17320,
+            "title": "about us &#8211; block 13",
+            "slug": "about-us-13",
+            "link": "https://studio.houzez.co/favethemes-blocks/about-us-13/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/about-us-13-1.png",
+            "type": "block",
+            "category": "block, about-us"
+        },
+        {
+            "id": 17312,
+            "title": "about us &#8211; block 12",
+            "slug": "about-us-12",
+            "link": "https://studio.houzez.co/favethemes-blocks/about-us-12/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/about-us-12-1.png",
+            "type": "block",
+            "category": "block, about-us"
+        },
+        {
+            "id": 17304,
+            "title": "about us &#8211; block 11",
+            "slug": "about-us-11",
+            "link": "https://studio.houzez.co/favethemes-blocks/about-us-11/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/about-us-11-1.png",
+            "type": "block",
+            "category": "block, about-us"
+        },
+        {
+            "id": 17297,
+            "title": "about us &#8211; block 10",
+            "slug": "about-us-10",
+            "link": "https://studio.houzez.co/favethemes-blocks/about-us-10/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/about-us-10-1.png",
+            "type": "block",
+            "category": "block, about-us"
+        },
+        {
+            "id": 17290,
+            "title": "about us &#8211; block 09",
+            "slug": "about-us-09",
+            "link": "https://studio.houzez.co/favethemes-blocks/about-us-09/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/about-us-09-1.png",
+            "type": "block",
+            "category": "block, about-us"
+        },
+        {
+            "id": 17284,
+            "title": "about us &#8211; block 08",
+            "slug": "about-us-08",
+            "link": "https://studio.houzez.co/favethemes-blocks/about-us-08/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/about-us-08-1.png",
+            "type": "block",
+            "category": "block, about-us"
+        },
+        {
+            "id": 17269,
+            "title": "about us &#8211; block 07",
+            "slug": "about-us-07",
+            "link": "https://studio.houzez.co/favethemes-blocks/about-us-07/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/about-us-07a.png",
+            "type": "block",
+            "category": "block, about-us"
+        },
+        {
+            "id": 17259,
+            "title": "about us &#8211; block 06",
+            "slug": "about-us-06",
+            "link": "https://studio.houzez.co/favethemes-blocks/about-us-06/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/about-us-06a.png",
+            "type": "block",
+            "category": "block, about-us"
+        },
+        {
+            "id": 17253,
+            "title": "about us &#8211; block 05",
+            "slug": "about-us-05",
+            "link": "https://studio.houzez.co/favethemes-blocks/about-us-05/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/about-us-05a.png",
+            "type": "block",
+            "category": "block, about-us"
+        },
+        {
+            "id": 17242,
+            "title": "about us &#8211; block 04",
+            "slug": "about-us-04",
+            "link": "https://studio.houzez.co/favethemes-blocks/about-us-04/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/about-us-04.png",
+            "type": "block",
+            "category": "block, about-us"
+        },
+        {
+            "id": 17235,
+            "title": "about us &#8211; block 03",
+            "slug": "about-us-03",
+            "link": "https://studio.houzez.co/favethemes-blocks/about-us-03/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/about-us-03a.png",
+            "type": "block",
+            "category": "block, about-us"
+        },
+        {
+            "id": 17228,
+            "title": "about us &#8211; block 02",
+            "slug": "about-us-02",
+            "link": "https://studio.houzez.co/favethemes-blocks/about-us-02/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/about-us-02a.png",
+            "type": "block",
+            "category": "block, about-us"
+        },
+        {
+            "id": 17222,
+            "title": "about us &#8211; block 01",
+            "slug": "about-us-01",
+            "link": "https://studio.houzez.co/favethemes-blocks/about-us-01/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/about-us-01a.png",
+            "type": "block",
+            "category": "block, about-us"
+        },
+        {
+            "id": 17212,
+            "title": "team 07",
+            "slug": "team-07",
+            "link": "https://studio.houzez.co/favethemes-blocks/team-07/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/team-07.png",
+            "type": "block",
+            "category": "block, team"
+        },
+        {
+            "id": 17202,
+            "title": "team 06",
+            "slug": "team-06",
+            "link": "https://studio.houzez.co/favethemes-blocks/team-06/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/team-06.png",
+            "type": "block",
+            "category": "block, team"
+        },
+        {
+            "id": 17189,
+            "title": "team 05",
+            "slug": "team-05",
+            "link": "https://studio.houzez.co/favethemes-blocks/team-05/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/team-05.png",
+            "type": "block",
+            "category": "block, team"
+        },
+        {
+            "id": 17179,
+            "title": "team 04",
+            "slug": "team-04",
+            "link": "https://studio.houzez.co/favethemes-blocks/team-04/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/team-04.png",
+            "type": "block",
+            "category": "block, team"
+        },
+        {
+            "id": 17163,
+            "title": "team 03",
+            "slug": "team-03",
+            "link": "https://studio.houzez.co/favethemes-blocks/team-03/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/team-03.png",
+            "type": "block",
+            "category": "block, team"
+        },
+        {
+            "id": 17154,
+            "title": "team 02",
+            "slug": "team-02",
+            "link": "https://studio.houzez.co/favethemes-blocks/team-02/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/team-02.png",
+            "type": "block",
+            "category": "block, team"
+        },
+        {
+            "id": 17148,
+            "title": "team 01",
+            "slug": "team-01",
+            "link": "https://studio.houzez.co/favethemes-blocks/team-01/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/team-01.png",
+            "type": "block",
+            "category": "block, team"
+        },
+        {
+            "id": 17139,
+            "title": "testimonials 08",
+            "slug": "testimonials-08",
+            "link": "https://studio.houzez.co/favethemes-blocks/testimonials-08/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/testimonials-08.png",
+            "type": "block",
+            "category": "block, testimonials"
+        },
+        {
+            "id": 17129,
+            "title": "testimonials 07",
+            "slug": "testimonials-07",
+            "link": "https://studio.houzez.co/favethemes-blocks/testimonials-07/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/testimonials-07.png",
+            "type": "block",
+            "category": "block, testimonials"
+        },
+        {
+            "id": 17118,
+            "title": "testimonials 06",
+            "slug": "testimonials-06",
+            "link": "https://studio.houzez.co/favethemes-blocks/testimonials-06/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/testimonials-06.png",
+            "type": "block",
+            "category": "block, testimonials"
+        },
+        {
+            "id": 17109,
+            "title": "testimonials 05",
+            "slug": "testimonials-05",
+            "link": "https://studio.houzez.co/favethemes-blocks/testimonials-05/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/testimonials-05.png",
+            "type": "block",
+            "category": "block, testimonials"
+        },
+        {
+            "id": 17103,
+            "title": "testimonials 04",
+            "slug": "testimonials-04",
+            "link": "https://studio.houzez.co/favethemes-blocks/testimonials-04/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/testimonials-04.png",
+            "type": "block",
+            "category": "block, testimonials"
+        },
+        {
+            "id": 17097,
+            "title": "testimonials 03",
+            "slug": "testimonials-03",
+            "link": "https://studio.houzez.co/favethemes-blocks/testimonials-03/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/testimonials-03.png",
+            "type": "block",
+            "category": "block, testimonials"
+        },
+        {
+            "id": 17091,
+            "title": "testimonials 02",
+            "slug": "testimonials-02",
+            "link": "https://studio.houzez.co/favethemes-blocks/testimonials-02/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/testimonials-02.png",
+            "type": "block",
+            "category": "block, testimonials"
+        },
+        {
+            "id": 17085,
+            "title": "testimonials 01",
+            "slug": "testimonials-01",
+            "link": "https://studio.houzez.co/favethemes-blocks/testimonials-01/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/testimonials-01.png",
+            "type": "block",
+            "category": "block, testimonials"
+        },
+        {
+            "id": 17079,
+            "title": "agents 08",
+            "slug": "agents-08",
+            "link": "https://studio.houzez.co/favethemes-blocks/agents-08/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2024/11/agent-block-08.png",
+            "type": "block",
+            "category": "block, agents"
+        },
+        {
+            "id": 17073,
+            "title": "agents 07",
+            "slug": "agents-07",
+            "link": "https://studio.houzez.co/favethemes-blocks/agents-07/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2024/11/agent-block-07.png",
+            "type": "block",
+            "category": "block, agents"
+        },
+        {
+            "id": 17066,
+            "title": "agents 06",
+            "slug": "agents-06",
+            "link": "https://studio.houzez.co/favethemes-blocks/agents-06/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2024/11/agent-block-06.png",
+            "type": "block",
+            "category": "block, agents"
+        },
+        {
+            "id": 17045,
+            "title": "agents 05",
+            "slug": "agents-05",
+            "link": "https://studio.houzez.co/favethemes-blocks/agents-05/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2024/11/agent-block-05.png",
+            "type": "block",
+            "category": "block, agents"
+        },
+        {
+            "id": 17038,
+            "title": "agents 04",
+            "slug": "agents-04",
+            "link": "https://studio.houzez.co/favethemes-blocks/agents-04/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2024/11/agent-block-04.png",
+            "type": "block",
+            "category": "block, agents"
+        },
+        {
+            "id": 17033,
+            "title": "agents 03",
+            "slug": "agents-03",
+            "link": "https://studio.houzez.co/favethemes-blocks/agents-03/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2024/11/agent-block-03.png",
+            "type": "block",
+            "category": "block, agents"
+        },
+        {
+            "id": 17387,
+            "title": "agents 02",
+            "slug": "agents-02",
+            "link": "https://studio.houzez.co/favethemes-blocks/agents-02/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2024/11/agent-block-02.png",
+            "type": "block",
+            "category": "block, agents"
+        },
+        {
+            "id": 16989,
+            "title": "agents 01",
+            "slug": "agents-01",
+            "link": "https://studio.houzez.co/favethemes-blocks/agents-01/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2024/11/agent-block-01.png",
+            "type": "block",
+            "category": "block, agents"
+        },
+        {
+            "id": 2243,
+            "title": "hero 46",
+            "slug": "hero-46",
+            "link": "https://studio.houzez.co/favethemes-blocks/hero-46/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/hero-46.png",
+            "type": "block",
+            "category": "block, hero"
+        },
+        {
+            "id": 2232,
+            "title": "hero 45",
+            "slug": "hero-45",
+            "link": "https://studio.houzez.co/favethemes-blocks/hero-45/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/hero-45.png",
+            "type": "block",
+            "category": "block, hero"
+        },
+        {
+            "id": 2224,
+            "title": "hero 44",
+            "slug": "hero-44",
+            "link": "https://studio.houzez.co/favethemes-blocks/hero-44/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/hero-44.png",
+            "type": "block",
+            "category": "block, hero"
+        },
+        {
+            "id": 2214,
+            "title": "hero 43",
+            "slug": "hero-43",
+            "link": "https://studio.houzez.co/favethemes-blocks/hero-43/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/hero-43.png",
+            "type": "block",
+            "category": "block, hero"
+        },
+        {
+            "id": 2206,
+            "title": "hero 42",
+            "slug": "hero-42",
+            "link": "https://studio.houzez.co/favethemes-blocks/hero-42/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/hero-42.png",
+            "type": "block",
+            "category": "block, hero"
+        },
+        {
+            "id": 2199,
+            "title": "hero 41",
+            "slug": "hero-41",
+            "link": "https://studio.houzez.co/favethemes-blocks/hero-41/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/hero-41.png",
+            "type": "block",
+            "category": "block, hero"
+        },
+        {
+            "id": 2192,
+            "title": "hero 40",
+            "slug": "hero-40",
+            "link": "https://studio.houzez.co/favethemes-blocks/hero-40/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/hero-40.png",
+            "type": "block",
+            "category": "block, hero"
+        },
+        {
+            "id": 2181,
+            "title": "hero 39",
+            "slug": "hero-39",
+            "link": "https://studio.houzez.co/favethemes-blocks/hero-39/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/hero-39.png",
+            "type": "block",
+            "category": "block, hero"
+        },
+        {
+            "id": 2171,
+            "title": "hero 38",
+            "slug": "hero-38",
+            "link": "https://studio.houzez.co/favethemes-blocks/hero-38/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/hero-38.png",
+            "type": "block",
+            "category": "block, hero"
+        },
+        {
+            "id": 2164,
+            "title": "hero 37",
+            "slug": "hero-37",
+            "link": "https://studio.houzez.co/favethemes-blocks/hero-37/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/hero-37.png",
+            "type": "block",
+            "category": "block, hero"
+        },
+        {
+            "id": 2154,
+            "title": "hero 36",
+            "slug": "hero-36",
+            "link": "https://studio.houzez.co/favethemes-blocks/hero-36/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/hero-36.png",
+            "type": "block",
+            "category": "block, hero"
+        },
+        {
+            "id": 2147,
+            "title": "hero 35",
+            "slug": "hero-35",
+            "link": "https://studio.houzez.co/favethemes-blocks/hero-35/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/hero-35.png",
+            "type": "block",
+            "category": "block, hero"
+        },
+        {
+            "id": 2136,
+            "title": "hero 34",
+            "slug": "hero-34",
+            "link": "https://studio.houzez.co/favethemes-blocks/hero-34/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/hero-34.png",
+            "type": "block",
+            "category": "block, hero"
+        },
+        {
+            "id": 2128,
+            "title": "hero 33",
+            "slug": "hero-33",
+            "link": "https://studio.houzez.co/favethemes-blocks/hero-33/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/hero-33.png",
+            "type": "block",
+            "category": "block, hero"
+        },
+        {
+            "id": 2120,
+            "title": "hero 32",
+            "slug": "hero-32",
+            "link": "https://studio.houzez.co/favethemes-blocks/hero-32/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/hero-32.png",
+            "type": "block",
+            "category": "block, hero"
+        },
+        {
+            "id": 2110,
+            "title": "hero 31",
+            "slug": "hero-31",
+            "link": "https://studio.houzez.co/favethemes-blocks/hero-31/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/hero-31.png",
+            "type": "block",
+            "category": "block, hero"
+        },
+        {
+            "id": 2102,
+            "title": "hero 30",
+            "slug": "hero-30",
+            "link": "https://studio.houzez.co/favethemes-blocks/hero-30/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/hero-30.png",
+            "type": "block",
+            "category": "block, hero"
+        },
+        {
+            "id": 2093,
+            "title": "hero 29",
+            "slug": "hero",
+            "link": "https://studio.houzez.co/favethemes-blocks/hero/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/hero-29.png",
+            "type": "block",
+            "category": "block, hero"
+        },
+        {
+            "id": 2086,
+            "title": "hero 28",
+            "slug": "hero-28",
+            "link": "https://studio.houzez.co/favethemes-blocks/hero-28/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/hero-28.png",
+            "type": "block",
+            "category": "block, hero"
+        },
+        {
+            "id": 2078,
+            "title": "hero 27",
+            "slug": "hero-27",
+            "link": "https://studio.houzez.co/favethemes-blocks/hero-27/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/hero-27.png",
+            "type": "block",
+            "category": "block, hero"
+        },
+        {
+            "id": 2068,
+            "title": "hero 26",
+            "slug": "hero-26",
+            "link": "https://studio.houzez.co/favethemes-blocks/hero-26/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/hero-26.png",
+            "type": "block",
+            "category": "block, hero"
+        },
+        {
+            "id": 2059,
+            "title": "hero 25",
+            "slug": "hero-25",
+            "link": "https://studio.houzez.co/favethemes-blocks/hero-25/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/hero-25-1.png",
+            "type": "block",
+            "category": "block, hero"
+        },
+        {
+            "id": 2051,
+            "title": "hero 24",
+            "slug": "hero-24",
+            "link": "https://studio.houzez.co/favethemes-blocks/hero-24/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/hero-24.png",
+            "type": "block",
+            "category": "block, hero"
+        },
+        {
+            "id": 2043,
+            "title": "hero 23",
+            "slug": "hero-23",
+            "link": "https://studio.houzez.co/favethemes-blocks/hero-23/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/hero-23.png",
+            "type": "block",
+            "category": "block, hero"
+        },
+        {
+            "id": 2032,
+            "title": "hero 22",
+            "slug": "hero-22",
+            "link": "https://studio.houzez.co/favethemes-blocks/hero-22/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/hero-22.png",
+            "type": "block",
+            "category": "block, hero"
+        },
+        {
+            "id": 2022,
+            "title": "hero 21",
+            "slug": "hero-21",
+            "link": "https://studio.houzez.co/favethemes-blocks/hero-21/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/hero-21.png",
+            "type": "block",
+            "category": "block, hero"
+        },
+        {
+            "id": 2015,
+            "title": "hero 20",
+            "slug": "hero-20",
+            "link": "https://studio.houzez.co/favethemes-blocks/hero-20/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/hero-20.png",
+            "type": "block",
+            "category": "block, hero"
+        },
+        {
+            "id": 2008,
+            "title": "hero 19",
+            "slug": "hero-19",
+            "link": "https://studio.houzez.co/favethemes-blocks/hero-19/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/hero-19.png",
+            "type": "block",
+            "category": "block, hero"
+        },
+        {
+            "id": 2001,
+            "title": "hero 18",
+            "slug": "hero-18",
+            "link": "https://studio.houzez.co/favethemes-blocks/hero-18/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/hero-18.png",
+            "type": "block",
+            "category": "block, hero"
+        },
+        {
+            "id": 1994,
+            "title": "hero 17",
+            "slug": "hero-17",
+            "link": "https://studio.houzez.co/favethemes-blocks/hero-17/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/hero-17.png",
+            "type": "block",
+            "category": "block, hero"
+        },
+        {
+            "id": 1987,
+            "title": "hero 16",
+            "slug": "hero-16",
+            "link": "https://studio.houzez.co/favethemes-blocks/hero-16/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/hero-16.png",
+            "type": "block",
+            "category": "block, hero"
+        },
+        {
+            "id": 1980,
+            "title": "hero 15",
+            "slug": "hero-15",
+            "link": "https://studio.houzez.co/favethemes-blocks/hero-15/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/hero-15.png",
+            "type": "block",
+            "category": "block, hero"
+        },
+        {
+            "id": 1973,
+            "title": "hero 14",
+            "slug": "hero-14",
+            "link": "https://studio.houzez.co/favethemes-blocks/hero-14/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/hero-14.png",
+            "type": "block",
+            "category": "block, hero"
+        },
+        {
+            "id": 1966,
+            "title": "hero 13",
+            "slug": "hero-13",
+            "link": "https://studio.houzez.co/favethemes-blocks/hero-13/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/hero-13.png",
+            "type": "block",
+            "category": "block, hero"
+        },
+        {
+            "id": 1955,
+            "title": "hero 12",
+            "slug": "hero-12",
+            "link": "https://studio.houzez.co/favethemes-blocks/hero-12/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/hero-12.png",
+            "type": "block",
+            "category": "block, hero"
+        },
+        {
+            "id": 1947,
+            "title": "hero 11",
+            "slug": "hero-11",
+            "link": "https://studio.houzez.co/favethemes-blocks/hero-11/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/hero-11.png",
+            "type": "block",
+            "category": "block, hero"
+        },
+        {
+            "id": 1940,
+            "title": "hero 10",
+            "slug": "hero-10",
+            "link": "https://studio.houzez.co/favethemes-blocks/hero-10/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/hero-10.png",
+            "type": "block",
+            "category": "block, hero"
+        },
+        {
+            "id": 1933,
+            "title": "hero 09",
+            "slug": "hero-09",
+            "link": "https://studio.houzez.co/favethemes-blocks/hero-09/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/hero-09.png",
+            "type": "block",
+            "category": "block, hero"
+        },
+        {
+            "id": 1925,
+            "title": "hero 08",
+            "slug": "hero-08",
+            "link": "https://studio.houzez.co/favethemes-blocks/hero-08/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/hero-08.png",
+            "type": "block",
+            "category": "block, hero"
+        },
+        {
+            "id": 1916,
+            "title": "hero 07",
+            "slug": "hero-07",
+            "link": "https://studio.houzez.co/favethemes-blocks/hero-07/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/hero-07.png",
+            "type": "block",
+            "category": "block, hero"
+        },
+        {
+            "id": 1903,
+            "title": "hero 06",
+            "slug": "hero-06",
+            "link": "https://studio.houzez.co/favethemes-blocks/hero-06/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/hero-06.png",
+            "type": "block",
+            "category": "block, hero"
+        },
+        {
+            "id": 1895,
+            "title": "hero 05",
+            "slug": "hero-05",
+            "link": "https://studio.houzez.co/favethemes-blocks/hero-05/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/hero-05.png",
+            "type": "block",
+            "category": "block, hero"
+        },
+        {
+            "id": 1887,
+            "title": "hero 04",
+            "slug": "hero-04",
+            "link": "https://studio.houzez.co/favethemes-blocks/hero-04/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/hero-04.png",
+            "type": "block",
+            "category": "block, hero"
+        },
+        {
+            "id": 1876,
+            "title": "hero 03",
+            "slug": "hero-03",
+            "link": "https://studio.houzez.co/favethemes-blocks/hero-03/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/hero-03.png",
+            "type": "block",
+            "category": "block, hero"
+        },
+        {
+            "id": 1866,
+            "title": "hero 02",
+            "slug": "hero-02",
+            "link": "https://studio.houzez.co/favethemes-blocks/hero-02/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/hero-02.png",
+            "type": "block",
+            "category": "block, hero"
+        },
+        {
+            "id": 1857,
+            "title": "hero 01",
+            "slug": "hero-01",
+            "link": "https://studio.houzez.co/favethemes-blocks/hero-01/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/hero-01.png",
+            "type": "block",
+            "category": "block, hero"
+        },
+        {
+            "id": 1833,
+            "title": "grid 20",
+            "slug": "grid-20",
+            "link": "https://studio.houzez.co/favethemes-blocks/grid-20/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/grid-20.png",
+            "type": "block",
+            "category": "block, grid"
+        },
+        {
+            "id": 1818,
+            "title": "grid 19",
+            "slug": "grid-19",
+            "link": "https://studio.houzez.co/favethemes-blocks/grid-19/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/grid-19.png",
+            "type": "block",
+            "category": "block, grid"
+        },
+        {
+            "id": 1799,
+            "title": "grid 18",
+            "slug": "grid-18",
+            "link": "https://studio.houzez.co/favethemes-blocks/grid-18/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/grid-18.png",
+            "type": "block",
+            "category": "block, grid"
+        },
+        {
+            "id": 1788,
+            "title": "grid 17",
+            "slug": "grid-17",
+            "link": "https://studio.houzez.co/favethemes-blocks/grid-17/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/grid-17.png",
+            "type": "block",
+            "category": "block, grid"
+        },
+        {
+            "id": 1775,
+            "title": "grid 16",
+            "slug": "grid-16",
+            "link": "https://studio.houzez.co/favethemes-blocks/grid-16/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/grid-16.png",
+            "type": "block",
+            "category": "block, grid"
+        },
+        {
+            "id": 1759,
+            "title": "grid 15",
+            "slug": "grid-15",
+            "link": "https://studio.houzez.co/favethemes-blocks/grid-15/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/grid-15.png",
+            "type": "block",
+            "category": "block, grid"
+        },
+        {
+            "id": 1743,
+            "title": "grid 14",
+            "slug": "grid-14",
+            "link": "https://studio.houzez.co/favethemes-blocks/grid-14/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/grid-14.png",
+            "type": "block",
+            "category": "block, grid"
+        },
+        {
+            "id": 1723,
+            "title": "grid 13",
+            "slug": "grid-13",
+            "link": "https://studio.houzez.co/favethemes-blocks/grid-13/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/grid-13.png",
+            "type": "block",
+            "category": "block, grid"
+        },
+        {
+            "id": 1669,
+            "title": "grid 12",
+            "slug": "grid-12",
+            "link": "https://studio.houzez.co/favethemes-blocks/grid-12/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/grid-12.png",
+            "type": "block",
+            "category": "block, grid"
+        },
+        {
+            "id": 1648,
+            "title": "grid 11",
+            "slug": "grid-11",
+            "link": "https://studio.houzez.co/favethemes-blocks/grid-11/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/grid-11.png",
+            "type": "block",
+            "category": "block, grid"
+        },
+        {
+            "id": 1635,
+            "title": "grid 10",
+            "slug": "grid-10",
+            "link": "https://studio.houzez.co/favethemes-blocks/grid-10/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/09/grid-10.png",
+            "type": "block",
+            "category": "block, grid"
+        },
+        {
+            "id": 1611,
+            "title": "grid 9",
+            "slug": "grid-9",
+            "link": "https://studio.houzez.co/favethemes-blocks/grid-9/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/08/grid-09.png",
+            "type": "block",
+            "category": "block, grid"
+        },
+        {
+            "id": 1597,
+            "title": "grid 8",
+            "slug": "grid-8",
+            "link": "https://studio.houzez.co/favethemes-blocks/grid-8/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/08/grid-08.png",
+            "type": "block",
+            "category": "block, grid"
+        },
+        {
+            "id": 1590,
+            "title": "grid 7",
+            "slug": "grid-7",
+            "link": "https://studio.houzez.co/favethemes-blocks/grid-7/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/08/grid-07.png",
+            "type": "block",
+            "category": "block, grid"
+        },
+        {
+            "id": 1579,
+            "title": "grid 6",
+            "slug": "grid-6",
+            "link": "https://studio.houzez.co/favethemes-blocks/grid-6/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/08/grid-06.png",
+            "type": "block",
+            "category": "block, grid"
+        },
+        {
+            "id": 1565,
+            "title": "grid 5",
+            "slug": "grid-5",
+            "link": "https://studio.houzez.co/favethemes-blocks/grid-5/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/08/grid-05.png",
+            "type": "block",
+            "category": "block, grid"
+        },
+        {
+            "id": 1545,
+            "title": "grid 4",
+            "slug": "grid-4",
+            "link": "https://studio.houzez.co/favethemes-blocks/grid-4/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/08/grid-04.png",
+            "type": "block",
+            "category": "block, grid"
+        },
+        {
+            "id": 1526,
+            "title": "grid 3",
+            "slug": "grid-3",
+            "link": "https://studio.houzez.co/favethemes-blocks/grid-3/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/08/grid-03.png",
+            "type": "block",
+            "category": "block, grid"
+        },
+        {
+            "id": 1504,
+            "title": "grid 2",
+            "slug": "grid-2",
+            "link": "https://studio.houzez.co/favethemes-blocks/grid-2/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/08/grid-02.png",
+            "type": "block",
+            "category": "block, grid"
+        },
+        {
+            "id": 1484,
+            "title": "grid 1",
+            "slug": "grid-1",
+            "link": "https://studio.houzez.co/favethemes-blocks/grid-1/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/08/grid-01.png",
+            "type": "block",
+            "category": "block, grid"
+        },
+        {
+            "id": 1335,
+            "title": "homepage &#8211; demo 34",
+            "slug": "homepage-demo-34",
+            "link": "https://studio.houzez.co/favethemes-blocks/homepage-demo-34/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/08/demo34.houzez.co_.png",
+            "type": "template",
+            "category": ""
+        },
+        {
+            "id": 1329,
+            "title": "homepage &#8211; demo 33",
+            "slug": "homepage-demo-33",
+            "link": "https://studio.houzez.co/favethemes-blocks/homepage-demo-33/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/08/demo33.houzez.co_.png",
+            "type": "template",
+            "category": ""
+        },
+        {
+            "id": 1324,
+            "title": "homepage 03 &#8211; demo 32 (rtl)",
+            "slug": "homepage-03-demo-32-rtl",
+            "link": "https://studio.houzez.co/favethemes-blocks/homepage-03-demo-32-rtl/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/08/demo32.houzez.co_homepage-03_.png",
+            "type": "template",
+            "category": ""
+        },
+        {
+            "id": 1319,
+            "title": "homepage 02 &#8211; demo 32 (rtl)",
+            "slug": "homepage-02-demo-32-rtl",
+            "link": "https://studio.houzez.co/favethemes-blocks/homepage-02-demo-32-rtl/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/08/demo32.houzez.co_homepage-02_.png",
+            "type": "template",
+            "category": ""
+        },
+        {
+            "id": 1314,
+            "title": "homepage 01 &#8211; demo 32 (rtl)",
+            "slug": "homepage-01-demo-32-rtl",
+            "link": "https://studio.houzez.co/favethemes-blocks/homepage-01-demo-32-rtl/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/08/demo32.houzez.co_homepage-01_.png",
+            "type": "template",
+            "category": ""
+        },
+        {
+            "id": 1309,
+            "title": "homepage 03 &#8211; demo 31 (rtl)",
+            "slug": "homepage-03-demo-31-rtl",
+            "link": "https://studio.houzez.co/favethemes-blocks/homepage-03-demo-31-rtl/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/08/demo31.houzez.co_homepage-03_.png",
+            "type": "template",
+            "category": ""
+        },
+        {
+            "id": 1304,
+            "title": "homepage 02 &#8211; demo 31 (rtl)",
+            "slug": "homepage-02-demo-31-rtl",
+            "link": "https://studio.houzez.co/favethemes-blocks/homepage-02-demo-31-rtl/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/08/demo31.houzez.co_homepage-02_.png",
+            "type": "template",
+            "category": ""
+        },
+        {
+            "id": 1299,
+            "title": "homepage 01 &#8211; demo 31 (rtl)",
+            "slug": "homepage-01-demo-31-rtl",
+            "link": "https://studio.houzez.co/favethemes-blocks/homepage-01-demo-31-rtl/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/08/demo31.houzez.co_homepage-01_.png",
+            "type": "template",
+            "category": ""
+        },
+        {
+            "id": 1291,
+            "title": "homepage 03 &#8211; demo 30 (rtl)",
+            "slug": "homepage-03-demo-30-rtl",
+            "link": "https://studio.houzez.co/favethemes-blocks/homepage-03-demo-30-rtl/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/08/demo30.houzez.co_homepage-03_1.png",
+            "type": "template",
+            "category": ""
+        },
+        {
+            "id": 1190,
+            "title": "homepage 02 &#8211; demo 30 (rtl)",
+            "slug": "homepage-02-demo-30-rtl",
+            "link": "https://studio.houzez.co/favethemes-blocks/homepage-02-demo-30-rtl/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/08/demo30.houzez.co_homepage-02_.png",
+            "type": "template",
+            "category": ""
+        },
+        {
+            "id": 1182,
+            "title": "homepage 01 &#8211; demo 30 (rtl)",
+            "slug": "homepage-01-demo-30-rtl",
+            "link": "https://studio.houzez.co/favethemes-blocks/homepage-01-demo-30-rtl/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/08/demo30.houzez.co_homepage-01_.png",
+            "type": "template",
+            "category": ""
+        },
+        {
+            "id": 1177,
+            "title": "homepage 03 &#8211; demo 29",
+            "slug": "homepage-03-demo-29",
+            "link": "https://studio.houzez.co/favethemes-blocks/homepage-03-demo-29/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/08/demo32.houzez.co_homepage-03_.png",
+            "type": "template",
+            "category": ""
+        },
+        {
+            "id": 1172,
+            "title": "homepage 02 &#8211; demo 29",
+            "slug": "homepage-02-demo-29",
+            "link": "https://studio.houzez.co/favethemes-blocks/homepage-02-demo-29/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/08/demo29.houzez.co_homepage-02_.png",
+            "type": "template",
+            "category": ""
+        },
+        {
+            "id": 1160,
+            "title": "homepage 01 &#8211; demo 29",
+            "slug": "homepage-01-demo-29",
+            "link": "https://studio.houzez.co/favethemes-blocks/homepage-01-demo-29/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/08/demo29.houzez.co_homepage-01_.png",
+            "type": "template",
+            "category": ""
+        },
+        {
+            "id": 1020,
+            "title": "homepage 03 &#8211; demo 28",
+            "slug": "homepage-03-demo-28",
+            "link": "https://studio.houzez.co/favethemes-blocks/homepage-03-demo-28/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/08/demo28.houzez.co_homepage-03_.png",
+            "type": "template",
+            "category": ""
+        },
+        {
+            "id": 1013,
+            "title": "homepage 02 &#8211; demo 28",
+            "slug": "homepage-02-demo-28",
+            "link": "https://studio.houzez.co/favethemes-blocks/homepage-02-demo-28/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/08/demo28.houzez.co_homepage-02_.png",
+            "type": "template",
+            "category": ""
+        },
+        {
+            "id": 987,
+            "title": "homepage 01 &#8211; demo 28",
+            "slug": "homepage-01-demo-28",
+            "link": "https://studio.houzez.co/favethemes-blocks/homepage-01-demo-28/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/08/demo28.houzez.co_homepage-01_.png",
+            "type": "template",
+            "category": ""
+        },
+        {
+            "id": 974,
+            "title": "homepage 03 &#8211; demo 27",
+            "slug": "homepage-03-demo-27",
+            "link": "https://studio.houzez.co/favethemes-blocks/homepage-03-demo-27/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/08/demo27.houzez.co_homepage-3_.png",
+            "type": "template",
+            "category": ""
+        },
+        {
+            "id": 952,
+            "title": "homepage 02 &#8211; demo 27",
+            "slug": "homepage-02-demo-27",
+            "link": "https://studio.houzez.co/favethemes-blocks/homepage-02-demo-27/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/08/demo27.houzez.co_homepage-2_.png",
+            "type": "template",
+            "category": ""
+        },
+        {
+            "id": 922,
+            "title": "homepage 01 &#8211; demo 27",
+            "slug": "homepage-01-demo-27",
+            "link": "https://studio.houzez.co/favethemes-blocks/homepage-01-demo-27/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/08/demo27.houzez.co_homepage-1_.png",
+            "type": "template",
+            "category": ""
+        },
+        {
+            "id": 909,
+            "title": "homepage 03 &#8211; demo 26",
+            "slug": "homepage-03-demo-26",
+            "link": "https://studio.houzez.co/favethemes-blocks/homepage-03-demo-26/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/08/demo26.houzez.co_homepage-3_.png",
+            "type": "template",
+            "category": ""
+        },
+        {
+            "id": 887,
+            "title": "homepage 02 &#8211; demo 26",
+            "slug": "homepage-02-demo-26",
+            "link": "https://studio.houzez.co/favethemes-blocks/homepage-02-demo-26/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/08/demo26.houzez.co_homepage-2_.png",
+            "type": "template",
+            "category": ""
+        },
+        {
+            "id": 864,
+            "title": "homepage 01 &#8211; demo 26",
+            "slug": "homepage-01-demo-26",
+            "link": "https://studio.houzez.co/favethemes-blocks/homepage-01-demo-26/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/08/demo26.houzez.co_homepage-1_.png",
+            "type": "template",
+            "category": ""
+        },
+        {
+            "id": 855,
+            "title": "homepage 03 &#8211; demo 25",
+            "slug": "homepage-03-demo-25",
+            "link": "https://studio.houzez.co/favethemes-blocks/homepage-03-demo-25/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/08/demo25.houzez.co_homepage-3_.png",
+            "type": "template",
+            "category": ""
+        },
+        {
+            "id": 846,
+            "title": "homepage 02 &#8211; demo 25",
+            "slug": "homepage-02-demo-25",
+            "link": "https://studio.houzez.co/favethemes-blocks/homepage-02-demo-25/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/08/demo25.houzez.co_homepage-2_.png",
+            "type": "template",
+            "category": ""
+        },
+        {
+            "id": 817,
+            "title": "homepage 01 &#8211; demo 25",
+            "slug": "homepage-01-demo-25",
+            "link": "https://studio.houzez.co/favethemes-blocks/homepage-01-demo-25/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/08/demo25.houzez.co_homepage-1_.png",
+            "type": "template",
+            "category": ""
+        },
+        {
+            "id": 791,
+            "title": "homepage &#8211; demo 24",
+            "slug": "homepage-demo-24",
+            "link": "https://studio.houzez.co/favethemes-blocks/homepage-demo-24/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/08/demo24.houzez.co_.png",
+            "type": "template",
+            "category": ""
+        },
+        {
+            "id": 724,
+            "title": "homepage 03 &#8211; demo 23",
+            "slug": "homepage-03-demo-23",
+            "link": "https://studio.houzez.co/favethemes-blocks/homepage-03-demo-23/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/08/demo23.houzez.co_home-3_.png",
+            "type": "template",
+            "category": ""
+        },
+        {
+            "id": 673,
+            "title": "homepage 02 &#8211; demo 23",
+            "slug": "homepage-02-demo-23",
+            "link": "https://studio.houzez.co/favethemes-blocks/homepage-02-demo-23/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/08/demo23.houzez.co_home-2_.png",
+            "type": "template",
+            "category": ""
+        },
+        {
+            "id": 626,
+            "title": "homepage 01 &#8211; demo 23",
+            "slug": "homepage-01-demo-23",
+            "link": "https://studio.houzez.co/favethemes-blocks/homepage-01-demo-23/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/08/demo23.houzez.co_home-1_.png",
+            "type": "template",
+            "category": ""
+        },
+        {
+            "id": 607,
+            "title": "homepage &#8211; demo 22",
+            "slug": "homepage-demo-22",
+            "link": "https://studio.houzez.co/favethemes-blocks/homepage-demo-22/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/08/demo22.houzez.co_.png",
+            "type": "template",
+            "category": ""
+        },
+        {
+            "id": 597,
+            "title": "homepage 03 &#8211; demo 21",
+            "slug": "homepage-03-demo-21",
+            "link": "https://studio.houzez.co/favethemes-blocks/homepage-03-demo-21/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/08/demo21.houzez.co_homepage-3_.png",
+            "type": "template",
+            "category": ""
+        },
+        {
+            "id": 590,
+            "title": "homepage 02 &#8211; demo 21",
+            "slug": "homepage-02-demo-21",
+            "link": "https://studio.houzez.co/favethemes-blocks/homepage-02-demo-21/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/08/demo21.houzez.co_homepage-2_.png",
+            "type": "template",
+            "category": ""
+        },
+        {
+            "id": 568,
+            "title": "homepage 01 &#8211; demo 21",
+            "slug": "homepage-01-demo-21",
+            "link": "https://studio.houzez.co/favethemes-blocks/homepage-01-demo-21/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/08/demo21.houzez.co_homepage-1_.png",
+            "type": "template",
+            "category": ""
+        },
+        {
+            "id": 552,
+            "title": "homepage &#8211; demo 20",
+            "slug": "homepage-demo-20",
+            "link": "https://studio.houzez.co/favethemes-blocks/homepage-demo-20/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/08/demo20.houzez.co_.png",
+            "type": "template",
+            "category": ""
+        },
+        {
+            "id": 529,
+            "title": "homepage &#8211; demo 19",
+            "slug": "homepage-demo-19",
+            "link": "https://studio.houzez.co/favethemes-blocks/homepage-demo-19/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/08/demo19.houzez.co_.png",
+            "type": "template",
+            "category": ""
+        },
+        {
+            "id": 497,
+            "title": "homepage &#8211; demo 18",
+            "slug": "homepage-demo-18",
+            "link": "https://studio.houzez.co/favethemes-blocks/homepage-demo-18/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/08/demo18.houzez.co_.png",
+            "type": "template",
+            "category": ""
+        },
+        {
+            "id": 487,
+            "title": "homepage &#8211; demo 17",
+            "slug": "homepage-demo-17",
+            "link": "https://studio.houzez.co/favethemes-blocks/homepage-demo-17/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/08/demo17.houzez.co_.png",
+            "type": "template",
+            "category": ""
+        },
+        {
+            "id": 480,
+            "title": "homepage 03 &#8211; demo 15",
+            "slug": "homepage-03-demo-15",
+            "link": "https://studio.houzez.co/favethemes-blocks/homepage-03-demo-15/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/08/demo15.houzez.co_homepage-3_.png",
+            "type": "template",
+            "category": ""
+        },
+        {
+            "id": 473,
+            "title": "homepage 02 &#8211; demo 15",
+            "slug": "homepage-02-demo-15",
+            "link": "https://studio.houzez.co/favethemes-blocks/homepage-02-demo-15/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/08/demo15.houzez.co_homepage-2_.png",
+            "type": "template",
+            "category": ""
+        },
+        {
+            "id": 459,
+            "title": "homepage 01 &#8211; demo 15",
+            "slug": "homepage-01-demo-15",
+            "link": "https://studio.houzez.co/favethemes-blocks/homepage-01-demo-15/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/08/demo15.houzez.co_homepage-1_.png",
+            "type": "template",
+            "category": ""
+        },
+        {
+            "id": 434,
+            "title": "homepage &#8211; demo 14",
+            "slug": "homepage-demo-14",
+            "link": "https://studio.houzez.co/favethemes-blocks/homepage-demo-14/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/08/Homepage-Demo-14.png",
+            "type": "template",
+            "category": ""
+        },
+        {
+            "id": 421,
+            "title": "homepage &#8211; demo 13",
+            "slug": "homepage-demo-13",
+            "link": "https://studio.houzez.co/favethemes-blocks/homepage-demo-13/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/08/Homepage-Demo-13.png",
+            "type": "template",
+            "category": ""
+        },
+        {
+            "id": 407,
+            "title": "homepage &#8211; demo 12",
+            "slug": "homepage-demo-12",
+            "link": "https://studio.houzez.co/favethemes-blocks/homepage-demo-12/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/08/Homepage-Demo-12.png",
+            "type": "template",
+            "category": ""
+        },
+        {
+            "id": 345,
+            "title": "homepage &#8211; demo 11",
+            "slug": "homepage-demo-11",
+            "link": "https://studio.houzez.co/favethemes-blocks/homepage-demo-11/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/08/Homepage-Demo-11.png",
+            "type": "template",
+            "category": ""
+        },
+        {
+            "id": 313,
+            "title": "homepage &#8211; demo 10",
+            "slug": "homepage-demo-10",
+            "link": "https://studio.houzez.co/favethemes-blocks/homepage-demo-10/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/08/Homepage-Demo-10.png",
+            "type": "template",
+            "category": ""
+        },
+        {
+            "id": 305,
+            "title": "homepage &#8211; demo 09",
+            "slug": "homepage-demo-09",
+            "link": "https://studio.houzez.co/favethemes-blocks/homepage-demo-09/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/08/Homepage-Demo-09.png",
+            "type": "template",
+            "category": ""
+        },
+        {
+            "id": 280,
+            "title": "homepage &#8211; demo 08",
+            "slug": "homepage-demo-08",
+            "link": "https://studio.houzez.co/favethemes-blocks/homepage-demo-08/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/08/Homepage-Demo-08.png",
+            "type": "template",
+            "category": ""
+        },
+        {
+            "id": 269,
+            "title": "homepage &#8211; demo 07",
+            "slug": "homepage-demo-07",
+            "link": "https://studio.houzez.co/favethemes-blocks/homepage-demo-07/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/08/Homepage-Demo-07.png",
+            "type": "template",
+            "category": ""
+        },
+        {
+            "id": 259,
+            "title": "homepage &#8211; demo 06",
+            "slug": "homepage-demo-06",
+            "link": "https://studio.houzez.co/favethemes-blocks/homepage-demo-06/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/08/Homepage-Demo-06.png",
+            "type": "template",
+            "category": ""
+        },
+        {
+            "id": 228,
+            "title": "homepage &#8211; demo 05",
+            "slug": "homepage-demo-05",
+            "link": "https://studio.houzez.co/favethemes-blocks/homepage-demo-05/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/08/Homepage-Demo-05.png",
+            "type": "template",
+            "category": ""
+        },
+        {
+            "id": 211,
+            "title": "homepage &#8211; demo 04",
+            "slug": "homepage-demo-04",
+            "link": "https://studio.houzez.co/favethemes-blocks/homepage-demo-04/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/08/Homepage-Demo-04.png",
+            "type": "template",
+            "category": ""
+        },
+        {
+            "id": 193,
+            "title": "homepage &#8211; demo 03",
+            "slug": "homepage-demo-03",
+            "link": "https://studio.houzez.co/favethemes-blocks/homepage-demo-03/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/08/Homepage-Demo-03.png",
+            "type": "template",
+            "category": ""
+        },
+        {
+            "id": 172,
+            "title": "homepage &#8211; demo 02",
+            "slug": "homepage-demo-02",
+            "link": "https://studio.houzez.co/favethemes-blocks/homepage-demo-02/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/08/Homepage-Demo-02.png",
+            "type": "template",
+            "category": ""
+        },
+        {
+            "id": 167,
+            "title": "homepage &#8211; demo 01",
+            "slug": "homepage-demo-01",
+            "link": "https://studio.houzez.co/favethemes-blocks/homepage-demo-01/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/08/Homepage-Demo-01.png",
+            "type": "template",
+            "category": ""
+        },
+        {
+            "id": 19413,
+            "title": "taxonomy grid 05",
+            "slug": "taxonomy-grid-05",
+            "link": "https://studio.houzez.co/favethemes-blocks/taxonomy-grid-05/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/11/taxonomy-grid-05.png",
+            "type": "block",
+            "category": "block, grid"
+        },
+        {
+            "id": 19407,
+            "title": "taxonomy grid 04",
+            "slug": "taxonomy-grid-04",
+            "link": "https://studio.houzez.co/favethemes-blocks/taxonomy-grid-04/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/11/taxonomy-grid-04.png",
+            "type": "block",
+            "category": "block, grid"
+        },
+        {
+            "id": 19398,
+            "title": "taxonomy grid 03",
+            "slug": "taxonomy-grid-03",
+            "link": "https://studio.houzez.co/favethemes-blocks/taxonomy-grid-03/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/11/taxonomy-grid-03.png",
+            "type": "block",
+            "category": "block, grid"
+        },
+        {
+            "id": 19387,
+            "title": "taxonomy grid 02",
+            "slug": "taxonomy-grid-02",
+            "link": "https://studio.houzez.co/favethemes-blocks/taxonomy-grid-02/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/11/taxonomy-grid-02.png",
+            "type": "block",
+            "category": "block, grid"
+        },
+        {
+            "id": 19379,
+            "title": "taxonomy grid 01",
+            "slug": "taxonomy-grid-01",
+            "link": "https://studio.houzez.co/favethemes-blocks/taxonomy-grid-01/",
+            "image": "https://studio.houzez.co/wp-content/uploads/2023/11/taxonomy-grid-01.png",
+            "type": "block",
+            "category": "block, grid"
+        }
+    ],
+    "total_records": 369,
+    "tags": [
+        {
+            "title": "About us",
+            "slug": "about-us",
+            "count": 44
+        },
+        {
+            "title": "Agents",
+            "slug": "agents",
+            "count": 13
+        },
+        {
+            "title": "Blog",
+            "slug": "blog",
+            "count": 7
+        },
+        {
+            "title": "Calculator",
+            "slug": "calculator",
+            "count": 0
+        },
+        {
+            "title": "Call to action",
+            "slug": "call-to-action",
+            "count": 17
+        },
+        {
+            "title": "Contact us",
+            "slug": "contact-us",
+            "count": 15
+        },
+        {
+            "title": "Footer",
+            "slug": "footer",
+            "count": 18
+        },
+        {
+            "title": "Grid",
+            "slug": "grid",
+            "count": 25
+        },
+        {
+            "title": "Header",
+            "slug": "header",
+            "count": 14
+        },
+        {
+            "title": "Hero",
+            "slug": "hero",
+            "count": 48
+        },
+        {
+            "title": "Inquiry form",
+            "slug": "inquiry-form",
+            "count": 10
+        },
+        {
+            "title": "Partners",
+            "slug": "partners",
+            "count": 0
+        },
+        {
+            "title": "Properties",
+            "slug": "properties",
+            "count": 20
+        },
+        {
+            "title": "Services",
+            "slug": "services",
+            "count": 17
+        },
+        {
+            "title": "Single Agency",
+            "slug": "single-agency",
+            "count": 6
+        },
+        {
+            "title": "Single Agent",
+            "slug": "single-agent",
+            "count": 9
+        },
+        {
+            "title": "Single Property",
+            "slug": "single-property",
+            "count": 18
+        },
+        {
+            "title": "Team",
+            "slug": "team",
+            "count": 7
+        },
+        {
+            "title": "Testimonials",
+            "slug": "testimonials",
+            "count": 8
+        }
+    ],
+    "all_templates": true,
+    "sync_friendly": true
+}
