@@ -122,32 +122,68 @@ final class Update_Checker {
 	 * description, so customers see the action right next to the version.
 	 */
 	public function inject_theme_card_link(): void {
-		$url = wp_nonce_url(
-			admin_url( 'admin-post.php?action=estatesite_force_update_check&type=theme&slug=' . rawurlencode( $this->slug ) ),
-			'estatesite_force_update_check_' . $this->slug
+		// Build the action URL with real ampersands. wp_nonce_url() and esc_js()
+		// both HTML-entity-encode `&` → `&amp;` (intended for HTML attributes
+		// and onclick handlers respectively). Setting link.href to such a
+		// string in JS produces $_GET keys named `amp;type`, `amp;slug` etc,
+		// breaking nonce verification — visible as "The link you followed has
+		// expired."
+		//
+		// We hand-build the URL, then emit it through wp_json_encode so the JS
+		// literal contains real ampersands.
+		$url = add_query_arg(
+			[
+				'action' => 'estatesite_force_update_check',
+				'type'   => 'theme',
+				'slug'   => rawurlencode( $this->slug ),
+			],
+			admin_url( 'admin-post.php' )
 		);
-		$slug  = esc_js( $this->slug );
-		$label = esc_js( __( 'Check for updates', 'estatesite-wpcore' ) );
-		$href  = esc_js( $url );
+		$url = wp_nonce_url( $url, 'estatesite_force_update_check_' . $this->slug );
+		$url = html_entity_decode( $url, ENT_QUOTES, 'UTF-8' );
+
+		$slug_json  = wp_json_encode( $this->slug );
+		$label_json = wp_json_encode( __( 'Check for updates', 'estatesite-wpcore' ) );
+		$href_json  = wp_json_encode( $url );
 		?>
 		<style>
-			.theme[data-slug="<?php echo esc_attr( $slug ); ?>"] .esc-check-updates {
+			.theme[data-slug="<?php echo esc_attr( $this->slug ); ?>"] .esc-check-updates {
 				display: inline-block;
 				margin-top: 4px;
 				color: #2271b1;
 				text-decoration: none;
 				font-size: 13px;
 			}
-			.theme[data-slug="<?php echo esc_attr( $slug ); ?>"] .esc-check-updates:hover {
+			.theme[data-slug="<?php echo esc_attr( $this->slug ); ?>"] .esc-check-updates:hover {
+				color: #135e96;
+				text-decoration: underline;
+			}
+			.theme-overlay .theme-info .esc-check-updates {
+				display: inline-block;
+				margin-left: 12px;
+				font-size: 13px;
+				color: #2271b1;
+				text-decoration: none;
+				vertical-align: middle;
+			}
+			.theme-overlay .theme-info .esc-check-updates:hover {
 				color: #135e96;
 				text-decoration: underline;
 			}
 		</style>
 		<script>
 		(function () {
-			var slug  = '<?php echo $slug; ?>';
-			var href  = '<?php echo $href; ?>';
-			var label = '<?php echo $label; ?>';
+			var slug  = <?php echo $slug_json; ?>;
+			var href  = <?php echo $href_json; ?>;
+			var label = <?php echo $label_json; ?>;
+
+			function makeLink() {
+				var link = document.createElement('a');
+				link.className = 'esc-check-updates';
+				link.href = href;
+				link.textContent = label;
+				return link;
+			}
 
 			function injectIntoCard(card) {
 				if (!card || card.querySelector('.esc-check-updates')) return;
@@ -156,16 +192,43 @@ final class Update_Checker {
 				            card.querySelector('.theme-name') ||
 				            card.querySelector('.theme-author') ||
 				            card;
-				var link = document.createElement('a');
-				link.className = 'esc-check-updates';
-				link.href = href;
-				link.textContent = label;
-				mount.appendChild(link);
+				mount.appendChild(makeLink());
+			}
+
+			function injectIntoModal() {
+				// WP renders the theme-details modal when a card is clicked.
+				// `.theme-overlay` is the overlay wrapper; `.theme-info` holds
+				// title, version, author + an actions row. The modal IS shared
+				// across themes, so we only inject when this overlay is showing
+				// OUR theme.
+				var overlay = document.querySelector('.theme-overlay');
+				if (!overlay) return;
+				// The active overlay sets the theme on body via class change:
+				// data-slug is on the .theme card that's currently expanded.
+				// More reliable: check the overlay's visible state + name
+				// matches.
+				var nameNode = overlay.querySelector('.theme-name');
+				// The theme card the overlay is showing has class 'displaying-theme'
+				var displayed = document.querySelector('.theme.displaying-theme');
+				if (!displayed) return;
+				if (displayed.getAttribute('data-slug') !== slug) return;
+				if (overlay.querySelector('.esc-check-updates')) return;
+
+				// Mount inside .theme-info, right after the .theme-name h2/h3
+				var info = overlay.querySelector('.theme-info');
+				if (!info) return;
+				var nameEl = info.querySelector('.theme-name');
+				if (nameEl) {
+					nameEl.appendChild(makeLink());
+				} else {
+					info.appendChild(makeLink());
+				}
 			}
 
 			function tryNow() {
 				var card = document.querySelector('.theme[data-slug="' + slug + '"]');
 				if (card) injectIntoCard(card);
+				injectIntoModal();
 				return !!card;
 			}
 
