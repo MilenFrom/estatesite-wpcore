@@ -144,6 +144,83 @@ ZIP_SIZE=$(du -h "$WORK_DIR/$ZIP_NAME" | cut -f1)
 echo "✓ Built zip: $ZIP_NAME ($ZIP_SIZE)"
 
 # -----------------------------------------------------------------------------
+# Extract the full `== Changelog ==` section from readme.txt
+# -----------------------------------------------------------------------------
+# WP's plugin info modal shows the entire Changelog tab as one body — same
+# convention as wordpress.org's plugin pages — so we extract everything from
+# `== Changelog ==` until the next `== Heading ==` block (or EOF). The
+# python step below converts the wiki-style markup (`= 1.0.5 =` headings,
+# `* item` bullets, `**bold**`, `\`code\``) into HTML, then JSON-escapes
+# the result for the manifest.
+#
+# Falls back to a "See GitHub release" link if readme.txt is missing or the
+# Changelog section is empty.
+CHANGELOG_TEXT=""
+if [ -f "readme.txt" ]; then
+  CHANGELOG_TEXT=$(awk '
+    BEGIN { capture=0 }
+    /^==[[:space:]]+Changelog[[:space:]]+==/ { capture=1; next }
+    /^==[[:space:]]/ { if (capture) exit }
+    capture { print }
+  ' readme.txt)
+  CHANGELOG_TEXT=$(echo "$CHANGELOG_TEXT" | awk 'NF {p=1} p' | tac | awk 'NF {p=1} p' | tac)
+fi
+
+if [ -z "$CHANGELOG_TEXT" ]; then
+  CHANGELOG_TEXT="See https://github.com/MilenFrom/$PACKAGE_SLUG/releases/tag/v$VERSION"
+  echo "⚠ No readme.txt changelog block found for v$VERSION — using fallback link"
+else
+  CL_LINES=$(echo "$CHANGELOG_TEXT" | wc -l)
+  echo "✓ Extracted $CL_LINES-line changelog section for v$VERSION"
+fi
+
+# Convert readme.txt wiki-style markup → HTML, then JSON-escape.
+# WP's plugins_api section renderer runs wp_kses($section, $plugins_allowedtags)
+# which strips unknown tags but doesn't auto-convert bullets — `* foo` would
+# show as literal text. Converting `* foo` → `<li>foo</li>` (wrapped in <ul>)
+# and `**foo**` → `<strong>foo</strong>` gives a properly formatted modal.
+# Uses python for both the conversion and JSON-escaping because escaping
+# multi-line strings with control characters in pure bash is fragile.
+CHANGELOG_JSON=$(printf '%s' "$CHANGELOG_TEXT" | python3 -c '
+import sys, json, re
+
+text = sys.stdin.read()
+lines = text.split("\n")
+out = []
+in_list = False
+# Match version-heading lines: "= 1.2.3 =" or "= 1.2.3-beta.1 ="
+ver_heading = re.compile(r"^=[[:space:]]*([0-9]+\.[0-9]+\.[0-9]+(?:-[\w.]+)?)[[:space:]]*=[[:space:]]*$".replace("[[:space:]]", "[ \\t]"))
+
+def close_list():
+    global in_list
+    if in_list:
+        out.append("</ul>")
+        in_list = False
+
+for line in lines:
+    stripped = line.lstrip()
+    m = ver_heading.match(stripped)
+    if m:
+        close_list()
+        out.append(f"<h4>v{m.group(1)}</h4>")
+    elif stripped.startswith("* "):
+        if not in_list:
+            out.append("<ul>")
+            in_list = True
+        item = stripped[2:]
+        item = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", item)
+        item = re.sub(r"`([^`]+)`", r"<code>\1</code>", item)
+        out.append(f"<li>{item}</li>")
+    else:
+        close_list()
+        if stripped:
+            out.append(f"<p>{stripped}</p>")
+close_list()
+print(json.dumps("\n".join(out)))
+')
+DESCRIPTION_JSON=$(printf '%s' "$PACKAGE_DESCRIPTION" | python3 -c 'import sys, json; print(json.dumps(sys.stdin.read()))')
+
+# -----------------------------------------------------------------------------
 # Build manifest JSON
 # -----------------------------------------------------------------------------
 # Customers' WP plugin reads this file to decide whether to update.
@@ -164,8 +241,8 @@ cat > "$MANIFEST" <<JSON
   "tested":       "$HEADER_TESTED",
   "last_updated": "$LAST_UPDATED",
   "sections": {
-    "description": "$PACKAGE_DESCRIPTION",
-    "changelog":   "See https://github.com/MilenFrom/$PACKAGE_SLUG/releases/tag/v$VERSION"
+    "description": $DESCRIPTION_JSON,
+    "changelog":   $CHANGELOG_JSON
   }
 }
 JSON
