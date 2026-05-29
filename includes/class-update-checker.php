@@ -59,9 +59,135 @@ final class Update_Checker {
 		if ( $type === 'plugin' ) {
 			add_filter( 'site_transient_update_plugins', [ $this, 'inject_plugin_update' ] );
 			add_filter( 'plugins_api',                   [ $this, 'plugins_api' ], 10, 3 );
+			add_filter( 'plugin_action_links_' . $slug,  [ $this, 'plugin_action_links' ] );
 		} else {
 			add_filter( 'site_transient_update_themes', [ $this, 'inject_theme_update' ] );
 		}
+
+		// Handle the manual "Check for updates" click. Bypasses both our
+		// own 12h transient AND WordPress's update_themes/update_plugins
+		// transient so the next page load re-polls everything fresh.
+		add_action( 'admin_post_estatesite_force_update_check', [ $this, 'handle_force_check' ] );
+
+		// One-shot recovery URL — works from anywhere on the site for an
+		// authenticated admin. Lets customers stuck on a stale manifest
+		// (e.g. their Update_Checker pre-dates the "Check for updates"
+		// button) recover with a single URL we can email them. Triggered
+		// by visiting `?estatesite_clear_update_cache=1`.
+		add_action( 'init', [ $this, 'maybe_handle_clear_url' ] );
+
+		// Flash notice on the admin screen after the force-check redirects back.
+		// Registered globally (not gated on $type) so we only attach it once
+		// per instance — multiple instances each have their own slug-keyed
+		// transient already, but the notice is a noop unless the query arg
+		// is present.
+		add_action( 'admin_notices', [ $this, 'maybe_render_force_check_notice' ] );
+
+		// Theme card "Check for updates" link. We attach an admin notice
+		// (rendered on themes.php only) that adds the link to our theme's
+		// card — the theme_action_links filter doesn't exist for themes,
+		// so we use a small inline JS+CSS shim.
+		if ( $type === 'theme' ) {
+			add_action( 'admin_print_footer_scripts-themes.php', [ $this, 'inject_theme_card_link' ] );
+		}
+	}
+
+	/**
+	 * "Check for updates" row-action on the Plugins admin screen.
+	 */
+	public function plugin_action_links( array $links ): array {
+		$url = wp_nonce_url(
+			admin_url( 'admin-post.php?action=estatesite_force_update_check&type=' . $this->type . '&slug=' . rawurlencode( $this->slug ) ),
+			'estatesite_force_update_check_' . $this->slug
+		);
+		$links[] = sprintf(
+			'<a href="%s">%s</a>',
+			esc_url( $url ),
+			esc_html__( 'Check for updates', 'estatesite-wpcore' )
+		);
+		return $links;
+	}
+
+	/**
+	 * Inject a "Check for updates" link into our theme's card on the Themes
+	 * admin screen. There's no first-class theme equivalent of
+	 * plugin_action_links, so we render a tiny inline script that finds the
+	 * theme card by its data-slug attribute and appends a button.
+	 */
+	public function inject_theme_card_link(): void {
+		$url = wp_nonce_url(
+			admin_url( 'admin-post.php?action=estatesite_force_update_check&type=theme&slug=' . rawurlencode( $this->slug ) ),
+			'estatesite_force_update_check_' . $this->slug
+		);
+		$slug  = esc_js( $this->slug );
+		$label = esc_js( __( 'Check for updates', 'estatesite-wpcore' ) );
+		$href  = esc_js( $url );
+		?>
+		<style>
+			.theme[data-slug="<?php echo esc_attr( $slug ); ?>"] .esc-check-updates {
+				display: inline-block;
+				margin-left: 8px;
+				color: #2271b1;
+				text-decoration: none;
+				font-size: 13px;
+			}
+			.theme[data-slug="<?php echo esc_attr( $slug ); ?>"] .esc-check-updates:hover {
+				color: #135e96;
+				text-decoration: underline;
+			}
+		</style>
+		<script>
+		(function () {
+			document.addEventListener('DOMContentLoaded', function () {
+				var card = document.querySelector('.theme[data-slug="<?php echo esc_js( $slug ); ?>"]');
+				if (!card) return;
+				var actions = card.querySelector('.theme-actions');
+				if (!actions) actions = card.querySelector('.theme-name');
+				if (!actions) return;
+				if (actions.querySelector('.esc-check-updates')) return; // already added
+				var link = document.createElement('a');
+				link.className = 'esc-check-updates';
+				link.href = '<?php echo $href; ?>';
+				link.textContent = '<?php echo $label; ?>';
+				actions.appendChild(link);
+			});
+		})();
+		</script>
+		<?php
+	}
+
+	/**
+	 * Force-check handler. Clears all relevant caches and bounces back.
+	 * Triggered by the "Check for updates" button.
+	 */
+	public function handle_force_check(): void {
+		if ( ! current_user_can( 'update_themes' ) && ! current_user_can( 'update_plugins' ) ) {
+			wp_die( esc_html__( 'You do not have permission.', 'estatesite-wpcore' ) );
+		}
+		$type = sanitize_key( $_GET['type'] ?? '' );
+		$slug = wp_unslash( $_GET['slug'] ?? '' );
+		check_admin_referer( 'estatesite_force_update_check_' . $slug );
+
+		// Wipe our own manifest cache for this package.
+		delete_site_transient( 'estatesite_update_' . md5( $type . '|' . $slug ) );
+
+		// Wipe WordPress's whole update transient so its next poll re-runs
+		// every plugin/theme update check, including ours. Cheap — the next
+		// admin pageload rebuilds it.
+		if ( $type === 'theme' ) {
+			delete_site_transient( 'update_themes' );
+			wp_update_themes();
+			$redirect = self_admin_url( 'themes.php' );
+		} else {
+			delete_site_transient( 'update_plugins' );
+			wp_update_plugins();
+			$redirect = self_admin_url( 'plugins.php' );
+		}
+
+		// Brief flash via a query arg so the next page can show a notice.
+		$redirect = add_query_arg( 'estatesite_update_checked', '1', $redirect );
+		wp_safe_redirect( $redirect );
+		exit;
 	}
 
 	/**
@@ -210,5 +336,65 @@ final class Update_Checker {
 	 */
 	public function clear_cache(): void {
 		delete_site_transient( $this->cache_key );
+	}
+
+	/**
+	 * One-shot recovery handler. Visiting `?estatesite_clear_update_cache=1`
+	 * as an authenticated admin clears all EstateSite update caches AND the
+	 * WordPress update_themes/update_plugins transients, then redirects to
+	 * Dashboard → Updates. Lets stuck customers recover without WP-CLI.
+	 *
+	 * Registered on `init` (not admin_init) so the URL works from anywhere
+	 * on the site, including the front-end.
+	 */
+	public function maybe_handle_clear_url(): void {
+		static $handled = false;
+		if ( $handled ) {
+			return;
+		}
+		if ( empty( $_GET['estatesite_clear_update_cache'] ) ) {
+			return;
+		}
+		if ( ! current_user_can( 'update_themes' ) && ! current_user_can( 'update_plugins' ) ) {
+			return; // Silent — don't tip off non-admins that the endpoint exists.
+		}
+		$handled = true;
+
+		// Clear ALL EstateSite manifest caches we can find. Each Update_Checker
+		// instance has its own slug-keyed transient — we don't know all the
+		// slugs from inside one instance, so wipe every option starting with
+		// our prefix.
+		global $wpdb;
+		$wpdb->query( "DELETE FROM {$wpdb->options} WHERE option_name LIKE '_site_transient_estatesite_update_%' OR option_name LIKE '_site_transient_timeout_estatesite_update_%'" );
+
+		// Wipe WP's own update transients.
+		delete_site_transient( 'update_themes' );
+		delete_site_transient( 'update_plugins' );
+		wp_update_themes();
+		wp_update_plugins();
+
+		// Redirect to Updates page with a notice flag.
+		wp_safe_redirect( add_query_arg( 'estatesite_update_checked', '1', self_admin_url( 'update-core.php' ) ) );
+		exit;
+	}
+
+	/**
+	 * Render a one-shot success notice after handle_force_check redirects.
+	 * Static guard so multiple Update_Checker instances don't all render it.
+	 */
+	public function maybe_render_force_check_notice(): void {
+		static $rendered = false;
+		if ( $rendered ) {
+			return;
+		}
+		if ( empty( $_GET['estatesite_update_checked'] ) ) {
+			return;
+		}
+		$rendered = true;
+		?>
+		<div class="notice notice-success is-dismissible">
+			<p><?php esc_html_e( 'EstateSite update check complete. If a new version is available, you will see it on this page.', 'estatesite-wpcore' ); ?></p>
+		</div>
+		<?php
 	}
 }
