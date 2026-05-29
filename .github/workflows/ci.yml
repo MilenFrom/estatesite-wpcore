@@ -7,10 +7,11 @@ on:
   pull_request:
     branches: [main, master]
 
+# CI's only job is quality gating — lint + version-consistency. Distribution
+# is self-hosted (zips + manifests served from dev.estatesite.eu/updates/).
+# Releases are cut manually on the dev server via bin/release.sh.
+
 jobs:
-  # -------------------------------------------------------------------------
-  # PHP lint — runs on every push and PR. Catches syntax errors before merge.
-  # -------------------------------------------------------------------------
   lint:
     name: PHP syntax check
     runs-on: ubuntu-latest
@@ -38,26 +39,19 @@ jobs:
           | xargs -0 -n1 -P4 php -l \
           | grep -v "^No syntax errors" \
           | tee lint_errors.txt
-          # Fail if any line of output remained (anything other than "No syntax errors")
           if [ -s lint_errors.txt ]; then
-            echo "❌ PHP syntax errors found"
+            echo "::error::PHP syntax errors found"
             exit 1
           fi
 
-  # -------------------------------------------------------------------------
-  # Version consistency — main plugin file Version: must match readme.txt
-  # Stable tag: (or the package's documented version source). Only runs on
-  # tag pushes and PRs touching the main plugin file.
-  # -------------------------------------------------------------------------
   version-consistency:
     name: Version consistency
     runs-on: ubuntu-latest
-    if: startsWith(github.ref, 'refs/tags/v') || github.event_name == 'pull_request'
+    if: startsWith(github.ref, 'refs/tags/v')
     steps:
       - uses: actions/checkout@v4
 
       - name: "Compare plugin Version: vs tag"
-        if: startsWith(github.ref, 'refs/tags/v')
         shell: bash
         run: |
           TAG_VERSION="${GITHUB_REF_NAME#v}"
@@ -65,100 +59,6 @@ jobs:
           echo "Tag: $TAG_VERSION"
           echo "Plugin header: $PLUGIN_VERSION"
           if [ "$TAG_VERSION" != "$PLUGIN_VERSION" ]; then
-            echo "❌ Tag v$TAG_VERSION but plugin header Version: $PLUGIN_VERSION — bump the plugin header before tagging"
+            echo "::error::Tag v$TAG_VERSION but plugin header Version: $PLUGIN_VERSION — bump the plugin header before tagging"
             exit 1
           fi
-
-  # -------------------------------------------------------------------------
-  # Release build — runs only on version tags. Builds the distribution zip
-  # (with vendored libs included, dev files excluded) and attaches it as
-  # a GitHub Release asset.
-  # -------------------------------------------------------------------------
-  release:
-    name: Build release zip
-    needs: [lint, version-consistency]
-    runs-on: ubuntu-latest
-    if: startsWith(github.ref, 'refs/tags/v')
-    permissions:
-      contents: write   # required to create the release + upload assets
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Build dist zip
-        shell: bash
-        run: |
-          SLUG="estatesite-wpcore"
-          VERSION="${GITHUB_REF_NAME#v}"
-          DIST="$SLUG"
-
-          mkdir -p "../$DIST"
-          # Copy everything EXCEPT dev-only files (rsync's --exclude is cleaner
-          # than maintaining a tar transform). Resulting tree mirrors what
-          # customers see on their server after WordPress unpacks the zip.
-          rsync -a \
-            --exclude='.git' \
-            --exclude='.github' \
-            --exclude='.gitignore' \
-            --exclude='.gitattributes' \
-            --exclude='.editorconfig' \
-            --exclude='node_modules' \
-            --exclude='tests' \
-            --exclude='phpunit.xml*' \
-            --exclude='phpcs.xml*' \
-            --exclude='composer.lock' \
-            --exclude='*.log' \
-            --exclude='.DS_Store' \
-            --exclude='Thumbs.db' \
-            --exclude='RELEASE_NOTES_v*.md' \
-            ./ "../$DIST/"
-
-          cd ..
-          zip -r "${SLUG}-${VERSION}.zip" "$DIST" -q
-          ls -la "${SLUG}-${VERSION}.zip"
-          mv "${SLUG}-${VERSION}.zip" "$GITHUB_WORKSPACE/"
-
-      - name: Build update manifest (JSON)
-        shell: bash
-        run: |
-          # Build the update manifest customers will pull from
-          # https://dev.estatesite.eu/updates/estatesite-wpcore.json
-          # CI attaches it to the GitHub release; the release process docs
-          # describe how to sync it to the server.
-          SLUG="estatesite-wpcore"
-          VERSION="${GITHUB_REF_NAME#v}"
-          ZIP_URL="https://github.com/${{ github.repository }}/releases/download/${GITHUB_REF_NAME}/${SLUG}-${VERSION}.zip"
-
-          # Extract metadata from the plugin header
-          REQUIRES=$(grep -m1 '^[[:space:]]*\*[[:space:]]*Requires at least:' estatesite-wpcore.php | sed -E 's/.*Requires at least:[[:space:]]+//' | xargs)
-          REQUIRES_PHP=$(grep -m1 '^[[:space:]]*\*[[:space:]]*Requires PHP:' estatesite-wpcore.php | sed -E 's/.*Requires PHP:[[:space:]]+//' | xargs)
-          TESTED=$(grep -m1 '^[[:space:]]*\*[[:space:]]*Tested up to:' estatesite-wpcore.php | sed -E 's/.*Tested up to:[[:space:]]+//' | xargs || echo "")
-
-          cat > "${SLUG}.json" <<JSON
-          {
-            "name":         "EstateSite Core",
-            "slug":         "${SLUG}",
-            "version":      "${VERSION}",
-            "download_url": "${ZIP_URL}",
-            "homepage":     "https://estatesite.eu",
-            "author":       "Estate Site",
-            "requires":     "${REQUIRES}",
-            "requires_php": "${REQUIRES_PHP}",
-            "tested":       "${TESTED}",
-            "last_updated": "$(date -u +%Y-%m-%d)",
-            "sections": {
-              "description": "EstateSite Core — real-estate WordPress backbone.",
-              "changelog":   "See https://github.com/${{ github.repository }}/releases/tag/${GITHUB_REF_NAME}"
-            }
-          }
-          JSON
-          cat "${SLUG}.json"
-
-      - name: Create GitHub Release with zip + manifest assets
-        uses: softprops/action-gh-release@v2
-        with:
-          files: |
-            estatesite-wpcore-*.zip
-            estatesite-wpcore.json
-          draft: false
-          prerelease: ${{ contains(github.ref_name, '-') }}
-          generate_release_notes: true
