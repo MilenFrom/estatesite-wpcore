@@ -157,6 +157,13 @@ final class Plugin {
 				require_once $path;
 			}
 		}
+
+		// Theme action wiring (ported from houzez/framework/template-hooks.php).
+		// MUST load after template-functions.php so the callbacks it registers
+		// already exist. Without these add_action() calls, themes that call
+		// do_action('houzez_header') / do_action('houzez_footer') render
+		// blank chrome.
+		require_once ESCORE_DIR . 'includes/template-hooks.php';
 	}
 
 	/**

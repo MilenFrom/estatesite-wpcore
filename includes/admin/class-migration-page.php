@@ -53,6 +53,24 @@ final class Migration_Page {
 			delete_transient( 'estatesite_migration_flash' );
 		}
 
+		// Data-driven enablement: the auto-detection in Compat_Mode runs ONCE
+		// at first access. If Core was activated BEFORE Houzez data existed,
+		// the mode locks to native_esc and the buttons would all grey out
+		// even though fave_* data may have arrived since. Compute whether
+		// any legacy data actually exists and treat that as the override
+		// signal for "would Prepare/Run be meaningful here?".
+		$has_fave_data = (
+			! empty( $audit['posts_by_type'] )
+			|| $audit['pages_with_fave_meta'] > 0
+			|| $audit['users_with_fave_meta'] > 0
+			|| $audit['terms_with_fave_meta'] > 0
+			|| $audit['options_legacy_present']
+		);
+		// Post-cutover, fave_* meta is intentionally preserved (rollback
+		// safety). Don't let its presence re-enable Prepare — the migration
+		// has already happened.
+		$already_cut_over = ( $status['phase'] === 'native' );
+
 		$action_url = admin_url( 'admin-post.php' );
 		?>
 		<div class="wrap">
@@ -126,9 +144,29 @@ final class Migration_Page {
 						<strong>1. <?php esc_html_e( 'Prepare', 'estatesite-wpcore' ); ?></strong>
 						— <?php esc_html_e( 'Switch into MIGRATING mode (new writes dual-write to both fave_* and esc_* keys).', 'estatesite-wpcore' ); ?>
 					</p>
-					<?php submit_button( __( 'Prepare migration', 'estatesite-wpcore' ), 'primary',
-						'submit_prepare', false,
-						[ 'disabled' => $mode === Compat_Mode::NATIVE_ESC ] ); ?>
+					<?php
+					// Prepare is meaningful when: not already migrating, AND either
+					// we're in legacy_fave OR auto-detection misfired (mode is
+					// native_esc but legacy fave_* data is present AND we haven't
+					// yet completed a cutover).
+					$prepare_disabled = ( $mode === Compat_Mode::MIGRATING )
+						|| $already_cut_over
+						|| ( $mode === Compat_Mode::NATIVE_ESC && ! $has_fave_data );
+					// submit_button() emits any attribute in the array verbatim,
+					// even when the value is false — so `'disabled' => false`
+					// still renders `disabled=""` which the browser treats as
+					// disabled. Conditionally include the key instead.
+					$prepare_attrs = $prepare_disabled ? [ 'disabled' => 'disabled' ] : [];
+					submit_button( __( 'Prepare migration', 'estatesite-wpcore' ), 'primary',
+						'submit_prepare', false, $prepare_attrs );
+					if ( $mode === Compat_Mode::NATIVE_ESC && $has_fave_data && ! $already_cut_over ) :
+						?>
+						<p class="description" style="color:#996800;">
+							<?php esc_html_e( 'Mode is currently native_esc, but legacy fave_* data was detected. Running Prepare will switch to migrating mode so you can copy that data over.', 'estatesite-wpcore' ); ?>
+						</p>
+						<?php
+					endif;
+					?>
 				</form>
 
 				<form method="post" action="<?php echo esc_url( $action_url ); ?>" style="margin-bottom:1.5em;">
@@ -139,10 +177,21 @@ final class Migration_Page {
 						<strong>2. <?php esc_html_e( 'Run', 'estatesite-wpcore' ); ?></strong>
 						— <?php esc_html_e( 'Copy existing fave_* meta into esc_* keys across all entity types. Idempotent and resumable.', 'estatesite-wpcore' ); ?>
 					</p>
+					<?php
+					// Run requires MIGRATING mode by design (writes go to both
+					// fave_* and esc_* during the run). On native_esc with
+					// legacy data, the admin should hit Prepare first.
+					$run_disabled = ( $mode !== Compat_Mode::MIGRATING );
+					?>
 					<button type="button" class="button button-primary" id="estatesite-migrate-run"
-						<?php disabled( $mode !== Compat_Mode::MIGRATING ); ?>>
+						<?php disabled( $run_disabled ); ?>>
 						<?php esc_html_e( 'Run migration', 'estatesite-wpcore' ); ?>
 					</button>
+					<?php if ( $run_disabled && $has_fave_data ) : ?>
+						<p class="description" style="color:#996800;">
+							<?php esc_html_e( 'Run is only available in migrating mode. Click Prepare above first.', 'estatesite-wpcore' ); ?>
+						</p>
+					<?php endif; ?>
 					<span class="estatesite-migrate-progress" style="margin-left:1em;"></span>
 				</form>
 
@@ -155,9 +204,11 @@ final class Migration_Page {
 						<strong>3. <?php esc_html_e( 'Cutover', 'estatesite-wpcore' ); ?></strong>
 						— <?php esc_html_e( 'Switch to native_esc mode. Reads now prefer esc_* keys.', 'estatesite-wpcore' ); ?>
 					</p>
-					<?php submit_button( __( 'Cutover to native', 'estatesite-wpcore' ), 'primary',
-						'submit_cutover', false,
-						[ 'disabled' => $mode !== Compat_Mode::MIGRATING ] ); ?>
+					<?php
+					$cutover_attrs = ( $mode !== Compat_Mode::MIGRATING ) ? [ 'disabled' => 'disabled' ] : [];
+					submit_button( __( 'Cutover to native', 'estatesite-wpcore' ), 'primary',
+						'submit_cutover', false, $cutover_attrs );
+					?>
 				</form>
 
 				<form method="post" action="<?php echo esc_url( $action_url ); ?>" style="margin-bottom:1em;"
@@ -169,9 +220,11 @@ final class Migration_Page {
 						<strong><?php esc_html_e( 'Rollback', 'estatesite-wpcore' ); ?></strong>
 						— <?php esc_html_e( 'Switch back to legacy_fave mode at any time. Safe and reversible.', 'estatesite-wpcore' ); ?>
 					</p>
-					<?php submit_button( __( 'Rollback to legacy', 'estatesite-wpcore' ), 'secondary',
-						'submit_rollback', false,
-						[ 'disabled' => $mode === Compat_Mode::LEGACY_FAVE ] ); ?>
+					<?php
+					$rollback_attrs = ( $mode === Compat_Mode::LEGACY_FAVE ) ? [ 'disabled' => 'disabled' ] : [];
+					submit_button( __( 'Rollback to legacy', 'estatesite-wpcore' ), 'secondary',
+						'submit_rollback', false, $rollback_attrs );
+					?>
 				</form>
 			</div>
 		</div>

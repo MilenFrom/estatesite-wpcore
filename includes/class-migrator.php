@@ -263,8 +263,13 @@ final class Migrator {
 	}
 
 	/**
-	 * Generic copy: for each (logical, fave, esc) in $entities, copy raw fave value
-	 * to esc key on the object, skipping if esc already has a value.
+	 * Generic copy: for each (logical, fave, esc) in $entities, copy raw fave value(s)
+	 * to esc key on the object, skipping if esc already has any value.
+	 *
+	 * Uses get_*_meta(..., false) to fetch ALL rows for the key, so multi-row meta
+	 * (e.g. fave_property_images stores one row per attachment ID) migrates fully.
+	 * Earlier versions used single-value reads and collapsed gallery meta to a
+	 * single image.
 	 */
 	private static function copy_meta_keys( int $object_id, array $entities, string $type ): void {
 		$map = Property::key_map();
@@ -272,11 +277,24 @@ final class Migrator {
 			if ( ! isset( $map[ $entity ] ) ) continue;
 			foreach ( $map[ $entity ] as $logical => [ $fave_key, $esc_key ] ) {
 				if ( $fave_key === $esc_key ) continue;
-				$fave_val = self::raw_get( $object_id, $fave_key, $type );
-				if ( $fave_val === '' || $fave_val === null ) continue;
-				$existing = self::raw_get( $object_id, $esc_key, $type );
-				if ( $existing !== '' && $existing !== null ) continue;
-				self::raw_set( $object_id, $esc_key, $fave_val, $type );
+
+				$fave_vals = self::raw_get_all( $object_id, $fave_key, $type );
+				if ( empty( $fave_vals ) ) continue;
+
+				$existing = self::raw_get_all( $object_id, $esc_key, $type );
+				if ( ! empty( $existing ) ) continue;
+
+				// Single-row: keep using update_*_meta so the row is written
+				// in its conventional single form. Multi-row: use add_*_meta
+				// once per value (no $unique flag → can write duplicates,
+				// which is correct for gallery-style storage).
+				if ( count( $fave_vals ) === 1 ) {
+					self::raw_set( $object_id, $esc_key, $fave_vals[0], $type );
+				} else {
+					foreach ( $fave_vals as $v ) {
+						self::raw_add( $object_id, $esc_key, $v, $type );
+					}
+				}
 			}
 		}
 	}
@@ -289,11 +307,38 @@ final class Migrator {
 		}
 	}
 
+	/**
+	 * Multi-row read. Returns array of all values for the key, or [] if none.
+	 * Used by the migrator so multi-row meta (e.g. gallery images) is copied
+	 * row-by-row instead of being collapsed to a single value.
+	 */
+	private static function raw_get_all( int $id, string $key, string $type ): array {
+		switch ( $type ) {
+			case 'user': $vals = get_user_meta( $id, $key, false ); break;
+			case 'term': $vals = get_term_meta( $id, $key, false ); break;
+			default:     $vals = get_post_meta( $id, $key, false );
+		}
+		if ( ! is_array( $vals ) ) {
+			return [];
+		}
+		// WP returns serialized strings unmodified when count flag is false;
+		// callers need them as-is so add_*_meta re-serializes correctly.
+		return $vals;
+	}
+
 	private static function raw_set( int $id, string $key, $value, string $type ): void {
 		switch ( $type ) {
 			case 'user': update_user_meta( $id, $key, $value ); break;
 			case 'term': update_term_meta( $id, $key, $value ); break;
 			default:     update_post_meta( $id, $key, $value );
+		}
+	}
+
+	private static function raw_add( int $id, string $key, $value, string $type ): void {
+		switch ( $type ) {
+			case 'user': add_user_meta( $id, $key, $value ); break;
+			case 'term': add_term_meta( $id, $key, $value ); break;
+			default:     add_post_meta( $id, $key, $value );
 		}
 	}
 

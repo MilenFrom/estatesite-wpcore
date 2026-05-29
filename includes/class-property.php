@@ -68,13 +68,20 @@ final class Property {
 	/**
 	 * Read meta by logical key. Falls back to legacy key in native mode if value missing.
 	 *
-	 * @param int    $object_id   Post ID (or user ID for entity=user, term ID for entity=term).
-	 * @param string $logical     Logical field name.
-	 * @param mixed  $default     Returned if no value found.
-	 * @param string $entity      Entity scope (default: property).
+	 * @param int|null $object_id   Post ID (or user ID for entity=user, term ID for entity=term).
+	 *                              Null/0 returns $default without touching the DB — lets editor
+	 *                              previews and other "no current object" callers render safely
+	 *                              instead of fataling on `$post->ID` when $post is null.
+	 * @param string   $logical     Logical field name.
+	 * @param mixed    $default     Returned if no value found (or $object_id is null/0).
+	 * @param string   $entity      Entity scope (default: property).
 	 * @return mixed
 	 */
-	public static function get( int $object_id, string $logical, $default = null, string $entity = self::ENTITY_PROPERTY ) {
+	public static function get( ?int $object_id, string $logical, $default = null, string $entity = self::ENTITY_PROPERTY ) {
+		if ( ! $object_id ) {
+			return $default;
+		}
+
 		$key = self::key( $logical, $entity );
 
 		// Unknown logical key — allow raw access (escape hatch).
@@ -97,8 +104,14 @@ final class Property {
 
 	/**
 	 * Write meta by logical key. Dual-writes in migrating mode.
+	 *
+	 * @param int|null $object_id Null/0 returns false without writing.
 	 */
-	public static function set( int $object_id, string $logical, $value, string $entity = self::ENTITY_PROPERTY ): bool {
+	public static function set( ?int $object_id, string $logical, $value, string $entity = self::ENTITY_PROPERTY ): bool {
+		if ( ! $object_id ) {
+			return false;
+		}
+
 		$key = self::key( $logical, $entity );
 
 		if ( $key === null ) {
@@ -120,8 +133,14 @@ final class Property {
 
 	/**
 	 * Delete meta by logical key.
+	 *
+	 * @param int|null $object_id Null/0 returns false without touching the DB.
 	 */
-	public static function delete( int $object_id, string $logical, string $entity = self::ENTITY_PROPERTY ): bool {
+	public static function delete( ?int $object_id, string $logical, string $entity = self::ENTITY_PROPERTY ): bool {
+		if ( ! $object_id ) {
+			return false;
+		}
+
 		$key = self::key( $logical, $entity );
 
 		if ( $key === null ) {
@@ -144,12 +163,16 @@ final class Property {
 	 * Bulk read — fetches the entire meta blob in a single query, then plucks fields.
 	 * Critical for list views (archive grids, search results) to avoid N+1.
 	 *
-	 * @param int      $object_id    Object ID.
+	 * @param int|null $object_id    Object ID. Null/0 returns [logical => null, ...].
 	 * @param string[] $logical_keys List of logical keys to fetch.
 	 * @param string   $entity       Entity scope.
 	 * @return array<string,mixed>   Logical key => value (missing keys → null).
 	 */
-	public static function get_many( int $object_id, array $logical_keys, string $entity = self::ENTITY_PROPERTY ): array {
+	public static function get_many( ?int $object_id, array $logical_keys, string $entity = self::ENTITY_PROPERTY ): array {
+		if ( ! $object_id ) {
+			return array_fill_keys( $logical_keys, null );
+		}
+
 		$raw = self::_raw_get_all( $object_id, $entity );
 		$out = [];
 
