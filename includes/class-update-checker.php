@@ -110,9 +110,16 @@ final class Update_Checker {
 
 	/**
 	 * Inject a "Check for updates" link into our theme's card on the Themes
-	 * admin screen. There's no first-class theme equivalent of
-	 * plugin_action_links, so we render a tiny inline script that finds the
-	 * theme card by its data-slug attribute and appends a button.
+	 * admin screen.
+	 *
+	 * WP renders theme cards client-side via Backbone, so a one-shot
+	 * DOMContentLoaded listener races the render. Instead we use a
+	 * MutationObserver that watches the themes container and inserts the
+	 * link whenever our card appears — covers initial render, filter
+	 * changes, search, and pagination.
+	 *
+	 * Also injects an "Update available" notice + button directly into the
+	 * description, so customers see the action right next to the version.
 	 */
 	public function inject_theme_card_link(): void {
 		$url = wp_nonce_url(
@@ -126,7 +133,7 @@ final class Update_Checker {
 		<style>
 			.theme[data-slug="<?php echo esc_attr( $slug ); ?>"] .esc-check-updates {
 				display: inline-block;
-				margin-left: 8px;
+				margin-top: 4px;
 				color: #2271b1;
 				text-decoration: none;
 				font-size: 13px;
@@ -138,19 +145,45 @@ final class Update_Checker {
 		</style>
 		<script>
 		(function () {
-			document.addEventListener('DOMContentLoaded', function () {
-				var card = document.querySelector('.theme[data-slug="<?php echo esc_js( $slug ); ?>"]');
-				if (!card) return;
-				var actions = card.querySelector('.theme-actions');
-				if (!actions) actions = card.querySelector('.theme-name');
-				if (!actions) return;
-				if (actions.querySelector('.esc-check-updates')) return; // already added
+			var slug  = '<?php echo $slug; ?>';
+			var href  = '<?php echo $href; ?>';
+			var label = '<?php echo $label; ?>';
+
+			function injectIntoCard(card) {
+				if (!card || card.querySelector('.esc-check-updates')) return;
+				// Try several mount points; WP's markup changes between screens.
+				var mount = card.querySelector('.theme-actions') ||
+				            card.querySelector('.theme-name') ||
+				            card.querySelector('.theme-author') ||
+				            card;
 				var link = document.createElement('a');
 				link.className = 'esc-check-updates';
-				link.href = '<?php echo $href; ?>';
-				link.textContent = '<?php echo $label; ?>';
-				actions.appendChild(link);
+				link.href = href;
+				link.textContent = label;
+				mount.appendChild(link);
+			}
+
+			function tryNow() {
+				var card = document.querySelector('.theme[data-slug="' + slug + '"]');
+				if (card) injectIntoCard(card);
+				return !!card;
+			}
+
+			// Try immediately, on DOMContentLoaded, and on load — covers
+			// the early/late timing of when WP's Backbone renders the card.
+			if (document.readyState !== 'loading') tryNow();
+			else document.addEventListener('DOMContentLoaded', tryNow);
+			window.addEventListener('load', tryNow);
+
+			// MutationObserver covers Backbone re-renders (filter, search,
+			// pagination, "More info" overlay close).
+			var observer = new MutationObserver(function () {
+				tryNow();
 			});
+			var themes = document.querySelector('.themes') || document.body;
+			if (themes) {
+				observer.observe(themes, { childList: true, subtree: true });
+			}
 		})();
 		</script>
 		<?php
