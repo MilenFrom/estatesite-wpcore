@@ -268,7 +268,7 @@ CSF::createSection( $prefix, array(
     'title'      => esc_html__( 'Social Media Fields', 'houzez' ),
     'id'         => 'houzez-profile-social-fields',
     'desc'       => esc_html__( 'Manage the visibility of social media fields in the frontend dashboard', 'houzez' ),
-    'subsection' => true,
+    'parent'           => 'houzez-profile-fields',
     'fields'     => array(
         array(
             'id'       => 'profile_social_fields_info',

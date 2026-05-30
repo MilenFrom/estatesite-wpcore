@@ -232,7 +232,7 @@ CSF::createSection( $prefix, array(
 CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'Show/Hide Form Fields', 'houzez' ),
     'id'     => 'contactforms-showhide',
-    'subsection' => true,
+    'parent'           => 'contact-form-7',
     'fields' => array(
         array(
             'id'       => 'prop_detail_agent_form_fields_section-start',
@@ -336,7 +336,7 @@ CSF::createSection( $prefix, array(
 CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'Redirection', 'houzez' ),
     'id'     => 'contactforms-redirection',
-    'subsection' => true,
+    'parent'           => 'contact-form-7',
     'fields' => array(
         
         array(

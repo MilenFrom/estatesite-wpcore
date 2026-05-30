@@ -214,7 +214,7 @@ CSF::createSection( $prefix, array(
 CSF::createSection( $prefix, array(
     'title'            => esc_html__( 'User Approval', 'houzez' ),
     'id'               => 'header-user-approval',
-    'subsection'       => true,
+    'parent'           => 'header-login-register',
     'fields'           => array(
         array(
             'id'       => 'enable_user_approval',
@@ -251,7 +251,7 @@ CSF::createSection( $prefix, array(
 CSF::createSection( $prefix, array(
     'title'            => esc_html__( 'User Verification', 'houzez' ),
     'id'               => 'header-user-verification',
-    'subsection'       => true,
+    'parent'           => 'header-login-register',
     'fields'           => array(
         array(
             'id'       => 'enable_user_verification',
@@ -306,7 +306,7 @@ CSF::createSection( $prefix, array(
 CSF::createSection( $prefix, array(
     'title'            => esc_html__( 'User Roles', 'houzez' ),
     'id'               => 'header-user-roles',
-    'subsection'       => true,
+    'parent'           => 'header-login-register',
     'fields'           => array(
 
         array(

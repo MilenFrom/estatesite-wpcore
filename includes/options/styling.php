@@ -14,7 +14,8 @@ CSF::createSection( $prefix, array(
     'title'            => esc_html__( 'Styling', 'houzez' ),
     'id'               => 'houzez-styling',
     'customizer_width' => '',
-    'icon'             => 'el-icon-brush el-icon-small'
+    'icon'             => 'el-icon-brush el-icon-small',
+    'fields'           => array(),
 ) );
 
 /* Body
@@ -22,7 +23,7 @@ CSF::createSection( $prefix, array(
 CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'Body', 'houzez' ),
     'id'     => 'styling-body',
-    'subsection' => true,
+    'parent'           => 'houzez-styling',
     'fields' => array(
         array(
             'id'       => 'body_text_color',
@@ -99,7 +100,7 @@ CSF::createSection( $prefix, array(
 CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'Navigation Bar', 'houzez' ),
     'id'     => 'styling-headers',
-    'subsection' => true,
+    'parent'           => 'houzez-styling',
     'fields' => array(
 
 
@@ -551,7 +552,7 @@ CSF::createSection( $prefix, array(
 CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'Sub Menu', 'houzez' ),
     'id'     => 'styling-submenu',
-    'subsection' => true,
+    'parent'           => 'houzez-styling',
     'fields' => array(
         array(
             'id'       => 'header_submenu_bg',
@@ -612,7 +613,7 @@ CSF::createSection( $prefix, array(
 CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'Create Listing Button', 'houzez' ),
     'id'     => 'styling-create-listing',
-    'subsection' => true,
+    'parent'           => 'houzez-styling',
     'fields' => array(
         array(
             'id'       => 'header_4_btn_color',
@@ -771,7 +772,7 @@ CSF::createSection( $prefix, array(
 CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'Login & Register', 'houzez' ),
     'id'     => 'styling-login-register',
-    'subsection' => true,
+    'parent'           => 'houzez-styling',
     'fields' => array(
         array(
             'id'       => 'hd_login_register_color',
@@ -824,7 +825,7 @@ CSF::createSection( $prefix, array(
 CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'Mobile Menu', 'houzez' ),
     'id'     => 'styling-mobile-menu',
-    'subsection' => true,
+    'parent'           => 'houzez-styling',
     'fields' => array(
         array(
             'id'       => 'mob_menu_bg_color',
@@ -895,7 +896,7 @@ CSF::createSection( $prefix, array(
 CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'Advanced Search', 'houzez' ),
     'id'     => 'styling-advanced-search',
-    'subsection' => true,
+    'parent'           => 'houzez-styling',
     'fields' => array(
         array(
             'id'       => 'adv_background',
@@ -1088,7 +1089,7 @@ CSF::createSection( $prefix, array(
 CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'Saved Search Button', 'houzez' ),
     'id'     => 'styling-saved-search',
-    'subsection' => true,
+    'parent'           => 'houzez-styling',
     'fields' => array(
         array(
             'id'       => 'ssb_color',
@@ -1147,7 +1148,7 @@ CSF::createSection( $prefix, array(
 CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'User Account Menu', 'houzez' ),
     'id'     => 'styling-user-account-menu',
-    'subsection' => true,
+    'parent'           => 'houzez-styling',
     'fields' => array(
         array(
             'id'       => 'ua_menu_bg',
@@ -1205,7 +1206,7 @@ CSF::createSection( $prefix, array(
 CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'Dashboard Menu', 'houzez' ),
     'id'     => 'styling-dashboardmenu',
-    'subsection' => true,
+    'parent'           => 'houzez-styling',
     'fields' => array(
         array(
             'id'       => 'dm_background',
@@ -1282,7 +1283,7 @@ CSF::createSection( $prefix, array(
 CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'Property Details', 'houzez' ),
     'id'     => 'styling-property-detail',
-    'subsection' => true,
+    'parent'           => 'houzez-styling',
     'fields' => array(
         array(
             'id'       => 'houzez_prop_details_bg',
@@ -1313,7 +1314,7 @@ CSF::createSection( $prefix, array(
 CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'Featured Label', 'houzez' ),
     'id'     => 'styling-featured-label',
-    'subsection' => true,
+    'parent'           => 'houzez-styling',
     'fields' => array(
         array(
             'id'       => 'featured_label_bg_color',
@@ -1341,7 +1342,7 @@ CSF::createSection( $prefix, array(
 CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'Top Bar', 'houzez' ),
     'id'     => 'styling-top-bar',
-    'subsection' => true,
+    'parent'           => 'houzez-styling',
     'fields' => array(
         array(
             'id'       => 'top_bar_bg',
@@ -1378,7 +1379,7 @@ CSF::createSection( $prefix, array(
 CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'Agent & Agency Detail', 'houzez' ),
     'id'     => 'styling-single-agent-agency',
-    'subsection' => true,
+    'parent'           => 'houzez-styling',
     'fields' => array(
         array(
             'id'       => 'aad_bg_color',
@@ -1409,7 +1410,7 @@ CSF::createSection( $prefix, array(
 CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'Widgets', 'houzez' ),
     'id'     => 'styling-hz-widgets',
-    'subsection' => true,
+    'parent'           => 'houzez-styling',
     'fields' => array(
         array(
             'id'       => 'widgets_custom_design',
@@ -1477,7 +1478,7 @@ CSF::createSection( $prefix, array(
 CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'Footer', 'houzez' ),
     'id'     => 'styling-footer',
-    'subsection' => true,
+    'parent'           => 'houzez-styling',
     'fields' => array(
         array(
             'id'       => 'footer_bg_color',

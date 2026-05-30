@@ -184,7 +184,7 @@ CSF::createSection( $prefix, array(
 CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'Lightbox Logo', 'houzez' ),
     'id'     => 'lightbox-logo-options',
-    'subsection'   => true,
+    'parent'           => 'logo-favicon',
     'fields'        => array(
         array(
             'id'        => 'lightbox_logo',
@@ -201,7 +201,7 @@ CSF::createSection( $prefix, array(
 CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'Dashboard Logo', 'houzez' ),
     'id'     => 'dashboard-logo-options',
-    'subsection'   => true,
+    'parent'           => 'logo-favicon',
     'fields'        => array(
         array(
             'id'        => 'dashboard_logo',

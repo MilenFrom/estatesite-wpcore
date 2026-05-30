@@ -234,7 +234,7 @@ CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'Property Agent', 'houzez' ),
     'id'     => 'email-property-agent',
     'icon'   => '',
-    'subsection' => true,
+    'parent'           => 'houzez-email-management',
     'fields'    => array(
         array(
             'id'     => 'email-property_agent_contact',
@@ -283,7 +283,7 @@ CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'Schedule Tour', 'houzez' ),
     'id'     => 'email-scheduletour',
     'icon'   => '',
-    'subsection' => true,
+    'parent'           => 'houzez-email-management',
     'fields'    => array(
         array(
             'id'     => 'email-property_schedule_tour',
@@ -331,7 +331,7 @@ CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'New Register', 'houzez' ),
     'id'     => 'email-register-user',
     'icon'   => '',
-    'subsection' => true,
+    'parent'           => 'houzez-email-management',
     'fields'    => array(
         array(
             'id'     => 'email-new-user-info',
@@ -434,7 +434,7 @@ CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'Package Activated', 'houzez' ),
     'id'     => 'email-package-activated',
     'icon'   => '',
-    'subsection' => true,
+    'parent'           => 'houzez-email-management',
     'fields'    => array(
         array(
             'id'     => 'email-purchase-activated-package-info',
@@ -477,7 +477,7 @@ CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'Purchase Activated', 'houzez' ),
     'id'     => 'email-purchase-activated',
     'icon'   => '',
-    'subsection' => true,
+    'parent'           => 'houzez-email-management',
     'fields'    => array(
         array(
             'id'     => 'email-purchase-activated-info',
@@ -518,7 +518,7 @@ CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'Approved, Expired & Disapproved Listing', 'houzez' ),
     'id'     => 'email-approved-expired-listing',
     'icon'   => '',
-    'subsection' => true,
+    'parent'           => 'houzez-email-management',
     'fields'    => array(
         array(
             'id'     => 'email-approved-info',
@@ -628,7 +628,7 @@ CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'Wire Transfer', 'houzez' ),
     'id'     => 'email-wire-transfer',
     'icon'   => '',
-    'subsection' => true,
+    'parent'           => 'houzez-email-management',
     'fields'    => array(
         array(
             'id'     => 'email-wire-transfer-info',
@@ -691,7 +691,7 @@ CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'Paid Submission Per Listing', 'houzez' ),
     'id'     => 'email-paid-submission-perlisting',
     'icon'   => '',
-    'subsection' => true,
+    'parent'           => 'houzez-email-management',
     'fields'    => array(
         array(
             'id'     => 'email-paid-perlisting-info',
@@ -816,7 +816,7 @@ CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'Free Submission Listing, Update Listing and Package Listing', 'houzez' ),
     'id'     => 'email-free-submissionandpackagelisting',
     'icon'   => '',
-    'subsection' => true,
+    'parent'           => 'houzez-email-management',
     'fields'    => array(
         array(
             'id'     => 'email-free-package-perlisting-info',
@@ -915,7 +915,7 @@ CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'Expired Listing', 'houzez' ),
     'id'     => 'email-expiredlisting',
     'icon'   => '',
-    'subsection' => true,
+    'parent'           => 'houzez-email-management',
     'fields'    => array(
         array(
             'id'     => 'email-free-listing-expired-info',
@@ -1013,7 +1013,7 @@ CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'Matching Submission', 'houzez' ),
     'id'     => 'email-matchingsubmission',
     'icon'   => '',
-    'subsection' => true,
+    'parent'           => 'houzez-email-management',
     'fields'    => array(
         array(
             'id'     => 'email-matching-submissions-info',
@@ -1056,7 +1056,7 @@ CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'Recurring Payment & Membership Cancelled', 'houzez' ),
     'id'     => 'email-membershipcancelledandrecurring',
     'icon'   => '',
-    'subsection' => true,
+    'parent'           => 'houzez-email-management',
     'fields'    => array(
         array(
             'id'     => 'email-recurring-payment-info',

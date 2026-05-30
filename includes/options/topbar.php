@@ -116,7 +116,7 @@ if ( class_exists( 'FCC_Rates' ) ) {    // if wp-currencies plugins is active
     CSF::createSection( $prefix, array(
         'title' => esc_html__('Currency Switcher', 'houzez'),
         'id' => 'currency-switcher',
-        'subsection' => true,
+        'parent'           => 'header-top-bar',
         'fields' => array(
             array(
                 'id'       => 'currency_switcher_enable',
@@ -170,7 +170,7 @@ if ( class_exists( 'FCC_Rates' ) ) {    // if wp-currencies plugins is active
 CSF::createSection( $prefix, array(
     'title' => esc_html__('Area Switcher', 'houzez'),
     'id' => 'area-switcher',
-    'subsection' => true,
+    'parent'           => 'header-top-bar',
     'fields' => array(
         array(
             'id'       => 'area_switcher_enable',

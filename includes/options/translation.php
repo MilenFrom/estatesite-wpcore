@@ -25,7 +25,7 @@ CSF::createSection( $prefix, array(
 CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'Common', 'houzez' ),
     'id'     => 'common-labels',
-    'subsection'   => true,
+    'parent'           => 'labels-management',
     'fields'        => array(
         array(
             'id'       => 'cl_common_section-start',
@@ -173,7 +173,7 @@ CSF::createSection( $prefix, array(
 CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'Searches', 'houzez' ),
     'id'     => 'searches-labels',
-    'subsection'   => true,
+    'parent'           => 'labels-management',
     'fields'        => array(
         array(
             'id'       => 'srh_labels_section-start',
@@ -495,7 +495,7 @@ CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'Grid, List, Card & Preview', 'houzez' ),
     'id'     => 'glcp-translation',
     'desc'   => esc_html__( 'Manage titles for listings Grid, List, Card and Preview views', 'houzez' ),
-    'subsection'   => true,
+    'parent'           => 'labels-management',
     'fields'        => array(
         
         /*--------------------------------------------------------------
@@ -616,7 +616,7 @@ CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'Property Detail Page', 'houzez' ),
     'id'     => 'property-details-labels',
     'desc'   => esc_html__( 'Manage titles for property detail page.', 'houzez' ),
-    'subsection'   => true,
+    'parent'           => 'labels-management',
     'fields'        => array(
         
         /*--------------------------------------------------------------
@@ -1420,7 +1420,7 @@ CSF::createSection( $prefix, array(
 CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'Add New Property', 'houzez' ),
     'id'     => 'createlisting-translation',
-    'subsection'   => true,
+    'parent'           => 'labels-management',
     'fields'        => array(
         
         array(
@@ -2709,7 +2709,7 @@ CSF::createSection( $prefix, array(
 CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'Agencies & Agency Detail', 'houzez' ),
     'id'     => 'agency-translation-menu',
-    'subsection'   => true,
+    'parent'           => 'labels-management',
     'fields'        => array(
         array(
             'id'       => 'agency_labels_section-start',
@@ -2881,7 +2881,7 @@ CSF::createSection( $prefix, array(
 CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'Dashboard Menu', 'houzez' ),
     'id'     => 'dashboard-menu',
-    'subsection'   => true,
+    'parent'           => 'labels-management',
     'fields'        => array(
         array(
             'id'       => 'dsh_labels_section-start',

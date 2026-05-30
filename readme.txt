@@ -4,7 +4,7 @@ Tags: real estate, property listings, agents, agencies
 Requires at least: 6.4
 Tested up to: 6.7
 Requires PHP: 7.4
-Stable tag: 1.0.7
+Stable tag: 1.0.8
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -24,6 +24,12 @@ EstateSite Core provides the foundation for a real estate site:
 This is the engine. The Classic theme is the visual layer. The Elementor add-on is for page builders.
 
 == Changelog ==
+
+= 1.0.8 =
+* Fix: Theme Options panel (wp-admin/admin.php?page=estatesite_options) tabs rendered "No data available" instead of their fields. Headers, Styling, Property Detail, Translation, Listing Options, Searches, Emails, Membership, Map, Topbar, Profile Fields, Logo & Favicons, Contact Forms, Login & Register, Add New Property, Agents, Agencies, and Half Map were all affected — every tab whose Houzez original had sub-tabs broke the same way. Root cause: the Houzez → CSF porter copied Redux's `'subsection' => true` flag verbatim, but CSF nests child tabs only via `'parent' => '<parent_id>'`. Result: parents and "subsections" all registered as independent top-level tabs, parents fell through to admin-options.class.php:614's empty-fields branch, and the literal text "No data available." rendered in the panel. Mechanically rewrote 92 `'subsection' => true,` declarations across 17 files to `'parent' => '<id-of-preceding-parent>'`, plus added `'fields' => array()` belt-and-suspenders to 2 bare parents.
+* Fix: includes/options/advanced-search.php fataled at load with "array_merge(): Argument #2 must be of type array, null given" at line 41. The Houzez source relied on a fields-builder class to populate $custom_search_fields_array — the EstateSite port doesn't have that path. Added a guard that defaults the variable to an empty array if not set. The Searches tab now loads instead of being silently skipped by the loader's try/catch.
+* Fix: includes/options/advanced-search.php and blog.php referenced ReduxFramework::$_url for legacy image-select asset paths (sidebar-layout 1c.png / 2cl.png / 2cr.png). ReduxFramework doesn't exist in our fork; these were dead references. Replaced with HOUZEZ_IMAGE (the theme's img dir, where the same files already live in the ported estatesite-classic theme). Clears the recurring "[EstateSite] Option section blog.php failed to load: Class 'ReduxFramework' not found" error in debug.log.
+* Internal: no schema migration needed. The `parent` keys live in option-file PHP; existing stored option values are untouched. Customers don't need to re-save any settings.
 
 = 1.0.7 =
 * Refactor: Removed theme-specific UI code from Update_Checker. The theme card "Check for updates" link and the Theme Details overlay Changelog block were living inside Core, which incorrectly coupled Core's generic update infrastructure to a specific theme's presentation. Core now exposes a small public API (manifest(), get_force_check_url(), get_slug(), get_type(), get_version()); EstateSite Classic owns its own admin UI in inc/class-update-ui.php. This release pairs with estatesite-classic v1.0.4 which contains the relocated code. Functional behavior is unchanged for customers.

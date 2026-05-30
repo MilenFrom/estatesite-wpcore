@@ -250,7 +250,7 @@ CSF::createSection( $prefix, array(
     'id'     => 'map-cluster',
     'desc'   => esc_html__('Marker clustering settings. Applies to Google Maps and OpenStreetMap/Mapbox.', 'houzez'),
     'icon'   => '',
-    'subsection' => true,
+    'parent'           => 'houzez-map-settings',
     'fields'    => array(
         array(
             'id'       => 'map_cluster_enable',
@@ -286,7 +286,7 @@ CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'Single Listing Map', 'houzez' ),
     'id'     => 'map-single-listing',
     'icon'   => '',
-    'subsection' => true,
+    'parent'           => 'houzez-map-settings',
     'fields'    => array(
         array(
             'id'       => 'detail_map_pin_type',
@@ -316,7 +316,7 @@ CSF::createSection( $prefix, array(
     'id'     => 'map-style',
     'desc'   => esc_html__('Configure map styling options for your preferred map provider.', 'houzez'),
     'icon'   => '',
-    'subsection' => true,
+    'parent'           => 'houzez-map-settings',
     'fields'    => array(
         array(
             'id'       => 'googlemap_map_id',

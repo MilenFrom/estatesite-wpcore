@@ -15,11 +15,12 @@ CSF::createSection( $prefix, array(
     'id'               => 'headers',
     'customizer_width' => '400px',
     'icon'             => 'el-icon-website el-icon-small',
+    'fields'           => array(),
 ) );
 CSF::createSection( $prefix, array(
     'title'            => esc_html__( 'Style', 'houzez' ),
     'id'               => 'header-styles',
-    'subsection'       => true,
+    'parent'           => 'headers',
     'fields'           => array(
         array(
             'id'       => 'header_style',
@@ -427,7 +428,7 @@ CSF::createSection( $prefix, array(
 CSF::createSection( $prefix, array(
     'title'            => esc_html__( 'Social Media', 'houzez' ),
     'id'               => 'header-social',
-    'subsection'       => true,
+    'parent'           => 'headers',
     'fields'           => array(
         array(
             'id'       => 'social-header',
@@ -541,7 +542,7 @@ CSF::createSection( $prefix, array(
 CSF::createSection( $prefix, array(
     'title'            => esc_html__( 'Create Listing Button', 'houzez' ),
     'id'               => 'header-create-listings',
-    'subsection'       => true,
+    'parent'           => 'headers',
     'fields'           => array(
         array(
             'id'       => 'create_lisiting_enable',

@@ -214,7 +214,7 @@ CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'Composer', 'houzez' ),
     'id'     => 'lisitngs-composer',
     'desc'   => esc_html__( 'Manage list or grid view information on the listing pages', 'houzez' ),
-    'subsection' => true,
+    'parent'           => 'lisitngs-options',
     'fields'        => array(
         
         array(
@@ -278,7 +278,7 @@ CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'Gallery', 'houzez' ),
     'id'     => 'lisitngs-gallery-slide',
     'desc'   => esc_html__( 'Manage gallery for listings grid/list', 'houzez' ),
-    'subsection' => true,
+    'parent'           => 'lisitngs-options',
     'fields'  => array(
         array(
             'id'       => 'disable_property_gallery',
@@ -369,7 +369,7 @@ CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'Icons', 'houzez' ),
     'id'     => 'lisitngs-composer-icons',
     'desc'   => esc_html__( 'Manage list or grid icons on the listing pages', 'houzez' ),
-    'subsection' => true,
+    'parent'           => 'lisitngs-options',
     'fields'  => $custom_icon_fields
 ));
 
@@ -377,7 +377,7 @@ CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'Meta v1, v4 and v7', 'houzez' ),
     'id'     => 'lisitngs-meta-v1v4',
     'desc'   => esc_html__( 'Manage list or grid (grid v.1, v.4 and v.7) meta type on the listing pages', 'houzez' ),
-    'subsection' => true,
+    'parent'           => 'lisitngs-options',
     'fields'  => array(
         array(
             'id'       => 'v1_4_meta_type',
@@ -399,7 +399,7 @@ CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'Meta v2', 'houzez' ),
     'id'     => 'lisitngs-meta-v2',
     'desc'   => esc_html__( 'Manage the meta type for the grid v2', 'houzez' ),
-    'subsection' => true,
+    'parent'           => 'lisitngs-options',
     'fields'  => array(
         array(
             'id'       => 'v2_meta_type',
@@ -436,7 +436,7 @@ CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'Listing Preview lightbox', 'houzez' ),
     'id'     => 'listing-preview-options',
     'desc'   => esc_html__( 'Manage listing preview information', 'houzez' ),
-    'subsection' => true,
+    'parent'           => 'lisitngs-options',
     'fields' => array(
         array(
             'id'       => 'preview_meta_type',
@@ -471,7 +471,7 @@ CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'Placeholder', 'houzez' ),
     'id'     => 'lisitngs-placeholder',
     'desc'   => esc_html__( 'Manage listings default Placeholder', 'houzez' ),
-    'subsection' => true,
+    'parent'           => 'lisitngs-options',
     'fields'        => array(  
         array(
             'id'        => 'houzez_placeholder',
@@ -487,7 +487,7 @@ CSF::createSection( $prefix, array(
 CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'Mark as Sold', 'houzez' ),
     'id'     => 'lisitngs-markassold',
-    'subsection' => true,
+    'parent'           => 'lisitngs-options',
     'fields'        => array(  
         array(
             'id'       => 'enable_mark_as_sold',

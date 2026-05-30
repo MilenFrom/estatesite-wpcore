@@ -267,7 +267,7 @@ CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'Schema Settings', 'houzez' ),
     'id'     => 'schema-settings-section',
     'desc'   => esc_html__( 'Configure JSON-LD structured data for property pages to improve SEO', 'houzez' ),
-    'subsection' => true,
+    'parent'           => 'property-page',
     'fields' => array(
         array(
             'id'       => 'enable_property_schema',
@@ -309,7 +309,7 @@ CSF::createSection( $prefix, array(
 CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'Layout Manager - Default', 'houzez' ),
     'id'     => 'property-section',
-    'subsection' => true,
+    'parent'           => 'property-page',
     'fields' => array(
         array(
             'id'      => 'property_blocks',
@@ -372,7 +372,7 @@ CSF::createSection( $prefix, array(
 CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'Layout Manager - Tabs', 'houzez' ),
     'id'     => 'property-section-tabs',
-    'subsection' => true,
+    'parent'           => 'property-page',
     'fields' => array(
         array(
             'id'      => 'property_blocks_tabs',
@@ -464,7 +464,7 @@ CSF::createSection( $prefix, array(
 CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'Layout Manager - Luxury Homes', 'houzez' ),
     'id'     => 'property-section-luxury-homes',
-    'subsection' => true,
+    'parent'           => 'property-page',
     'fields' => array(
         array(
             'id'      => 'property_blocks_luxuryhomes',
@@ -526,7 +526,7 @@ CSF::createSection( $prefix, array(
 CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'Gallery Popup', 'houzez' ),
     'id'     => 'gallery-popup-section',
-    'subsection' => true,
+    'parent'           => 'property-page',
     'fields' => array(
         array(
             'id'       => 'property_gallery_popup_type',
@@ -576,7 +576,7 @@ if( ! empty( $custom_fields_array ) ) {
 CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'Overview Section', 'houzez' ),
     'id'     => 'overview-section',
-    'subsection' => true,
+    'parent'           => 'property-page',
     'fields' => array(
         array(
             'id'       => 'show_id_head',
@@ -628,7 +628,7 @@ CSF::createSection( $prefix, array(
 CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'Energy Class', 'houzez' ),
     'id'     => 'energy-class-section',
-    'subsection' => true,
+    'parent'           => 'property-page',
     'fields' => array(
         array(
             'id'       => 'energy_class_mode',
@@ -831,7 +831,7 @@ $prop_details_showhide_default = array(
 CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'Show/Hide Data', 'houzez' ),
     'id'     => 'propertydetail-showhide',
-    'subsection' => true,
+    'parent'           => 'property-page',
     'fields' => array(
         array(
             'id'       => 'print_property_button',
@@ -913,7 +913,7 @@ CSF::createSection( $prefix, array(
 CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'Adsense Spaces', 'houzez' ),
     'id'     => 'adsense_spaces',
-    'subsection' => true,
+    'parent'           => 'property-page',
     'fields' => array(
         array(
             'id'       => 'adsense_space_1',
@@ -942,7 +942,7 @@ CSF::createSection( $prefix, array(
 CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'Walkscore', 'houzez' ),
     'id'     => 'walkscore',
-    'subsection' => true,
+    'parent'           => 'property-page',
     'fields' => array(
         array(
             'id'       => 'houzez_walkscore',
@@ -967,7 +967,7 @@ CSF::createSection( $prefix, array(
 CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'Yelp Nearby Places', 'houzez' ),
     'id'     => 'yelp',
-    'subsection' => true,
+    'parent'           => 'property-page',
     'fields' => array(
         array(
             'id'       => 'houzez_yelp',
@@ -1051,7 +1051,7 @@ CSF::createSection( $prefix, array(
 CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'Schedule a Tour', 'houzez' ),
     'id'     => 'schedule_a_tour',
-    'subsection' => true,
+    'parent'           => 'property-page',
     'fields' => array(
         array(
             'id'          => 'schedule_num_days',
@@ -1115,14 +1115,14 @@ CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'Luxury Homes Icons', 'houzez' ),
     'id'     => 'luxury-homes',
     'desc'   => esc_html__( 'Icons for the Luxury Homes property detail page', 'houzez' ),
-    'subsection' => true,
+    'parent'           => 'property-page',
     'fields' => $custom_licon_fields
 ));
 
 CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'Mortgage Calculator', 'houzez' ),
     'id'     => 'prop-details-mortgage-cal',
-    'subsection' => true,
+    'parent'           => 'property-page',
     'fields' => array(
         array(
             'id'          => 'cal_where',
@@ -1239,7 +1239,7 @@ CSF::createSection( $prefix, array(
 CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'Similar Properties', 'houzez' ),
     'id'     => 'property-similar-showhide',
-    'subsection' => true,
+    'parent'           => 'property-page',
     'fields' => array(
         array(
             'id'       => 'houzez_similer_properties',
@@ -1355,7 +1355,7 @@ CSF::createSection( $prefix, array(
 CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'Reviews & Ratings', 'houzez' ),
     'id'     => 'property-reviews',
-    'subsection' => true,
+    'parent'           => 'property-page',
     'fields' => array(
 
         array(
@@ -1406,7 +1406,7 @@ CSF::createSection( $prefix, array(
 CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'Breadcrumbs', 'houzez' ),
     'id'     => 'property-breadcrumbs',
-    'subsection' => true,
+    'parent'           => 'property-page',
     'fields' => array(
 
         array(
@@ -1431,7 +1431,7 @@ CSF::createSection( $prefix, array(
 CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'Next/Prev Property', 'houzez' ),
     'id'     => 'property-next-prev',
-    'subsection' => true,
+    'parent'           => 'property-page',
     'fields' => array(
 
         array(
@@ -1449,7 +1449,7 @@ CSF::createSection( $prefix, array(
 CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'Disclaimer', 'houzez' ),
     'id'     => 'property-disclaimer',
-    'subsection' => true,
+    'parent'           => 'property-page',
     'fields' => array(
 
         array(

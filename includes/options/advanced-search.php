@@ -38,6 +38,13 @@ $search_builder_disabled = array(
     'year-built' => esc_html__('Year Built', 'houzez'),
 );
 
+// Houzez's original loader injected $custom_search_fields_array via a
+// fields-builder class. In the EstateSite port we don't have that injection
+// path yet, so fall back to an empty array if nothing populated it —
+// preserves the Searches tab even when the fields-builder hasn't run.
+if ( ! isset( $custom_search_fields_array ) || ! is_array( $custom_search_fields_array ) ) {
+    $custom_search_fields_array = array();
+}
 $search_builder = array_merge($search_builder, $custom_search_fields_array);
 
 
@@ -57,7 +64,7 @@ CSF::createSection( $prefix, array(
 CSF::createSection( $prefix, array(
     'title'            => esc_html__( 'Header Search', 'houzez' ),
     'id'               => 'header-search',
-    'subsection'       => true,
+    'parent'           => 'advanced-search-houzez',
     'fields'           => array(
         array(
             'id'       => 'main-search-enable',
@@ -287,7 +294,7 @@ unset($dock_search_builder['price']);
 CSF::createSection( $prefix, array(
     'title'            => esc_html__( 'Dock Search', 'houzez' ),
     'id'               => 'dock-search',
-    'subsection'       => true,
+    'parent'           => 'advanced-search-houzez',
     'fields'           => array(
         array(
             'id'       => 'enable_advanced_search_over_headers',
@@ -419,7 +426,7 @@ CSF::createSection( $prefix, array(
 CSF::createSection( $prefix, array(
     'title'            => esc_html__( 'Half Map Search', 'houzez' ),
     'id'               => 'halfmap-search',
-    'subsection'       => true,
+    'parent'           => 'advanced-search-houzez',
     'fields'           => array(
         array(
             'id'       => 'enable_halfmap_search',
@@ -520,7 +527,7 @@ CSF::createSection( $prefix, array(
 CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'Banner Search', 'houzez' ),
     'id'     => 'home-banner-search',
-    'subsection' => true,
+    'parent'           => 'advanced-search-houzez',
     'fields' => array(
         array(
             'id'       => 'splash_v1_dropdown',
@@ -574,7 +581,7 @@ CSF::createSection( $prefix, array(
 CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'Settings', 'houzez' ),
     'id'     => 'adv-search-settings',
-    'subsection' => true,
+    'parent'           => 'advanced-search-houzez',
     'fields' => array(
         array(
             'id'       => 'keyword_field',
@@ -958,9 +965,9 @@ CSF::createSection( $prefix, array(
             'title'    => __('Search Result Page Layout', 'houzez'),
             'desc' => __('Select the layout for search result page.', 'houzez'),
             'options'  => array(
-                'no-sidebar' => ReduxFramework::$_url.'assets/img/1c.png',
-                'left-sidebar' => ReduxFramework::$_url.'assets/img/2cl.png',
-                'right-sidebar' => ReduxFramework::$_url.'assets/img/2cr.png'
+                'no-sidebar' => HOUZEZ_IMAGE.'1c.png',
+                'left-sidebar' => HOUZEZ_IMAGE.'2cl.png',
+                'right-sidebar' => HOUZEZ_IMAGE.'2cr.png'
             ),
             'default' => 'right-sidebar'
         ),

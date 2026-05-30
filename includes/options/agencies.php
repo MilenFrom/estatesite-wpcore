@@ -117,7 +117,7 @@ CSF::createSection( $prefix, array(
 CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'Agency Detail Page', 'houzez' ),
     'id'     => 'agency-detail-page',
-    'subsection' => true,
+    'parent'           => 'houzez-agencies',
     'fields' => array(
         array(
             'id'       => 'agency-detail-layout',

@@ -32,7 +32,7 @@ CSF::createSection( $prefix, array(
             'title'    => __('Single Post Layout', 'houzez'),
             'desc' => '',
             'options'  => array(
-                'no-sidebar' => ReduxFramework::$_url.'assets/img/1c.png',
+                'no-sidebar' => HOUZEZ_IMAGE.'1c.png',
                 'left-sidebar' => HOUZEZ_IMAGE. '2cl.png',
                 'right-sidebar' => HOUZEZ_IMAGE. '2cr.png'
             ),

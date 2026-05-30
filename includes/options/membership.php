@@ -239,7 +239,7 @@ CSF::createSection( $prefix, array(
 CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'Thank You Page', 'houzez' ),
     'id'     => 'mem-thankyou',
-    'subsection' => true,
+    'parent'           => 'payment-membership',
     'fields' => array(
         array(
             'id'       => 'thankyou_title',
@@ -300,7 +300,7 @@ CSF::createSection( $prefix, array(
 CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'Paypal Settings', 'houzez' ),
     'id'     => 'mem-paypal-settings',
-    'subsection' => true,
+    'parent'           => 'payment-gateways',
     'fields' => array(
         array(
             'id'       => 'enable_paypal',
@@ -355,7 +355,7 @@ CSF::createSection( $prefix, array(
 CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'Stripe Settings', 'houzez' ),
     'id'     => 'mem-stripe-settings',
-    'subsection' => true,
+    'parent'           => 'payment-gateways',
     'fields' => array(
         array(
             'id'       => 'enable_stripe',
@@ -392,7 +392,7 @@ CSF::createSection( $prefix, array(
 CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'Direct Payment / Wire Payment', 'houzez' ),
     'id'     => 'mem-wire-payment',
-    'subsection' => true,
+    'parent'           => 'payment-gateways',
     'fields' => array(
         array(
             'id'       => 'enable_wireTransfer',

@@ -229,7 +229,7 @@ CSF::createSection( $prefix, array(
 CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'Layout Manager', 'houzez' ),
     'id'     => 'Add-new-property-layout-manager',
-    'subsection' => true,
+    'parent'           => 'add-property-page',
     'fields' => array(
         array(
             'id'      => 'property_form_sections',
@@ -278,7 +278,7 @@ $submit_form_fields = array_merge($submit_form_fields, $custom_fields_array);
 CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'Show/Hide Form Fields', 'houzez' ),
     'id'     => 'property-showhide',
-    'subsection' => true,
+    'parent'           => 'add-property-page',
     'fields' => array(
         array(
             'id'      => 'adp_details_fields',
@@ -369,7 +369,7 @@ $submit_form_required_fields = array_merge($submit_form_required_fields, $custom
 CSF::createSection( $prefix, array(
     'title'  => esc_html__( 'Required Form Fields', 'houzez' ),
     'id'     => 'property-required-fields',
-    'subsection' => true,
+    'parent'           => 'add-property-page',
     'fields' => array(
         array(
             'id'       => 'enable_title_limit',
