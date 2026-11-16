@@ -31,8 +31,8 @@ set -euo pipefail
 # These three vars are the only per-package thing; everything else generic.
 PACKAGE_SLUG="estatesite-wpcore"
 PACKAGE_TYPE="plugin"   # plugin | theme
-PACKAGE_DISPLAY_NAME="EstateSite Core"
-PACKAGE_DESCRIPTION="EstateSite Core — real-estate WordPress backbone (CPTs, search, options, metaboxes, login)."
+PACKAGE_DISPLAY_NAME="EstateSite HouzezCore"
+PACKAGE_DESCRIPTION="EstateSite HouzezCore — real-estate WordPress backbone (CPTs, search, options, metaboxes, login)."
 
 # Where customer WP installs fetch from. Both files (zip + json) land here.
 UPDATE_ENDPOINT_DIR="/home/estatesite-dev/htdocs/dev.estatesite.eu/updates"

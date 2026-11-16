@@ -4,7 +4,7 @@ Tags: real estate, property listings, agents, agencies
 Requires at least: 6.4
 Tested up to: 6.7
 Requires PHP: 7.4
-Stable tag: 1.0.8
+Stable tag: 1.0.9
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,7 +12,7 @@ Real estate property management core for WordPress. Powers the EstateSite Classi
 
 == Description ==
 
-EstateSite Core provides the foundation for a real estate site:
+EstateSite HouzezCore provides the foundation for a real estate site:
 
 * Property, agent, and agency custom post types
 * Property search and filtering
@@ -24,6 +24,11 @@ EstateSite Core provides the foundation for a real estate site:
 This is the engine. The Classic theme is the visual layer. The Elementor add-on is for page builders.
 
 == Changelog ==
+
+= 1.0.9 =
+* Change: The plugin is now called **EstateSite HouzezCore** (formerly EstateSite Core) in the Plugins list, in its activation notice and on its dashboard card. It is the same plugin in the same folder with the same settings, so nothing needs reinstalling or reconfiguring. The EstateSite Classic theme uses the new name from version 1.0.14.
+* Fix: The agent info shortcode printed debug text ("Debug Info: … No agent associated with this post.") on a property that has no agent, or whose agent was deleted. It now prints nothing in that case. A property whose agent is stored as a list now shows its first agent.
+* Internal: The package no longer includes the developers' internal notes file.
 
 = 1.0.8 =
 * Fix: Theme Options panel (wp-admin/admin.php?page=estatesite_options) tabs rendered "No data available" instead of their fields. Headers, Styling, Property Detail, Translation, Listing Options, Searches, Emails, Membership, Map, Topbar, Profile Fields, Logo & Favicons, Contact Forms, Login & Register, Add New Property, Agents, Agencies, and Half Map were all affected — every tab whose Houzez original had sub-tabs broke the same way. Root cause: the Houzez → CSF porter copied Redux's `'subsection' => true` flag verbatim, but CSF nests child tabs only via `'parent' => '<parent_id>'`. Result: parents and "subsections" all registered as independent top-level tabs, parents fell through to admin-options.class.php:614's empty-fields branch, and the literal text "No data available." rendered in the panel. Mechanically rewrote 92 `'subsection' => true,` declarations across 17 files to `'parent' => '<id-of-preceding-parent>'`, plus added `'fields' => array()` belt-and-suspenders to 2 bare parents.
