@@ -12,9 +12,14 @@ function estatesite_houzez_agent_info_shortcode($atts) {
 
     // Get agent information
     $agent_id = get_post_meta($post_id, 'fave_agents', true);
+    if (is_array($agent_id)) {
+        $agent_id = reset($agent_id);
+    }
+    $agent_id = intval($agent_id);
 
-    if (!$agent_id) {
-        return "Debug Info: $debug_info\nNo agent associated with this post.";
+    // No broker, or one that has since been deleted: show nothing rather than an empty card
+    if (!$agent_id || get_post_type($agent_id) !== 'houzez_agent') {
+        return '';
     }
 
     $agent_name = get_the_title($agent_id);
