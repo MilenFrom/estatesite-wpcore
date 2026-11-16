@@ -61,7 +61,7 @@ final class Admin {
 		?>
 		<div class="notice notice-success is-dismissible">
 			<p>
-				<strong><?php esc_html_e( 'EstateSite Core activated.', 'estatesite-wpcore' ); ?></strong>
+				<strong><?php esc_html_e( 'EstateSite HouzezCore activated.', 'estatesite-wpcore' ); ?></strong>
 				<a href="<?php echo esc_url( admin_url( 'admin.php?page=estatesite' ) ); ?>">
 					<?php esc_html_e( 'View status →', 'estatesite-wpcore' ); ?>
 				</a>

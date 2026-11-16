@@ -1,4 +1,4 @@
-=== EstateSite Core ===
+=== EstateSite HouzezCore ===
 Contributors: estatesite
 Tags: real estate, property listings, agents, agencies
 Requires at least: 6.4

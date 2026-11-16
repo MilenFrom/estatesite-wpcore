@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: EstateSite Core
+ * Plugin Name: EstateSite HouzezCore
  * Plugin URI:  https://estatesite.eu
  * Description: Real estate property management core — CPTs, search, agents, options, metaboxes, payments. Powers the EstateSite Classic theme and Elementor packages.
  * Version:     1.0.8

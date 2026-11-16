@@ -165,7 +165,7 @@ final class Dashboard {
 	private static function render_health_cards( array $data ): void {
 		$cards = [
 			[
-				'title' => __( 'EstateSite Core', 'estatesite-wpcore' ),
+				'title' => __( 'EstateSite HouzezCore', 'estatesite-wpcore' ),
 				'ok'    => $data['core_active'],
 				'value' => $data['core_active'] ? 'v' . $data['version'] : __( 'inactive', 'estatesite-wpcore' ),
 				'icon'  => 'admin-plugins',
